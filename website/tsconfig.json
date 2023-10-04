@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "jsxImportSource": "react",
+    "verbatimModuleSyntax": true,
+    "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": false
+  }
+}

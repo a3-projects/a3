@@ -1,0 +1,27 @@
+---
+import { Navbar } from "@/ui/Navbar";
+---
+
+<header>
+  <Navbar>
+    <Navbar.List>
+      <Navbar.ListItem
+        className="group before:hover:bg-primary-800 before:hover:heropattern-banknote-primary-900"
+      >
+        <a href="/#home" class="flex items-center px-2 gap-2 z-10">
+          <div class="flex">
+            <p class="font-bold uppercase break-words flex flex-col md:flex-row md:gap-1">
+              Feyzan <span class="font-extralight">Synchro</span>
+            </p>
+          </div>
+        </a>
+      </Navbar.ListItem>
+      <Navbar.ListItem>
+        <Navbar.Link href="/#samples">Samples</Navbar.Link>
+      </Navbar.ListItem>
+      <Navbar.ListItem>
+        <Navbar.Link href="/#kontakt">Kontakt</Navbar.Link>
+      </Navbar.ListItem>
+    </Navbar.List>
+  </Navbar>
+</header>

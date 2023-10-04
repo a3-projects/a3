@@ -1,0 +1,20 @@
+---
+import Header from "@/modules/routing/components/Header.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Footer from "@/modules/routing/components/Footer.astro";
+---
+
+<BaseLayout>
+  <slot name="head" />
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</BaseLayout>
+<style>
+  body {
+    /* Workaround: Somehow adding class or id  on body element will get removed when opening it in the browser*/
+    @apply min-h-screen flex flex-col;
+  }
+</style>
