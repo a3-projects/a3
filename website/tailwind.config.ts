@@ -7,7 +7,7 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      spacing: { header: "56px" },
+      spacing: { header: "3.5rem" },
       fontFamily: {
         serif: ["Merriweather", ...fontFamily.serif],
         sans: ["Poppins", ...fontFamily.sans],
