@@ -1,0 +1,75 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import { META } from "@/constants/meta";
+import Layout from "@/layouts/Layout.astro";
+import { Main } from "@/ui/Main";
+---
+
+<Layout>
+  <BaseHead
+    title={META.TITLE}
+    description={META.DESCRIPTION}
+    robots="index,follow"
+    slot="head"
+  />
+  <Main>
+    <section
+      id="impressum"
+      class="bg-neutral-950 py-20 to-neutral-900 min-h-screen flex px-10"
+    >
+      <div class="max-w-prose mx-auto prose">
+        <h1>Impressum</h1>
+
+        <h2>Angaben gemäß § 5 TMG:</h2>
+
+        <p>
+          Vor- und Nachname: [Ihr vollständiger Name] <br />
+          Adresse: [Ihre vollständige Adresse]<br />
+          Telefon: [Ihre Telefonnummer]<br />
+          E-Mail: [Ihre E-Mail-Adresse]
+        </p>
+
+        <h2>Haftungsausschluss:</h2>
+        <p>
+          Die Informationen auf dieser Website dienen allgemeinen
+          Informationszwecken und stellen keine Rechtsberatung dar. Ich
+          übernehme keine Haftung für die Richtigkeit, Vollständigkeit und
+          Aktualität der bereitgestellten Informationen. Jegliche Handlung, die
+          aufgrund der Informationen auf dieser Website unternommen wird, liegt
+          in der alleinigen Verantwortung des Nutzers.
+        </p>
+
+        <h2>Datenschutzerklärung:</h2>
+        <p>
+          Ich nehme den Schutz Ihrer persönlichen Daten sehr ernst.
+          Informationen darüber, welche personenbezogenen Daten ich erfassen und
+          wie ich diese verarbeite, finden Sie in der <a
+            class="underline-offset-4"
+            href="/datenschutz">Datenschutzerklärung</a
+          >.
+        </p>
+
+        <h2>Urheberrecht:</h2>
+        <p>
+          Alle Inhalte auf dieser Website (Texte, Bilder, Grafiken, Videos,
+          usw.) unterliegen dem Urheberrecht und anderen Gesetzen zum Schutz des
+          geistigen Eigentums. Jegliche Nutzung oder Vervielfältigung ohne meine
+          ausdrückliche Zustimmung ist untersagt.
+        </p>
+
+        <h2>Rechtliche Hinweise:</h2>
+        <p>
+          Diese Webseite enthält möglicherweise Links zu externen Websites
+          Dritter. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+          Anbieter oder Betreiber verantwortlich. Ich übernehme keine Gewähr für
+          die Inhalte externer Links. Bei bekannt werden von Rechtsverletzungen
+          werde ich derartige Links umgehend entfernen. Bitte beachten Sie, dass
+          dies nur ein Beispiel ist und Sie das Impressum entsprechend Ihren
+          individuellen Anforderungen anpassen sollten. Es wird empfohlen,
+          rechtlichen Rat einzuholen, um sicherzustellen, dass Ihr Impressum den
+          geltenden Gesetzen und Vorschriften entspricht.
+        </p>
+      </div>
+    </section>
+  </Main>
+</Layout>

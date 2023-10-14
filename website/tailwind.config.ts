@@ -13,7 +13,7 @@ export default {
         sans: ["Poppins", ...fontFamily.sans],
       },
       colors: {
-        primary: colors.indigo,
+        primary: colors.blue,
         // primary: {
         //   "50": "#E4FDEB",
         //   "100": "#D1F0DA",

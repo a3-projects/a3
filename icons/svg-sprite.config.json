@@ -1,0 +1,29 @@
+{
+  "dest": "build",
+  "shape": {
+    "dest": "optimized-icons",
+    "transform": [
+      {
+        "svgo": {
+          "plugins": [{ "removeAttrs": { "attrs": "*:(stroke|fill):((?!^none$).)*" } }]
+        }
+      }
+    ]
+  },
+  "mode": {
+    "symbol": {
+      "dest": "sprites/svg",
+      "sprite": "gpc-icon-sprite",
+      "example": {
+        "dest": "index.html"
+      }
+    },
+    "css": {
+      "dest": "sprites/css",
+      "sprite": "gpc-icon-sprite",
+      "example": {
+        "dest": "index.html"
+      }
+    }
+  }
+}

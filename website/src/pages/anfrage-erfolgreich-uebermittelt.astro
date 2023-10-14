@@ -1,0 +1,43 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import { META } from "@/constants/meta";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Main } from "@/ui/Main";
+import { CheckCircle, MoveLeft } from "lucide-react";
+---
+
+<BaseLayout>
+  <BaseHead title={META.TITLE} description={META.DESCRIPTION} robots="noindex" />
+
+  <body>
+    <Main hasHeader={false}>
+      <section
+        id="home"
+        class="heropattern-texture-neutral-900 bg-neutral-950 px 4 py-10 to-neutral-900 min-h-screen flex flex-col items-center justify-center"
+      >
+        <div class="max-w-prose mx-auto flex flex-col items-center justify-center">
+          <CheckCircle className="text-positive-500" size={80} />
+          <h1 class="text-3xl lg:text-5xl !leading-[1.3] font-bold text-center mt-10">
+            Anfrage erfolgreich übermittelt.
+          </h1>
+          <p class="text-lg lg:text-2xl text-neutral-400 mt-10 text-center">
+            Wir werden uns so schnell wie möglich bei Ihnen melden.
+          </p>
+          <div
+            class="mt-20 flex items-center gap-2 group text-primary-500 py-4 px-6 rounded-full hover:bg-primary-500/10 cursor-pointer underline-offset-4"
+          >
+            <MoveLeft />
+            <a href="/" class="group-hover:underline text-lg">Zurück zur Startseite</a>
+          </div>
+        </div>
+      </section>
+    </Main>
+  </body>
+</BaseLayout>
+
+<style>
+  body {
+    /* Workaround: Somehow adding class or id  on body element will get removed when opening it in the browser*/
+    @apply flex min-h-screen flex-col;
+  }
+</style>

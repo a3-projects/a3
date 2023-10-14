@@ -1,0 +1,91 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import { META } from "@/constants/meta";
+import Layout from "@/layouts/Layout.astro";
+import { Main } from "@/ui/Main";
+---
+
+<Layout>
+  <BaseHead
+    title={META.TITLE}
+    description={META.DESCRIPTION}
+    robots="index,follow"
+    slot="head"
+  />
+  <Main>
+    <section
+      id="impressum"
+      class="bg-neutral-950 py-20 to-neutral-900 min-h-screen flex px-10"
+    >
+      <div class="max-w-prose mx-auto prose">
+        <h1 class="hyphens-auto">Datenschutz&shy;erklärung</h1>
+
+        <h2>Datenschutzerklärung für das Kontaktformular</h2>
+        <p>
+          Vielen Dank für die Nutzung unseres Kontaktformulars. Hier informieren
+          wir Sie darüber, wie wir mit den von Ihnen übermittelten Daten
+          umgehen:
+        </p>
+
+        <h3>Datenerhebung</h3>
+        <p>
+          Wir erfassen die folgenden Informationen über das Kontaktformular:
+        </p>
+        <ul>
+          <li>E-Mail-Adresse</li>
+          <li>Nachricht</li>
+        </ul>
+
+        <h3>Zweck der Datenerhebung</h3>
+        <p>
+          Die von Ihnen übermittelten Daten werden ausschließlich zur
+          Beantwortung Ihrer Anfrage verwendet.
+        </p>
+
+        <h3>Datenweitergabe</h3>
+        <p>
+          Ihre Daten werden nicht an Dritte weitergegeben, außer zur
+          Beantwortung Ihrer Anfrage.
+        </p>
+
+        <h3>Datenspeicherung</h3>
+        <p>
+          Ihre Daten werden so lange gespeichert, wie es für die Bearbeitung
+          Ihrer Anfrage erforderlich ist.
+        </p>
+
+        <h3>Ihre Rechte</h3>
+        <p>
+          Sie haben das Recht, Auskunft über die von uns gespeicherten Daten zu
+          erhalten und gegebenenfalls eine Berichtigung oder Löschung zu
+          verlangen. Kontaktieren Sie uns dazu bitte über die angegebene
+          E-Mail-Adresse.
+        </p>
+
+        <h2>Allgemeine Datenschutzerklärung</h2>
+        <p>
+          Vielen Dank für Ihren Besuch auf unserer Webseite. Hier erfahren Sie,
+          wie wir mit Ihren Daten umgehen:
+        </p>
+
+        <h3>Datenweitergabe</h3>
+        <p>
+          Ihre Daten werden nicht ohne Ihre Zustimmung an Dritte weitergegeben,
+          es sei denn, es ist gesetzlich vorgeschrieben.
+        </p>
+
+        <h3>Datensicherheit</h3>
+        <p>
+          Wir bemühen uns, angemessene Sicherheitsvorkehrungen zu treffen, um
+          Ihre Daten zu schützen.
+        </p>
+
+        <h3>Kontakt</h3>
+        <p>
+          Für Fragen zur Datenschutzerklärung kontaktieren Sie uns bitte unter
+          [Ihre Kontaktinformationen].
+        </p>
+      </div>
+    </section>
+  </Main>
+</Layout>

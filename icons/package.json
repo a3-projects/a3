@@ -1,0 +1,31 @@
+{
+  "name": "@crypler/icon-library",
+  "version": "0.1.0",
+  "description": "icon workflow tool",
+  "main": "build/icon-set/ts/iconSet.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "npm run pre-build && npm run generate ",
+    "pre-build": "del-cli build",
+    "post-build": "npm pack && move ./*.tgz .release",
+    "generate": "npm run generate:sprite && npm run generate:icon-set",
+    "generate:icon-set": "node src/icon-set-generator/index.js",
+    "generate:sprite": "svg-sprite icons/**/*.svg --config=svg-sprite.config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oemer aran",
+  "license": "ISC",
+  "dependencies": {
+    "camelcase": "^6.2.0",
+    "json5": "^2.2.0",
+    "svg-sprite": "^1.5.0"
+  },
+  "devDependencies": {
+    "del-cli": "^3.0.0",
+    "glob": "^7.1.6",
+    "svg-parser": "^2.0.4",
+    "svgson": "^5.2.1"
+  }
+}
