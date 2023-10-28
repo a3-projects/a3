@@ -3,12 +3,15 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
-
 // https://astro.build/config
 export default defineConfig({
-  site: "https://magical-snickerdoodle-3d7fa3.netlify.app/",
+  site: "https://a3-team.de",
   base: "",
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), sitemap(), react()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap(),
+    react(),
+  ],
 });
