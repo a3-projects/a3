@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         primary: colors.blue,
+        secondary: colors.teal,
         // primary: {
         //   "50": "#E4FDEB",
         //   "100": "#D1F0DA",
@@ -32,7 +33,7 @@ export default {
         positive: colors.emerald,
         warn: colors.amber,
         info: colors.blue,
-        black: colors.gray[950],
+        black: colors.black,
         white: colors.white,
       },
       /* @ts-ignore*/
@@ -50,5 +51,10 @@ export default {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-hero-patterns")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-hero-patterns"),
+    require("@domchristie/tailwind-utopia"),
+    require("@xpd/tailwind-3dtransforms"),
+  ],
 } satisfies Config;

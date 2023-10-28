@@ -1,0 +1,83 @@
+---
+import { PrincipleCard } from "@/domains/home/PrincipleCard";
+import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react";
+---
+
+<section
+  id="unsere-prinzipien"
+  class="overflow-hidden relative border-t border-solid border-neutral-900 flex items-start bg-gradient-to-b from-neutral-950 to-black pb-40"
+>
+  <div class="container mx-auto px-8 lg:px-0 z-10 flex flex-col items-start justify-start">
+    <h2 class="text-center text-fl-2xl font-bold pb-40 pt-20 w-full">Unsere Prinzipien</h2>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 w-full items-center justify-center gap-20 lg:gap-40 px-4 justify-items-center"
+    >
+      <PrincipleCard className="justify-self-start lg:justify-self-end">
+        <PrincipleCard.Border position="top-left" />
+        <PrincipleCard.Border position="top-left" className="delay-100" />
+        <PrincipleCard.Border position="top-left" className="delay-200" />
+        <PrincipleCard.Border position="top-left" className="delay-300" />
+
+        <PrincipleCard.Body>
+          <div class="w-1/4">
+            <ArrowDownToDot strokeWidth={1} className="w-full h-full text-primary-500" />
+          </div>
+          <div class="flex flex-col justify-between flex-grow">
+            <h3 class="text-fl-sm leading-[1.2] tracking-widest">SIMPEL, ABER SAUBER</h3>
+            <p class="text-neutral-400 text-fl-sm leading-[1.2]">
+              Die passende Lösung für jedes Problem - so wenig wie möglich, so viel wie nötig.
+            </p>
+          </div>
+        </PrincipleCard.Body>
+      </PrincipleCard>
+      <PrincipleCard className="justify-self-end lg:justify-self-start">
+        <PrincipleCard.Border position="top-right" />
+        <PrincipleCard.Border position="top-right" className="delay-100" />
+        <PrincipleCard.Border position="top-right" className="delay-200" />
+        <PrincipleCard.Body>
+          <div class="w-1/4">
+            <Workflow strokeWidth={1} className="w-full h-full text-primary-500" />
+          </div>
+          <div class="flex flex-col justify-between flex-grow">
+            <h3 class="text-fl-sm leading-[1.2] tracking-widest">MAXIMALES AUTOMATISIEREN</h3>
+            <p class="text-neutral-400 text-fl-sm leading-[1.2]">
+              Prozesse automatisieren, aufs Wesentliche fokusieren.
+            </p>
+          </div>
+        </PrincipleCard.Body>
+      </PrincipleCard>
+      <PrincipleCard className="justify-self-start lg:justify-self-end">
+        <PrincipleCard.Border position="bottom-left" />
+        <PrincipleCard.Border position="bottom-left" className="delay-100" />
+        <PrincipleCard.Border position="bottom-left" className="delay-200" />
+        <PrincipleCard.Body>
+          <div class="w-1/4">
+            <Repeat2 strokeWidth={1} className="w-full h-full text-primary-500" />
+          </div>
+          <div class="flex flex-col justify-between flex-grow">
+            <h3 class="text-fl-sm leading-[1.2] tracking-widest">ECHTE AGILITÄT</h3>
+            <p class="text-neutral-400 text-fl-sm leading-[1.2]">
+              Auf Änderung im Markt reagieren können - selbst spät in der Entwicklung.
+            </p>
+          </div>
+        </PrincipleCard.Body>
+      </PrincipleCard>
+      <PrincipleCard className="justify-self-end lg:justify-self-start">
+        <PrincipleCard.Border position="bottom-right" />
+        <PrincipleCard.Border position="bottom-right" className="delay-100" />
+        <PrincipleCard.Border position="bottom-right" className="delay-200" />
+        <PrincipleCard.Body>
+          <div class="w-1/4">
+            <MessagesSquare strokeWidth={1} className="w-full h-full text-primary-500" />
+          </div>
+          <div class="flex flex-col justify-between flex-grow">
+            <h3 class="text-fl-sm leading-[1.2] tracking-widest">MUT ZUR EHRLICHKEIT</h3>
+            <p class="text-neutral-400 text-fl-sm leading-[1.2]">
+              Kommunikation offen, statt hinter vorgehaltener Hand.
+            </p>
+          </div>
+        </PrincipleCard.Body>
+      </PrincipleCard>
+    </div>
+  </div>
+</section>

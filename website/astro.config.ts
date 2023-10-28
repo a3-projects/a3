@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://a3-team.de",
   base: "",
+
   integrations: [
     tailwind({
       applyBaseStyles: false,

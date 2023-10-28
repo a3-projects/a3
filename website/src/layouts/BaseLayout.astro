@@ -3,20 +3,24 @@ import "@fontsource/poppins";
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/700.css";
-import "@fontsource/merriweather";
-import "@fontsource/merriweather/400.css";
-import "@fontsource/merriweather/700.css";
+// import "@fontsource/merriweather";
+// import "@fontsource/merriweather/400.css";
+// import "@fontsource/merriweather/700.css";
 import "@/styles/global.css";
 import "@/styles/reset.css";
 ---
 
 <!doctype html>
-<html class="bg-neutral-950 text-neutral-50 font-sans" lang="en">
+<html class="bg-black text-neutral-50 font-sans text-fl-sm scroll-pt-header" lang="en">
   <slot />
   <style is:global>
     html {
       scroll-behavior: smooth;
     }
+    *::selection {
+      @apply bg-secondary-400/70 text-white;
+    }
   </style>
+
 
 </html>

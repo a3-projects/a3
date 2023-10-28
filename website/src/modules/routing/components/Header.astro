@@ -1,24 +1,23 @@
 ---
 import { Navbar } from "@/ui/Navbar";
+import { Logo } from "@/ui/icons/Logo";
 ---
 
 <header>
-  <Navbar>
+  <Navbar client:load>
     <Navbar.List>
       <Navbar.ListItem
-        className="group before:hover:bg-primary-600 before:hover:heropattern-graphpaper-primary-700"
+        className="group before:hover:bg-primary-700 before:hover:heropattern-diagonallines-primary-600"
       >
-        <a href="/#home" class="flex items-center px-2 gap-2 z-10">
-          <div class="flex">
-            <p class="font-bold uppercase break-words flex flex-col md:flex-row md:gap-1">
-              A3 <span class="font-extralight">Team</span>
-            </p>
+        <Navbar.Link href="/#start" className="flex items-center px-2 gap-3 z-10 h-full w-full text-white">
+          <Logo size={24} className="text-white" />
+
+          <div class="font-bold text-fl-sm">
+            A3 <span class="font-extralight">Team</span>
           </div>
-        </a>
+        </Navbar.Link>
       </Navbar.ListItem>
-      <Navbar.ListItem>
-        <Navbar.Link href="/#techstack">Tech-Stack</Navbar.Link>
-      </Navbar.ListItem>
+
       <Navbar.ListItem>
         <Navbar.Link href="/#kontakt">Kontakt</Navbar.Link>
       </Navbar.ListItem>

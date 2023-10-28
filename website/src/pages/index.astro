@@ -2,91 +2,20 @@
 import Layout from "@/layouts/Layout.astro";
 import BaseHead from "@/components/BaseHead.astro";
 import { Main } from "@/ui/Main";
-import { Button } from "@/ui/Button";
-import { Card } from "@/ui/Card";
-import { MonitorSmartphone, Server, Wrench } from "lucide-react";
-import { LogoOnDark } from "@/ui/icons/LogoOnDark";
+
+import PrincipleSection from "@/domains/home/PrincipleSection.astro";
+import TechStackSection from "@/domains/home/TechStackSection.astro";
+import HiringSection from "@/domains/home/HiringSection.astro";
+import StartSection from "@/domains/home/StartSection.astro";
 ---
 
 <Layout>
   <BaseHead slot="head" title="A3 Team" description="" />
+
   <Main>
-    <section
-      id="start"
-      class="relative heropattern-texture-neutral-900 flex items-start bg-neutral-950 py-10 min-h-[calc(100vh-theme('spacing.header'))]"
-    >
-      <div class="container mx-auto px-4">
-        <div class="max-w-prose prose">
-          <h1 class="font-bold text-4xl lg:text-7xl leading-[1.2]">A3 Team</h1>
-          <p class="text-2xl">
-            Ihr A-Team für die digitale Transformation. Wir sind ein Team aus erfahrenen Softwareentwicklern,
-            die sich auf die Entwicklung von Webanwendungen spezialisiert haben.
-          </p>
-          <p class="text-2xl">
-            Wir entwickeln Webanwendungen mit modernen Technologien und Frameworks. Dabei setzen wir auf eine
-            agile Entwicklungsmethode, um schnell und flexibel auf die Anforderungen unserer Kunden reagieren
-            zu können.
-          </p>
-          <Button animated className="mt-8" size="lg">Unser Tech-Stack</Button>
-        </div>
-      </div>
-    </section>
-    <section
-      id="tech-stack"
-      class="overflow-hidden relative border-t border-solid border-neutral-800 flex items-start bg-neutral-900 pb-14"
-    >
-      <div class="container mx-auto px-4 z-10">
-        <h2 class="text-center text-5xl font-bold py-14">TECH-STACK</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <Card className=" bg-neutral-500/5 shadow-xl shadow-neutral-950/20">
-            <Card.Header className="flex gap-4 items-center">
-              <div class="flex items-center justify-center p-1 bg-primary-500/10">
-                <div class="flex p-2 relative bg-primary-500/10">
-                  <Wrench className="text-primary-500" size={24} />
-                </div>
-              </div>
-              <h3 class="text-xl text-center">Infrastruktur</h3>
-            </Card.Header>
-            <Card.Body className="text-lg text-neutral-400">
-              Unsere Experten bieten erstklassige Infrastrukturdienstleistungen, die Ihre Unternehmensprozesse
-              unterstützen und skalieren. Wir optimieren Ihre Hardware und Cloud-Ressourcen für maximale
-              Leistung und Effizienz.
-            </Card.Body>
-          </Card>
-          <Card className=" bg-neutral-500/5 shadow-xl shadow-neutral-950/20">
-            <Card.Header className="flex gap-4 items-center">
-              <div class="flex items-center justify-center p-1 bg-primary-500/10">
-                <div class="p-2 relative bg-primary-500/10">
-                  <Server className="text-primary-500" size={24} />
-                </div>
-              </div>
-              <h3 class="text-xl text-center">Backend</h3>
-            </Card.Header>
-            <Card.Body className="text-lg text-neutral-400">
-              Unser Backend-Entwicklungsteam gestaltet und verwaltet die Kernfunktionalität Ihrer Anwendungen
-              und Systeme. Wir sorgen für nahtlose Datenverarbeitung und Integration, um Ihre
-              Geschäftsanforderungen zu erfüllen.
-            </Card.Body>
-          </Card><Card className=" bg-neutral-500/5 shadow-xl shadow-neutral-950/20">
-            <Card.Header className="flex gap-4 items-center">
-              <div class="flex items-center justify-center p-1 bg-primary-500/10">
-                <div class="p-2 relative bg-primary-500/10">
-                  <MonitorSmartphone className="text-primary-500" size={24} />
-                </div>
-              </div>
-              <h3 class="text-xl text-center">Frontend</h3>
-            </Card.Header>
-            <Card.Body className="text-lg text-neutral-400">
-              Unsere Frontend-Experten gestalten benutzerfreundliche, visuell ansprechende Oberflächen für
-              Webanwendungen und mobile Apps. Wir optimieren das Nutzererlebnis, um Ihre Zielgruppe zu
-              begeistern.
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
-      <LogoOnDark
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%] rotate-30 text-primary-500/5"
-      />
-    </section>
+    <StartSection />
+    <PrincipleSection />
+    <TechStackSection />
+    <HiringSection />
   </Main>
 </Layout>

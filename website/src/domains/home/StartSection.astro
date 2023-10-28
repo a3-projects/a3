@@ -1,0 +1,45 @@
+---
+import { BackPattern } from "@/ui/BackPattern";
+import { button } from "@/ui/Button";
+import { Image } from "astro:assets";
+import blackWaveBackground from "@/assets/images/logo-background.svg";
+---
+
+<div class="absolute h-[100vh] -mt-header w-full">
+  <Image class="w-full h-full object-cover" src={blackWaveBackground} alt="black wave background" />
+</div>
+<section
+  id="start"
+  class="relative flex items-center pb-40 px-fl-md-xl pt-10 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
+>
+  <div aria-hidden="true" class="-z-0 flex gap-12 absolute left-0 h-[300%] transform rotate-30 -mt-20">
+    <div class="w-[1px] h-full bg-neutral-800"></div>
+    <div class="w-[1px] h-full bg-neutral-800"></div>
+  </div>
+  <div class="container z-10 mx-auto h-full gap-fl-2xl flex-grow items-center">
+    <div class="max-w-prose flex flex-col gap-fl-2xl">
+      <!-- <BackPattern color="secondary" className="self-start">
+      <div
+        class="bg-black border border-solid border-secondary-400 text-white fl-text-step-0 p-fl-xs-md flex flex-col gap-8 items-start leading-[2]"
+      >
+        <p>
+          Wir suchen unsere ersten Freelancer-Projekte. Sichern Sie sich <TextHighlight>konstengünstige</TextHighlight>
+          Software-Entwicklung ohne Qualitätsabstriche.
+        </p>
+        <a href="#kontakt" class={button({ variant: "secondary" })}>Experten anfordern</a>
+      </div>
+    </BackPattern> -->
+      <h1 class="font-bold text-fl-2xl leading-[1.2]">
+        Auch Software braucht <span class="text-primary-500"> Digitalisierung</span>
+      </h1>
+
+      <p class="text-fl-base text-neutral-400">
+        Egal ob Legacy oder Greenfield. Wir bringen Ihren Code mit modernen, agilen Prozessen in Einklang.
+      </p>
+
+      <BackPattern animated className="self-start">
+        <a href="#unsere-prinzipien" class={button({ size: "lg" })}>Unsere Prinzipien</a>
+      </BackPattern>
+    </div>
+  </div>
+</section>

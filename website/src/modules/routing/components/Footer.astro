@@ -1,15 +1,16 @@
 ---
 import { Button } from "@/ui/Button";
-import { Astro as AstroIcon } from "@/ui/icons/Astro";
-import { React as ReactIcon } from "@/ui/icons/React";
-import { Lucide } from "@/ui/icons/Lucide";
 
-import { Tailwind } from "@/ui/icons/Tailwind";
+import { Image } from "astro:assets";
+import astro from "@/assets/images/astro.svg";
+import tailwind from "@/assets/images/tailwind.svg";
+import lucide from "@/assets/images/lucide.svg";
+import react from "@/assets/images/react.svg";
 ---
 
 <footer
   id="kontakt"
-  class="bg-neutral-950 heropattern-texture-neutral-900 text-neutral-50 pt-40 border-t border-solid border-neutral-800 flex flex-col gap-6"
+  class="bg-black z-10 heropattern-texture-neutral-950 text-neutral-50 pt-40 border-t border-solid border-neutral-900 flex flex-col gap-6"
 >
   <div class="flex flex-col gap-4 px-10">
     <div>
@@ -21,8 +22,8 @@ import { Tailwind } from "@/ui/icons/Tailwind";
         data-netlify-recaptcha="true"
         class="flex flex-col gap-4 max-w-prose mx-auto"
       >
-        <h2 class="font-bold text-3xl lg:text-4xl">Unser Team passt perfekt zu Ihrem Projekt?</h2>
-        <p class="mt-5 text-lg lg:text-2xl text-neutral-400 leading-[1.7]">
+        <h2 class="font-bold text-fl-xl">Unser Team passt perfekt zu Ihrem Projekt?</h2>
+        <p class="mt-5 text-fl-base text-neutral-400 leading-[1.7]">
           Perfekt! Kontaktieren Sie uns jetzt ganz unverbindlich. Wir werden uns so schnell wie möglich bei
           Ihnen melden.
         </p>
@@ -30,7 +31,7 @@ import { Tailwind } from "@/ui/icons/Tailwind";
         <label class="text-neutral-400 mt-10 flex flex-col gap-3"
           >Email
           <input
-            class="border-2 border-solid text-white border-neutral-700 p-4 placeholder:opacity-70 bg-neutral-500/10 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+            class="border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
             placeholder="Mit welcher Email sollen wir Sie kontaktieren?"
             required
             name="email"
@@ -40,7 +41,7 @@ import { Tailwind } from "@/ui/icons/Tailwind";
         <label class="text-neutral-400 mt-4 flex flex-col gap-3"
           >Ihre Anfrage
           <textarea
-            class="h-[200px] border-2 border-solid text-white border-neutral-700 p-4 placeholder:opacity-70 bg-neutral-500/10 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+            class="h-[200px] border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
             required
             name="message"
             placeholder="Erzähle Sie uns etwas über Ihr Projekt."></textarea>
@@ -52,26 +53,28 @@ import { Tailwind } from "@/ui/icons/Tailwind";
       </form>
     </div>
     <div class=""></div>
-    <hr class="max-w-prose mx-auto border-neutral-800 w-1/2 my-20" />
 
-    <p class="mx-auto font-light">Powered by</p>
+    <p class="mx-auto font-light mt-40">Powered by</p>
     <div class="flex items-center justify-center gap-4">
       <a href="https://tailwindcss.com/" title="reactjs" target="_blank">
-        <ReactIcon className="text-[#61DAFB]" size={32} /></a
-      >
-      <a href="https://astro.build/" title="astrojs" target="_blank">
-        <AstroIcon size={32} />
+        <Image width={32} height={32} src={react} alt="react logo" />
+
+        <a href="https://astro.build/" title="astrojs" target="_blank">
+          <Image width={32} height={32} src={astro} alt="astro logo" />
+        </a>
+
+        <a href="https://tailwindcss.com/" title="tailwindcss" target="_blank">
+          <Image width={32} height={32} src={tailwind} alt="tailwind logo" />
+        </a>
       </a>
 
-      <a href="https://tailwindcss.com/" title="tailwindcss" target="_blank">
-        <Tailwind className="text-[#38BDF8]" size={32} />
+      <a href="https://lucide.dev/" title="lucide" target="_blank">
+        <Image width={32} height={32} src={lucide} alt="lucide logo" />
       </a>
-
-      <a href="https://lucide.dev/" title="lucide" target="_blank"> <Lucide size={32} /></a>
     </div>
   </div>
   <div
-    class="self-start flex gap-4 bg-neutral-950 w-full h-16 px-5 items-center border-t border-solid border-neutral-800 mt-10"
+    class="self-start flex gap-4 bg-black w-full h-16 px-5 items-center border-t border-solid border-neutral-900 mt-10"
   >
     <a class="text-sm hover:underline underline-offset-4" href="/impressum">Impressum</a>
     <div class="h-1/3 w-[1px] bg-neutral-800"></div>
