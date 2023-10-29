@@ -18,8 +18,8 @@ export const button = tv({
         "bg-neutral-50 text-neutral-950 hover:bg-neutral-950 hover:text-neutral-50 hover:shadow-lg ",
       link: "text-primary underline-offset-4 hover:underline",
     },
-    animated: {
-      true: "duration-100",
+    increaseHitbox: {
+      true: "before:absolute before:h-[calc(100%+1rem)] relative before:w-[calc(100%+1rem)]",
     },
     color: {},
     size: {
@@ -32,6 +32,8 @@ export const button = tv({
   defaultVariants: {
     variant: "default",
     size: "default",
+    animated: false,
+    increaseHitbox: false,
   },
 });
 
@@ -39,10 +41,10 @@ export interface ButtonProps extends VariantProps<typeof button> {}
 
 const Button = forwardRef<ElementRef<"button">, ButtonProps & ComponentPropsWithoutRef<"button">>(
   (props, ref) => {
-    const { children, className, variant = "default", size = "default", animated = false, ...rest } = props;
+    const { children, className, variant, size, increaseHitbox, ...rest } = props;
 
     return (
-      <button ref={ref} className={button({ className, variant, size, animated })} {...rest}>
+      <button ref={ref} className={button({ className, variant, size, increaseHitbox })} {...rest}>
         {children}
       </button>
     );
