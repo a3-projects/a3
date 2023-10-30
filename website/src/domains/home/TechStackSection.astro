@@ -75,10 +75,7 @@ interface TechIcon {
 }
 ---
 
-<section
-  id="tech-stack"
-  class="relative border-solid  border-neutral-900 flex items-start bg-black pb-40"
->
+<section id="tech-stack" class="relative border-solid border-neutral-900 flex items-start bg-black pb-40">
   <div class="container mx-auto px-4 z-10 flex flex-col items-start justify-start">
     <h2 class="text-center text-fl-2xl font-bold py-14 md:py-40 w-full">Unser Tech Stack</h2>
     <div class="flex flex-col gap-64 w-full items-center lg:items-start">
@@ -102,7 +99,7 @@ interface TechIcon {
         <Card
           className="flex-shrink-0 bg-neutral-950/60 heropattern-graphpaper-neutral-800 border-t lg:border-t-0 lg:border-l border-neutral-800 border-solid "
         >
-          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-11 p-6 lg:p-6">
+          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-14 p-8 lg:p-8">
             {
               devOpsIcons.map((icon) => (
                 <a class="min-w-[48px] min-h-[48px] " href={icon.href} title={icon.title} target="_blank">
@@ -133,7 +130,7 @@ interface TechIcon {
         <Card
           className="flex-shrink-0 bg-neutral-950/60 heropattern-graphpaper-neutral-800 border-t lg:border-t-0 lg:border-r border-neutral-800 border-solid "
         >
-          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-11 p-6 lg:p-6">
+          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-14 p-8 lg:p-8">
             {
               backendIcons.map((icon) => (
                 <a href={icon.href} title={icon.title} target="_blank">
@@ -162,7 +159,7 @@ interface TechIcon {
         <Card
           className="flex-shrink-0 bg-neutral-950/60 heropattern-graphpaper-neutral-800 border-t lg:border-t-0 lg:border-l border-neutral-800 border-solid "
         >
-          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-11 p-6 lg:p-6">
+          <Card.Body className="grid grid-cols-3 gap-8 justify-items-center lg:gap-14 p-8 lg:p-8">
             {
               frontendIcons.map((icon) => (
                 <a href={icon.href} title={icon.title} target="_blank">
@@ -177,8 +174,7 @@ interface TechIcon {
   </div>
   <div class="absolute w-full h-full top-0 left-0 overflow-x-clip">
     <LogoOutline
-    className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-neutral-900/50"
-  />
+      className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-neutral-900/50"
+    />
   </div>
-
 </section>
