@@ -5,9 +5,45 @@ import { Image } from "astro:assets";
 import blackWaveBackground from "@/assets/images/logo-background.svg";
 ---
 
-<div class="absolute h-[100vh] -mt-header w-full">
-  <Image class="w-full h-full object-cover" src={blackWaveBackground} alt="black wave background" />
+<script>
+  import { animate, scroll } from "motion";
+
+  // timeline([
+  //   ["#hero-title", { x: [-50, 0], y: [50, 0], opacity: [0, 1] }, { duration: 1 }],
+  //   ["#hero-description", { x: [-50, 0], y: [50, 0], opacity: [0, 1] }, { duration: 1, at: "-0.3" }],
+  //   ["#hero-button", { x: [-50, 0], y: [50, 0], opacity: [0, 1] }, { duration: 1, at: "-0.3" }],
+  // ]);
+
+  const fadeOutUp = (selector: string) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      scroll(animate(element, { y: [0, -200], opacity: [1, 0] }), {
+        target: element,
+        offset: ["-300px 0", "1 0"],
+      });
+    }
+  };
+  fadeOutUp("#hero-title");
+  fadeOutUp("#hero-description");
+  fadeOutUp("#hero-button");
+
+  const heroBackground = document.querySelector("#hero-background");
+  if (heroBackground) {
+    scroll(animate(heroBackground, { x: [0, 1000], scale: [1, 2] }), {
+      target: heroBackground,
+      offset: ["0 0", "1 0"],
+    });
+  }
+</script>
+<div class="absolute h-[100vh] -mt-header w-full overflow-hidden">
+  <Image
+    id="hero-background"
+    class="w-full h-full object-cover overflow-hidden"
+    src={blackWaveBackground}
+    alt="black wave background"
+  />
 </div>
+
 <section
   id="start"
   class="relative flex items-center pb-40 px-fl-md-xl pt-10 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
@@ -19,26 +55,29 @@ import blackWaveBackground from "@/assets/images/logo-background.svg";
   <div class="container z-10 mx-auto h-full gap-fl-2xl flex-grow items-center">
     <div class="max-w-prose flex flex-col gap-fl-2xl">
       <!-- <BackPattern color="secondary" className="self-start">
-      <div
-        class="bg-black border border-solid border-secondary-400 text-white fl-text-step-0 p-fl-xs-md flex flex-col gap-8 items-start leading-[2]"
-      >
-        <p>
-          Wir suchen unsere ersten Freelancer-Projekte. Sichern Sie sich <TextHighlight>konstengünstige</TextHighlight>
-          Software-Entwicklung ohne Qualitätsabstriche.
-        </p>
-        <a href="#kontakt" class={button({ variant: "secondary" })}>Experten anfordern</a>
-      </div>
-    </BackPattern> -->
-      <h1 class="font-bold text-fl-2xl leading-[1.2]">
+        <div
+          class="bg-black border border-solid border-secondary-400 text-white fl-text-step-0 p-fl-xs-md flex flex-col gap-8 items-start leading-[2]"
+        >
+          <p>
+            Wir suchen unsere ersten Freelancer-Projekte. Sichern Sie sich <TextHighlight>
+              konstengünstige
+            </TextHighlight>
+             Software-Entwicklung ohne Qualitätsabstriche.
+          </p>
+          <a href="#kontakt" class={button({ variant: "secondary" })}>Experten anfordern</a>
+        </div>
+      </BackPattern> -->
+      <h1 id="hero-title" class="font-bold text-fl-2xl leading-[1.2]">
         Auch Software braucht <span class="text-primary-500"> Digitalisierung</span>
       </h1>
 
-      <p class="text-fl-base text-neutral-400">
+      <p id="hero-description" class="text-fl-base text-neutral-400">
         Egal ob Legacy oder Greenfield. Wir bringen Ihren Code mit modernen, agilen Prozessen in Einklang.
       </p>
 
-      <BackPattern animated className="self-start">
-        <a href="#unsere-prinzipien" class={button({ size: "lg", increaseHitbox:true })}>Unsere Prinzipien</a>
+      <BackPattern id="hero-button" animated className="self-start">
+        <a href="#unsere-prinzipien" class={button({ size: "lg", increaseHitbox: true })}>Unsere Prinzipien</a
+        >
       </BackPattern>
     </div>
   </div>

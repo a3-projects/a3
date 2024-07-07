@@ -75,11 +75,44 @@ interface TechIcon {
 }
 ---
 
+<script>
+  import { scroll, animate } from "motion";
+
+  const techstackBackground = document.querySelector("#techstack-background");
+  if (techstackBackground) {
+    scroll(animate(techstackBackground, { y: [0, -1000] }), {
+      target: techstackBackground,
+      offset: ["0 0.5", "1 0"],
+    });
+  }
+
+  const techstackTitle = document.querySelector("#techstack-title");
+  if (techstackTitle) {
+    scroll(animate(techstackTitle, { y: [200, 0], opacity: [0, 1] }), {
+      target: techstackTitle,
+      offset: ["0 1", "3 1"],
+    });
+  }
+
+  const techstackCards = document.querySelectorAll(".techstack-card");
+
+  techstackCards.forEach((el, i) => {
+    if (el) {
+      scroll(animate(el, { x: [`${50 * (i % 2 ? 1 : -1)}%`, 0], y: [300, 0], opacity: [0, 1] }), {
+        target: el,
+        offset: ["0 1", "0 0.5"],
+      });
+    }
+  });
+</script>
+
 <section id="tech-stack" class="relative border-solid border-neutral-900 flex items-start bg-black pb-40">
   <div class="container mx-auto px-4 z-10 flex flex-col items-start justify-start">
-    <h2 class="text-center text-fl-2xl font-bold py-14 md:py-40 w-full">Unser Tech Stack</h2>
+    <h2 id="techstack-title" class="text-center text-fl-2xl font-bold py-14 md:py-40 w-full">
+      Unser Tech Stack
+    </h2>
     <div class="flex flex-col gap-64 w-full items-center lg:items-start">
-      <div class="flex flex-col lg:flex-row border border-solid border-neutral-800">
+      <div class="techstack-card flex flex-col lg:flex-row border border-solid border-neutral-800">
         <Card className=" bg-black/50 max-w-prose ">
           <Card.Header className="flex gap-4 items-center">
             <div class="flex items-center justify-center p-1 bg-primary-500/10">
@@ -110,7 +143,9 @@ interface TechIcon {
           </Card.Body>
         </Card>
       </div>
-      <div class="flex flex-col lg:flex-row-reverse border border-solid border-neutral-800 lg:self-end">
+      <div
+        class="techstack-card flex flex-col lg:flex-row-reverse border border-solid border-neutral-800 lg:self-end"
+      >
         <Card className=" bg-black/50 max-w-prose">
           <Card.Header className="flex gap-4 items-center">
             <div class="flex items-center justify-center p-1 bg-primary-500/10">
@@ -140,7 +175,7 @@ interface TechIcon {
             }
           </Card.Body>
         </Card>
-      </div><div class="flex flex-col lg:flex-row border border-solid border-neutral-800">
+      </div><div class="techstack-card flex flex-col lg:flex-row border border-solid border-neutral-800">
         <Card className=" bg-black/50 max-w-prose">
           <Card.Header className="flex gap-4 items-center">
             <div class="flex items-center justify-center p-1 bg-primary-500/10">
@@ -172,7 +207,7 @@ interface TechIcon {
       </div>
     </div>
   </div>
-  <div class="absolute w-full h-full top-0 left-0 overflow-x-clip">
+  <div id="techstack-background" class="absolute w-full h-full top-0 left-0 overflow-x-clip">
     <LogoOutline
       className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-neutral-900/50"
     />

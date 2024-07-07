@@ -3,16 +3,39 @@ import { PrincipleCard } from "@/domains/home/PrincipleCard";
 import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react";
 ---
 
+<script>
+  import { scroll, animate } from "motion";
+  const principleTitle = document.querySelector("#principle-title");
+  if (principleTitle) {
+    scroll(animate(principleTitle, { y: [200, 0], opacity: [0, 1] }), {
+      target: principleTitle,
+      offset: ["0 1", "3 1"],
+    });
+  }
+
+  const principleCards = document.querySelectorAll(".principle-card");
+
+  principleCards.forEach((el, i) => {
+    if (el) {
+      scroll(animate(el, { x: [`${100 * (i % 2 ? 1 : -1)}%`, 0], y: [400, 0], opacity: [0, 1] }), {
+        target: el,
+        offset: ["0 1", "2 1"],
+      });
+    }
+  });
+</script>
 <section
   id="unsere-prinzipien"
   class="overflow-hidden relative border-t border-solid border-neutral-900 flex items-start bg-gradient-to-b from-neutral-950 to-black pb-40"
 >
   <div class="container mx-auto px-8 lg:px-0 z-10 flex flex-col items-start justify-start">
-    <h2 class="text-center text-fl-2xl font-bold pb-40 pt-20 w-full">Unsere Prinzipien</h2>
+    <h2 class="text-center text-fl-2xl font-bold pb-40 pt-20 w-full" id="principle-title">
+      Unsere Prinzipien
+    </h2>
     <div
       class="grid grid-cols-1 lg:grid-cols-2 w-full items-center justify-center gap-20 lg:gap-40 px-4 justify-items-center"
     >
-      <PrincipleCard className="justify-self-start lg:justify-self-end">
+      <PrincipleCard id="principle-cardo" className="principle-card justify-self-start lg:justify-self-end">
         <PrincipleCard.Border position="top-left" />
         <PrincipleCard.Border position="top-left" className="delay-100" />
         <PrincipleCard.Border position="top-left" className="delay-200" />
@@ -30,7 +53,7 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
           </div>
         </PrincipleCard.Body>
       </PrincipleCard>
-      <PrincipleCard className="justify-self-end lg:justify-self-start">
+      <PrincipleCard className="principle-card justify-self-end lg:justify-self-start">
         <PrincipleCard.Border position="top-right" />
         <PrincipleCard.Border position="top-right" className="delay-100" />
         <PrincipleCard.Border position="top-right" className="delay-200" />
@@ -46,7 +69,7 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
           </div>
         </PrincipleCard.Body>
       </PrincipleCard>
-      <PrincipleCard className="justify-self-start lg:justify-self-end">
+      <PrincipleCard className="principle-card justify-self-start lg:justify-self-end">
         <PrincipleCard.Border position="bottom-left" />
         <PrincipleCard.Border position="bottom-left" className="delay-100" />
         <PrincipleCard.Border position="bottom-left" className="delay-200" />
@@ -62,7 +85,7 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
           </div>
         </PrincipleCard.Body>
       </PrincipleCard>
-      <PrincipleCard className="justify-self-end lg:justify-self-start">
+      <PrincipleCard className="principle-card justify-self-end lg:justify-self-start">
         <PrincipleCard.Border position="bottom-right" />
         <PrincipleCard.Border position="bottom-right" className="delay-100" />
         <PrincipleCard.Border position="bottom-right" className="delay-200" />

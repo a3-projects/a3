@@ -5,16 +5,75 @@ import { Card } from "@/ui/Card";
 import { CheckSquare, User, Users } from "lucide-react";
 ---
 
+<script>
+  import { scroll, animate } from "motion";
+
+  const hiringTeamBackground = document.querySelectorAll(".hiring-team-backgorund");
+
+  hiringTeamBackground.forEach((el) => {
+    if (el) {
+      scroll(animate(el, { skewX: ["0deg", "-30deg"] }), {
+        target: el,
+        offset: ["0 1", "0 0.2"],
+      });
+    }
+  });
+
+  const hiringTeamBackgroundMobile = document.querySelectorAll(".hiring-team-backgorund-mobile");
+
+  hiringTeamBackgroundMobile.forEach((el) => {
+    if (el) {
+      scroll(animate(el, { skewY: ["-20deg", "-5deg"] }), {
+        target: el,
+        offset: ["1 1", "1.2 1"],
+      });
+    }
+  });
+
+  const hiringTeamCard = document.querySelector("#hiring-team-card");
+
+  if (hiringTeamCard) {
+    scroll(animate(hiringTeamCard, { x: ["-100%", 0], opacity: [0, 1] }), {
+      target: hiringTeamCard,
+      offset: ["0.5 1", "0 0.5"],
+    });
+  }
+
+  const hiringInvidiualCard = document.querySelector("#hiring-individual-card");
+
+  if (hiringInvidiualCard) {
+    scroll(animate(hiringInvidiualCard, { x: ["100%", 0], opacity: [0, 1] }), {
+      target: hiringInvidiualCard,
+      offset: ["1.2 1", "0.5 0.5"],
+    });
+  }
+
+  const hiringTeamOr = document.querySelector("#hiring-team-or");
+
+  if (hiringTeamOr && hiringInvidiualCard) {
+    scroll(animate(hiringTeamOr, { y: ["100%", 0], opacity: [0, 1] }), {
+      target: hiringInvidiualCard,
+      offset: ["1 1", "1.2 1"],
+    });
+  }
+</script>
 <section class="relative z-10 bg-neutral-950 border-t border-solid border-neutral-800 overflow-hidden py-20">
-  <div class="hidden lg:flex absolute bg-primary-800 w-1/2 h-full top-0 left-0 -skew-x-[30deg] z-0"></div>
-  <div class="hidden lg:flex absolute bg-primary-800 w-full h-full top-0 -left-1/2 -skew-x-[30deg] z-0"></div>
-  <div class="lg:hidden absolute bg-primary-800 w-full h-1/2 top-0 left-0 z-0 -skew-y-[5deg]"></div>
+  <div class="hiring-team-backgorund hidden lg:flex absolute bg-primary-800 w-1/2 h-full top-0 left-0 z-0">
+  </div>
+  <div
+    class="hiring-team-backgorund hidden lg:flex absolute bg-primary-800 w-full h-full top-0 -left-1/2 z-0"
+  >
+  </div>
+  <div
+    class="hiring-team-backgorund-mobile lg:hidden absolute bg-primary-800 w-full h-1/2 top-0 left-0 z-0 skew-y-[10deg]"
+  >
+  </div>
   <div class="lg:hidden absolute bg-primary-800 w-full h-1/4 top-0 left-0 z-0"></div>
 
   <div
     class="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-20 relative z-10"
   >
-    <Card className="w-[350px] " color="transparent">
+    <Card id="hiring-team-card" className="w-[350px] " color="transparent">
       <Card.Header className="flex flex-col items-center justify-center">
         <Users size={64} className="text-primary-300" />
 
@@ -45,13 +104,17 @@ import { CheckSquare, User, Users } from "lucide-react";
       </Card.Body>
       <Card.Footer className="flex items-center justify-center mt-8">
         <BackPattern className="self-start" color="neutralOnDark" animated>
-          <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}>Experten anfordern</a>
+          <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
+            >Experten anfordern</a
+          >
         </BackPattern>
       </Card.Footer>
     </Card>
-    <div class="h-full italic self-center font-extralight text-fl-sm tracking-widest">ODER</div>
+    <div id="hiring-team-or" class="h-full italic self-center font-extralight text-fl-sm tracking-widest">
+      ODER
+    </div>
 
-    <Card className="w-[350px]" color="transparent">
+    <Card id="hiring-individual-card" className="w-[350px]" color="transparent">
       <Card.Header className="flex flex-col items-center justify-center">
         <User size={64} className="text-neutral-400" />
         <h3 class="text-center text-fl-lg font-bold text-neutral-400">Einzeln</h3>
@@ -75,7 +138,9 @@ import { CheckSquare, User, Users } from "lucide-react";
       </Card.Body>
       <Card.Footer className="flex items-center justify-center mt-8">
         <BackPattern className="self-start" color="neutralOnDark" animated>
-          <a href="#kontakt" class={button({ variant: "neutralOnDark",  increaseHitbox: true })}>Experten anfordern</a>
+          <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
+            >Experten anfordern</a
+          >
         </BackPattern>
       </Card.Footer>
     </Card>

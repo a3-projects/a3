@@ -8,6 +8,21 @@ import lucide from "@/assets/images/lucide.svg";
 import react from "@/assets/images/react.svg";
 ---
 
+<script>
+  import { animate, scroll } from "motion";
+  const fadeInUp = (selector: string) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      scroll(animate(element, { y: [200, 0], opacity: [0, 1] }), {
+        target: element,
+        offset: [`-300px 0.5`, "0 0.5"],
+      });
+    }
+  };
+  fadeInUp("#contact-title");
+  fadeInUp("#contact-description");
+  fadeInUp("#contact-form");
+</script>
 <footer
   id="kontakt"
   class="bg-black heropattern-texture-neutral-950 text-neutral-50 pt-40 border-t border-solid border-neutral-900 flex flex-col gap-6"
@@ -21,33 +36,37 @@ import react from "@/assets/images/react.svg";
         action="/anfrage-erfolgreich-uebermittelt"
         class="flex flex-col gap-4 max-w-prose mx-auto"
       >
-        <h2 class="font-bold text-3xl lg:text-4xl">Unser Team passt perfekt zu Ihrem Projekt?</h2>
-        <p class="mt-5 text-lg lg:text-2xl text-neutral-400 leading-[1.7]">
+        <h2 id="contact-title" class="font-bold text-3xl lg:text-4xl">
+          Unser Team passt perfekt zu Ihrem Projekt?
+        </h2>
+        <p id="contact-description" class="mt-5 text-lg lg:text-2xl text-neutral-400 leading-[1.7]">
           Perfekt! Kontaktieren Sie uns jetzt ganz unverbindlich. Wir werden uns so schnell wie möglich bei
           Ihnen melden.
         </p>
-        <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
-        <label class="text-neutral-400 mt-10 flex flex-col gap-3"
-          >Email
-          <input
-            class="border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-            placeholder="Mit welcher Email sollen wir Sie kontaktieren?"
-            required
-            name="email"
-            type="email"
-          /></label
-        >
-        <label class="text-neutral-400 mt-4 flex flex-col gap-3"
-          >Ihre Anfrage
-          <textarea
-            class="h-[200px] border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-            required
-            name="message"
-            placeholder="Erzähle Sie uns etwas über Ihr Projekt."></textarea>
-        </label>
-        <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
-          Anfrage absenden
-        </Button>
+        <div id="contact-form">
+          <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
+          <label class="text-neutral-400 mt-10 flex flex-col gap-3"
+            >Email
+            <input
+              class="border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+              placeholder="Mit welcher Email sollen wir Sie kontaktieren?"
+              required
+              name="email"
+              type="email"
+            /></label
+          >
+          <label class="text-neutral-400 mt-4 flex flex-col gap-3"
+            >Ihre Anfrage
+            <textarea
+              class="h-[200px] border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+              required
+              name="message"
+              placeholder="Erzähle Sie uns etwas über Ihr Projekt."></textarea>
+          </label>
+          <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
+            Anfrage absenden
+          </Button>
+        </div>
       </form>
     </div>
     <div class=""></div>
