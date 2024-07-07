@@ -7,6 +7,7 @@ import { CheckSquare, User, Users } from "lucide-react";
 
 <script>
   import { scroll, animate } from "motion";
+  const hiringSection = document.querySelector("#hiring-section")!;
 
   const hiringTeamBackground = document.querySelectorAll(".hiring-team-backgorund");
 
@@ -14,7 +15,7 @@ import { CheckSquare, User, Users } from "lucide-react";
     if (el) {
       scroll(animate(el, { skewX: ["0deg", "-30deg"] }), {
         target: el,
-        offset: ["0 1", "0 0.2"],
+        offset: ["0 0.7", "0.5 0.5"],
       });
     }
   });
@@ -33,7 +34,7 @@ import { CheckSquare, User, Users } from "lucide-react";
   const hiringTeamCard = document.querySelector("#hiring-team-card");
 
   if (hiringTeamCard) {
-    scroll(animate(hiringTeamCard, { x: ["-100%", 0], opacity: [0, 1] }), {
+    scroll(animate(hiringTeamCard, { x: ["-200px", 0], opacity: [0, 1] }), {
       target: hiringTeamCard,
       offset: ["0.5 1", "0 0.5"],
     });
@@ -42,9 +43,9 @@ import { CheckSquare, User, Users } from "lucide-react";
   const hiringInvidiualCard = document.querySelector("#hiring-individual-card");
 
   if (hiringInvidiualCard) {
-    scroll(animate(hiringInvidiualCard, { x: ["100%", 0], opacity: [0, 1] }), {
-      target: hiringInvidiualCard,
-      offset: ["1.2 1", "0.5 0.5"],
+    scroll(animate(hiringInvidiualCard, { x: ["100px", 0], opacity: [0, 1] }), {
+      target: hiringSection,
+      offset: ["0.4 0.5", "0.6 0.5"],
     });
   }
 
@@ -52,12 +53,15 @@ import { CheckSquare, User, Users } from "lucide-react";
 
   if (hiringTeamOr && hiringInvidiualCard) {
     scroll(animate(hiringTeamOr, { y: ["100%", 0], opacity: [0, 1] }), {
-      target: hiringInvidiualCard,
-      offset: ["1 1", "1.2 1"],
+      target: hiringSection,
+      offset: ["0.4 0.5", "0.5 0.5"],
     });
   }
 </script>
-<section class="relative z-10 bg-neutral-950 border-t border-solid border-neutral-800 overflow-hidden py-20">
+<section
+  id="hiring-section"
+  class="relative z-10 bg-neutral-950 border-t border-solid border-neutral-800 overflow-hidden py-20"
+>
   <div class="hiring-team-backgorund hidden lg:flex absolute bg-primary-800 w-1/2 h-full top-0 left-0 z-0">
   </div>
   <div

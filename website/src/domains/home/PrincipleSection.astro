@@ -19,7 +19,7 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
     if (el) {
       scroll(animate(el, { x: [`${100 * (i % 2 ? 1 : -1)}%`, 0], y: [400, 0], opacity: [0, 1] }), {
         target: el,
-        offset: ["0 1", "2 1"],
+        offset: ["0 1", "0 0.5"],
       });
     }
   });
