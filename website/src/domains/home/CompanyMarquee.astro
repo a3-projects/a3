@@ -1,0 +1,140 @@
+---
+// Import all company logos
+import AdidasLogo from "../../assets/images/company-logos/company-logo-adidas-white.svg";
+import DatevLogo from "../../assets/images/company-logos/company-logo-datev-white.svg";
+import KickerLogo from "../../assets/images/company-logos/company-logo-kicker-white.svg";
+import NordbayernLogo from "../../assets/images/company-logos/company-logo-nordbayern-white.svg";
+import FraunhoferIISLogo from "../../assets/images/company-logos/company-logo-fraunhofer-iis-white.svg";
+
+import PaesslerLogo from "../../assets/images/company-logos/company-logo-paessler-white.svg";
+import SellwerkLogo from "../../assets/images/company-logos/company-logo-sellwerk-white.svg";
+import SiemensLogo from "../../assets/images/company-logos/company-logo-siemens-white.svg";
+
+// Create array of company logos with alt text and height
+const companyLogos = [
+  { src: AdidasLogo, alt: "Adidas", width: 100 },
+  { src: KickerLogo, alt: "Kicker", width: 200 },
+
+  { src: NordbayernLogo, alt: "Nordbayern", width: 200 },
+  { src: DatevLogo, alt: "Datev", width: 100 },
+
+  { src: FraunhoferIISLogo, alt: "Fraunhofer IIS", width: 200 },
+
+  { src: PaesslerLogo, alt: "Paessler", width: 200 },
+  { src: SellwerkLogo, alt: "Sellwerk", width: 200 },
+  { src: SiemensLogo, alt: "Siemens", width: 200 },
+];
+---
+
+<section
+  class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-12 bg-gradient-to-r from-black to via-neutral-900 to-black"
+>
+  <div class="flex items-center justify-center">
+    <h1
+      class="text-fl-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+    >
+      GAME-CHANGER BEI
+    </h1>
+  </div>
+  <div class="relative overflow-hidden py-fl-xl">
+    <div
+      class="absolute top-0 left-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"
+    >
+    </div>
+    <div
+      class="absolute top-0 right-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
+    >
+    </div>
+    <div class="flex animate-marquee w-max marquee-container hover:pause-animation">
+      <!-- First set of logos -->
+      <div class="flex items-center gap-20 pl-20 justify-center">
+        {
+          companyLogos.map((logo) => (
+            <div class="flex-shrink-0 group cursor-pointer">
+              <img
+                src={logo.src.src}
+                alt={logo.alt}
+                style={`min-width: ${logo.width}px; `}
+                class="transition-all duration-300 ease-in-out logo-image"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="flex items-center gap-20 pl-20 justify-center">
+        {
+          companyLogos.map((logo) => (
+            <div class="flex-shrink-0 group cursor-pointer">
+              <img
+                src={logo.src.src}
+                alt={logo.alt}
+                style={`min-width: ${logo.width}px; `}
+                class="transition-all duration-300 ease-in-out logo-image"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* .pause-animation {
+    animation-play-state: paused;
+  }
+
+  .marquee-container:hover {
+    animation-play-state: paused;
+  } */
+
+  .logo-image {
+    filter: blur(0);
+    transform: scale(1);
+    transition:
+      filter 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  .logo-image:hover {
+    transform: scale(1.3);
+    animation: pulse-blur 1s ease;
+  }
+
+  @keyframes pulse-blur {
+    0% {
+      filter: blur(0);
+    }
+    50% {
+      filter: blur(5px);
+    }
+    100% {
+      filter: blur(0);
+    }
+  }
+
+  /* Add this to handle the transition back smoothly */
+  .logo-image:not(:hover) {
+    filter: blur(0);
+    transition:
+      filter 0.5s ease,
+      transform 0.5s ease;
+  }
+</style>

@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: gradient-nimation 3s ease-in-out infinite;
+  -moz-animation: gradient-nimation 3s ease-in-out infinite;
+  animation: gradient-nimation 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.animate-pulse {
+  background-size: 300%;
+  -webkit-animation: pulse-animation 3s ease-in-out infinite;
+  -moz-animation: pulse-animation 3s ease-in-out infinite;
+  animation: pulse-animation 3s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes pulse-animation {
+  0%,
+  85%,
+  100% {
+    background-position: 0% 50%;
+
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  5% {
+    transform: scale(1.05);
+    filter: blur(2px);
+  }
+  10% {
+    transform: scale(1.02);
+    filter: blur(1px);
+  }
+  15% {
+    transform: scale(1.08);
+    filter: blur(3px);
+  }
+  20% {
+    background-position: 100% 50%;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,10 +1,13 @@
 ---
+import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
 import { PrincipleCard } from "@/domains/home/PrincipleCard";
 import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react";
 ---
 
 <script>
   import { scroll, animate } from "motion";
+
+  /*
   const principleTitle = document.querySelector("#principle-title");
   if (principleTitle) {
     scroll(animate(principleTitle, { y: [200, 0], opacity: [0, 1] }), {
@@ -17,17 +20,25 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
 
   principleCards.forEach((el, i) => {
     if (el) {
-      scroll(animate(el, { x: [`${100 * (i % 2 ? 1 : -1)}%`, 0], y: [400, 0], opacity: [0, 1] }), {
+      scroll(animate(el, { x: [`${20 * (i % 2 ? 1 : -1)}%`, 0], y: [400, 0], opacity: [0, 1] }), {
         target: el,
         offset: ["0 1", "0 0.5"],
       });
     }
-  });
+  });*/
 </script>
 <section
   id="unsere-prinzipien"
-  class="overflow-hidden relative border-t border-solid border-neutral-900 flex items-start bg-gradient-to-b from-neutral-950 to-black pb-40"
+  class="overflow-hidden relative border-t border-dashed border-neutral-900 flex flex-col bg-black pb-40"
 >
+  <div class="flex align-center bg-neutral-900 justify-center mt-fl-xl">
+    <GradientHoverCard gradientColor="#262626" client:load>
+      <div class="p-10 rounded">
+        <div class="p-4 border w-0-40 text-fl-lg">asdfsdf</div>
+        <p class="p-4 border">asdfasdf asdf as a sdf asdf asdf saf sa fasdf as</p>
+      </div>
+    </GradientHoverCard>
+  </div>
   <div class="container mx-auto px-8 lg:px-0 z-10 flex flex-col items-start justify-start">
     <h2 class="text-center text-fl-2xl font-bold pb-40 pt-20 w-full" id="principle-title">
       Unsere Prinzipien
@@ -35,6 +46,20 @@ import { ArrowDownToDot, MessagesSquare, Repeat2, Workflow } from "lucide-react"
     <div
       class="grid grid-cols-1 lg:grid-cols-2 w-full items-center justify-center gap-20 lg:gap-40 px-4 justify-items-center"
     >
+      <div class="grid grid-cols-2 grid-rows-2 gap-8 w-full h-full">
+        <div class="bg-neutral-900 rounded-xl p-8 flex flex-col items-center justify-center">
+          <!-- Container 1 content -->
+        </div>
+        <div class="bg-neutral-900 rounded-xl p-8 flex flex-col items-center justify-center">
+          <!-- Container 2 content -->
+        </div>
+        <div class="bg-neutral-900 rounded-xl p-8 flex flex-col items-center justify-center">
+          <!-- Container 3 content -->
+        </div>
+        <div class="bg-neutral-900 rounded-xl p-8 flex flex-col items-center justify-center">
+          <!-- Container 4 content -->
+        </div>
+      </div>
       <PrincipleCard id="principle-cardo" className="principle-card justify-self-start lg:justify-self-end">
         <PrincipleCard.Border position="top-left" />
         <PrincipleCard.Border position="top-left" className="delay-100" />

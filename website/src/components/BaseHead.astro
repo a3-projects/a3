@@ -43,16 +43,3 @@ const { title, description, image = "/logo-banner.webp", robots } = Astro.props;
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.url)} />
 </head>
-
-<script>
-  import Lenis from "lenis";
-
-  const lenis = new Lenis();
-
-  const raf = (time: number) => {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  };
-
-  requestAnimationFrame(raf);
-</script>

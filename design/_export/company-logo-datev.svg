@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 396" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1468,-920)">
+        <g id="company-logo-datev" transform="matrix(1,0,0,1,2361.99,617.04)">
+            <rect x="-893.987" y="303.701" width="400" height="394.497" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="-893.987" y="303.701" width="400" height="394.497"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(0.513602,0,0,0.513602,2672.94,1566.56)">
+                    <g id="path54962" transform="matrix(8.79083,0,0,8.79083,-6944.89,-2457.47)">
+                        <path d="M0.063,67.125L0.063,87.375L7.375,87.375C12.821,87.375 17.5,83.007 17.5,77.406C17.345,71.183 13.446,67.125 8,67.125L0.063,67.125ZM24.5,67.125L16.719,87.375L21.063,87.375L27.125,71.344L32.125,84.094L26.5,84.094L26.5,87.375L37.719,87.375L29.781,67.125L24.5,67.125ZM34.281,67.125L34.281,70.563L40.844,70.563L40.844,87.375L45.344,87.375L45.344,70.563L51.719,70.563L51.719,67.125L34.281,67.125ZM53.438,67.125L53.438,87.375L67.438,87.375L67.438,84.094L57.781,84.094L57.781,78.5L66.344,78.5L66.344,75.063L57.781,75.063L57.781,70.563L66.969,70.563L66.969,67.125L53.438,67.125ZM68.063,67.125L76,87.375L80.813,87.375L88.594,67.125L77.875,67.125L77.875,70.563L83,70.563L78.313,82.844L72.563,67.125L68.063,67.125ZM4.25,70.563L7.688,70.563C11.11,70.563 13.438,73.049 13.281,77.25C13.126,81.608 10.171,83.937 6.594,83.938L4.25,83.938L4.25,70.563Z" style="fill:rgb(3,154,154);"/>
+                    </g>
+                    <g id="path54964" transform="matrix(8.79083,0,0,8.79083,-6766.46,-2284.45)">
+                        <rect x="-20.298" y="-19.682" width="88.279" height="62.449" style="fill:rgb(144,208,51);fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
