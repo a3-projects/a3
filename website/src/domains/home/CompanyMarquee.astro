@@ -31,12 +31,12 @@ const companyLogos = [
 >
   <div class="flex items-center justify-center">
     <h1
-      class="text-fl-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      class="text-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
     >
       GAME-CHANGER BEI
     </h1>
   </div>
-  <div class="relative overflow-hidden py-fl-xl">
+  <div class="relative overflow-hidden py--20">
     <div
       class="absolute top-0 left-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"
     >
@@ -45,7 +45,7 @@ const companyLogos = [
       class="absolute top-0 right-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
     >
     </div>
-    <div class="flex animate-marquee w-max marquee-container hover:pause-animation">
+    <div class="flex animate-marquee w-max py-10 marquee-container hover:pause-animation">
       <!-- First set of logos -->
       <div class="flex items-center gap-20 pl-20 justify-center">
         {
@@ -55,7 +55,7 @@ const companyLogos = [
                 src={logo.src.src}
                 alt={logo.alt}
                 style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out logo-image"
+                class="transition-all duration-300 ease-in-out animate-blur"
                 loading="lazy"
               />
             </div>
@@ -72,7 +72,7 @@ const companyLogos = [
                 src={logo.src.src}
                 alt={logo.alt}
                 style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out logo-image"
+                class="transition-all duration-300 ease-in-out animate-blur"
                 loading="lazy"
               />
             </div>
@@ -105,7 +105,7 @@ const companyLogos = [
     animation-play-state: paused;
   } */
 
-  .logo-image {
+  .animate-blur {
     filter: blur(0);
     transform: scale(1);
     transition:
@@ -113,7 +113,7 @@ const companyLogos = [
       transform 0.5s ease;
   }
 
-  .logo-image:hover {
+  .animate-blur:hover {
     transform: scale(1.3);
     animation: pulse-blur 1s ease;
   }
@@ -131,7 +131,7 @@ const companyLogos = [
   }
 
   /* Add this to handle the transition back smoothly */
-  .logo-image:not(:hover) {
+  .animate-blur:not(:hover) {
     filter: blur(0);
     transition:
       filter 0.5s ease,

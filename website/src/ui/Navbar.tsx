@@ -78,7 +78,7 @@ const NavbarListItem = forwardRef<ElementRef<"li">, NavbarListItemProps & Compon
 );
 
 export const navbarLink = tv({
-  base: "group-hover:underline hover:text-white text-sm text-neutral-50 underline-offset-4 relative z-10 h-full w-full flex items-center justify-center",
+  base: "group-hover:underline hover:text-white  text-neutral-50 underline-offset-4 relative z-10 h-full w-full flex items-center justify-center",
   variants: {
     active: { true: "underline italic font-bold " },
   },

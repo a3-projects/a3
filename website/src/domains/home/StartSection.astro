@@ -1,5 +1,4 @@
 ---
-import { BackPattern } from "@/ui/BackPattern";
 import { button } from "@/ui/Button";
 import { Image } from "astro:assets";
 import blackWaveBackground from "@/assets/images/logo-background.svg";
@@ -39,14 +38,14 @@ import CompanyMarquee from "./CompanyMarquee.astro";
 
 <section
   id="company-marquee-section"
-  class="relative flex items-center pb-40 px-fl-md-xl pt-10 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
+  class="relative flex items-center pb-40 px-md-20 pt-10 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
 >
   <div aria-hidden="true" class="-z-0 flex gap-12 absolute left-0 h-[300%] transform rotate-30 -mt-20">
     <div class="w-[1px] h-full bg-neutral-800"></div>
     <div class="w-[1px] h-full bg-neutral-800"></div>
   </div>
-  <div class="container z-10 mx-auto h-full gap-fl-2xl flex-grow items-center">
-    <div id="hero-body" class="flex flex-col items-center justify-center text-center">
+  <div class="container z-10 mx-auto h-full gap-24 flex-grow items-center">
+    <div id="hero-body" class="flex flex-col items-center justify-center text-center px-2">
       <!-- <BackPattern color="secondary" className="self-start">
         <div
           class="bg-black border border-solid border-secondary-400 text-white fl-text-step-0 p-fl-xs-md flex flex-col gap-8 items-start leading-[2]"
@@ -57,43 +56,57 @@ import CompanyMarquee from "./CompanyMarquee.astro";
             </TextHighlight>
              Software-Entwicklung ohne Qualitätsabstriche.
           </p>
-          <a href="#kontakt" class={button({ variant: "secondary" })}>Experten anfordern</a>
+          <a href="#kontakt" class={button({ variant: "secondary" })}>Experten anheuern</a>
         </div>
       </BackPattern> -->
-      <h1 id="hero-title" class="font-bold font-sans text-fl-4xl text-primary-200 leading-[1.2]">
-        Drei Köpfe. Ein <span
-          class="bg-gradient-to-r from-primary-200 via-primary-500 to-primary-100 text-transparent bg-clip-text animate-pulse"
-          >Puls</span
-        >.
+
+      <h1 id="hero-title" class="font-sans text-7xl text-primary-200 font-thin">
+        <span
+          class="bg-gradient-to-br from-primary-200 via-primary-200 to-primary-500 text-transparent bg-clip-text"
+          >Drei Köpfe.</span
+        >
+        <span class="block md:inline">
+          Ein <span
+            class="bg-gradient-to-r from-primary-200 via-primary-500 to-primary-100 text-transparent bg-clip-text animate-pulse"
+          >
+            Puls
+          </span>.</span
+        >
       </h1>
 
-      <p id="hero-description" class="text-fl-lg max-w-prose pt-fl-lg">
-        Verwandt im echten Leben, eingespielt im Projekt. Wir sprechen Klartext, denken mit und liefern so,
-        dass es alle verstehen.
+      <p id="hero-description" class="text-xl max-w-[800px] pt-8 font-serif">
+        Verwandt im echten Leben, eingespielt im Projekt. Wir sind drei Sofware-Entwickler, die Klartext
+        sprechen, mitdenken und so liefern, dass es alle verstehen.
       </p>
-      <div id="hero-button" class="text-fl-base mt-fl-xl">
-        <a href="#unsere-prinzipien" class={button({ size: "xl", increaseHitbox: true })}
-          >Lerne uns besser kennen</a
+      <div id="hero-button" class="text-xl mt-14">
+        <a
+          href="#unsere-prinzipien"
+          class={button({
+            size: "lg",
+            class: "text-lg rounded-xl",
+            variant: "gradient-primary",
+            increaseHitbox: true,
+          })}>Lerne uns besser kennen</a
         >
       </div>
-      <div class="flex flex-wrap items-center justify-center gap-4 mt-fl-lg">
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-14">
         <div
-          class="border border-solid border-primary-900 bg-black/30 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-primary-900 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Pragmatisch
         </div>
         <div
-          class="border border-solid border-primary-900 bg-black/30 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-primary-900 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Qualitätsbewusst
         </div>
         <div
-          class="border border-solid border-primary-900 bg-black/30 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-primary-900 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Kommunikativ
         </div>
         <div
-          class="border border-solid border-primary-900 bg-black/30 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-primary-900 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Verlässlich
         </div>

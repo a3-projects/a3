@@ -1,0 +1,183 @@
+---
+import astro from "@/assets/images/astro.svg";
+import github from "@/assets/images/github.svg";
+import java from "@/assets/images/java.svg";
+import next from "@/assets/images/next.svg";
+import nuxt from "@/assets/images/nuxt.svg";
+import prisma from "@/assets/images/prisma.svg";
+import react from "@/assets/images/react.svg";
+import tailwind from "@/assets/images/tailwind.svg";
+import typescript from "@/assets/images/typescript.svg";
+import vue from "@/assets/images/vue.svg";
+import aws from "@/assets/images/aws.svg";
+import spring from "@/assets/images/spring.svg";
+import gitlab from "@/assets/images/gitlab.svg";
+import kubernetes from "@/assets/images/kubernetes.svg";
+import go from "@/assets/images/go.svg";
+import docker from "@/assets/images/docker.svg";
+import playwright from "@/assets/images/playwright.svg";
+import python from "@/assets/images/python.svg";
+import vite from "@/assets/images/vite.svg";
+import robot from "@/assets/images/robot.svg";
+import dynamodb from "@/assets/images/dynamodb.svg";
+import node from "@/assets/images/node.svg";
+import postgres from "@/assets/images/postgres.svg";
+import storybook from "@/assets/images/storybook.svg";
+import rust from "@/assets/images/rust.svg";
+import graphql from "@/assets/images/graphql.svg";
+import { Image } from "astro:assets";
+
+const devOpsIcons: TechIcon[] = [
+  { src: aws, alt: "aws logo", title: "AWS", href: "https://aws.amazon.com/" },
+  { src: github, alt: "github logo", title: "Github", href: "https://github.com/" },
+  { src: gitlab, alt: "gitlab logo", title: "Gitlab", href: "https://gitlab.com/" },
+  { src: kubernetes, alt: "kubernetes logo", title: "Kubernetes", href: "https://kubernetes.io/" },
+  { src: go, alt: "go logo", title: "Go", href: "https://go.dev/" },
+  { src: docker, alt: "docker logo", title: "Docker", href: "https://www.docker.com/" },
+  { src: python, alt: "python logo", title: "Python", href: "https://www.python.org/" },
+  { src: playwright, alt: "playwright logo", title: "Playwright", href: "https://playwright.dev/" },
+  { src: robot, alt: "robot logo", title: "Robot Framework", href: "https://robotframework.org/" },
+];
+
+const backendIcons: TechIcon[] = [
+  { src: typescript, alt: "typescript logo", title: "TypeScript", href: "https://www.typescriptlang.org/" },
+  { src: graphql, alt: "graphql logo", title: "GraphQL", href: "https://graphql.org/" },
+  { src: node, alt: "node logo", title: "NodeJs", href: "https://nodejs.org/" },
+  { src: java, alt: "java logo", title: "Java", href: "https://java.com/" },
+  { src: spring, alt: "spring logo", title: "Spring", href: "https://spring.io/" },
+  { src: prisma, alt: "prisma logo", title: "Prisma", href: "https://www.prisma.io/" },
+  { src: dynamodb, alt: "dynamodb logo", title: "Dynamodb", href: "https://aws.amazon.com/dynamodb/" },
+  { src: postgres, alt: "postgres logo", title: "Postgres", href: "https://www.postgresql.org/" },
+  { src: rust, alt: "rust logo", title: "Rust", href: "https://www.rust-lang.org/" },
+];
+
+const frontendIcons: TechIcon[] = [
+  { src: next, alt: "next logo", title: "Next", href: "https://nextjs.org/" },
+  { src: nuxt, alt: "nuxt logo", title: "Nuxt", href: "https://nuxt.com/" },
+  //   { src: typescript, alt: "typescript logo", title: "TypeScript", href: "https://www.typescriptlang.org/" },
+  { src: react, alt: "react logo", title: "React", href: "https://reactjs.org/" },
+  { src: vue, alt: "vue logo", title: "Vue", href: "https://vuejs.org/" },
+  { src: tailwind, alt: "tailwind logo", title: "Tailwind", href: "https://tailwindcss.com/" },
+  { src: astro, alt: "astro logo", title: "Astro", href: "https://astro.build/" },
+  { src: storybook, alt: "storybook logo", title: "Storybook", href: "https://storybook.js.org/" },
+  { src: vite, alt: "vite logo", title: "Vite", href: "https://vitejs.dev/" },
+];
+
+// Combine all icons into a single array
+const allIcons: TechIcon[] = [...frontendIcons, ...backendIcons, ...devOpsIcons];
+
+// Fisher-Yates shuffle algorithm to randomize the icons
+function shuffleIcons(icons: TechIcon[]): TechIcon[] {
+  const shuffled = [...icons];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    // Use type assertion to tell TypeScript these values definitely exist
+    [shuffled[i], shuffled[j]] = [shuffled[j] as TechIcon, shuffled[i] as TechIcon];
+  }
+  return shuffled;
+}
+
+const shuffledIcons = shuffleIcons(allIcons);
+
+interface TechIcon {
+  src: ImageMetadata;
+  alt: string;
+  title: string;
+  href: string;
+}
+---
+
+<script>
+  import { hover, animate } from "motion";
+  document.addEventListener("DOMContentLoaded", () => {
+    const techIcons = document.querySelectorAll(".tech-stack-icon");
+    if (techIcons.length === 0) return;
+
+    let isHovering = false;
+    let animationInterval: number;
+
+    // Apply hover animation to each tech icon
+    techIcons.forEach((icon) => {
+      hover(icon, () => {
+        isHovering = true;
+        animate(icon, {
+          scale: [1, 1.5, 1.5],
+          filter: ["blur(0) grayscale(1)", "blur(5px) grayscale(0.5)", "blur(0) grayscale(0)"],
+        });
+        return () => {
+          animate(icon, {
+            scale: 1,
+            filter: "blur(0) grayscale(1)",
+          });
+          isHovering = false;
+          // Restart the cycle animation when hover ends
+          if (!animationInterval) {
+            startRandomAnimation();
+          }
+        };
+      });
+    });
+
+    // Function to animate a single random icon
+    const animateRandomIcon = () => {
+      if (isHovering) return;
+
+      const randomIndex = Math.floor(Math.random() * techIcons.length);
+      const icon = techIcons[randomIndex] as HTMLElement;
+
+      animate(
+        icon,
+        {
+          scale: [1, 1.5, 1.5, 1.5, 1, 1],
+          filter: [
+            "blur(0) grayscale(1)",
+            "blur(3px) grayscale(0)",
+            "blur(0) grayscale(0)",
+            "blur(0) grayscale(0)",
+            "blur(3px) grayscale(0)",
+            "blur(0) grayscale(1)",
+          ],
+        },
+        {
+          duration: 4,
+        }
+      );
+    };
+
+    // Function to start the random animation
+    const startRandomAnimation = () => {
+      animationInterval = window.setInterval(() => {
+        if (!isHovering) {
+          animateRandomIcon();
+        }
+      }, 4000);
+    };
+
+    // Start the animation
+    startRandomAnimation();
+  });
+</script>
+
+<section id="tools" class="overflow-x-clip relative flex items-start bg-neutral-950 pb-40">
+  <div class="container mx-auto px-4 z-10 flex flex-col">
+    <div class="flex flex-col items-center justify-center">
+      <h2
+        class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      >
+        Unsere Tools
+      </h2>
+      <p class="text-lg font-thin mt-4 text-neutral-400 font-serif">
+        So vielseitig wie die Probleme, die wir lösen.
+      </p>
+    </div>
+    <div class="flex gap-14 pt-10 flex-wrap max-w-[1200px] items-center justify-center mx-auto px-3 mt-20">
+      {
+        shuffledIcons.map((icon) => (
+          <a href={icon.href} title={icon.title} target="_blank" class="tech-stack-icon grayscale ">
+            <Image src={icon.src} alt={icon.alt} class="transition-all duration-300 size-14" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

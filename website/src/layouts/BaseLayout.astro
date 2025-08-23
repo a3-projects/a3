@@ -7,20 +7,22 @@ import "@fontsource/merriweather";
 import "@fontsource/merriweather/400.css";
 import "@fontsource/merriweather/700.css";
 import "@/styles/lenis.css";
+import "@/styles/tailwind.css";
 import "@/styles/global.css";
-import "@/styles/reset.css";
 ---
 
 <!doctype html>
-<html class="bg-black text-neutral-50 font-sans text-fl-xs scroll-pt-header" lang="en">
+<html class="bg-black text-neutral-50 font-sans text-xs scroll-pt-header" lang="en">
   <slot />
   <style is:global>
+    @reference "tailwindcss";
+
     html {
       scroll-behavior: smooth;
     }
-    *::selection {
+    /* *::selection {
       @apply bg-secondary-400/70 text-white;
-    }
+    } */
   </style>
   <script>
     import Lenis from "lenis";

@@ -7,7 +7,7 @@ export const card = tv({
   base: "",
   variants: {
     color: {
-      default: "bg-neutral-800/20 backdrop-blur-sm",
+      default: "",
       transparent: "bg-transparent",
     },
   },
@@ -29,7 +29,7 @@ const _Card = forwardRef<ElementRef<"div">, CardProps & ComponentPropsWithoutRef
 });
 
 export const cardHeader = tv({
-  base: "px-4 lg:px-8 pt-8 pb-4",
+  base: "px-4 pt-8 pb-4",
 });
 
 export interface CardHeaderProps extends VariantProps<typeof cardHeader> {}
@@ -47,7 +47,7 @@ const CardHeader = forwardRef<ElementRef<"div">, CardHeaderProps & ComponentProp
 );
 
 export const cardBody = tv({
-  base: "px-4 lg:px-8 py-4",
+  base: "px-4 py-4",
 });
 
 export interface CardBodyProps extends VariantProps<typeof cardBody> {}
@@ -65,7 +65,7 @@ const CardBody = forwardRef<ElementRef<"div">, CardBodyProps & ComponentPropsWit
 );
 
 export const cardFooter = tv({
-  base: "px-4 lg:px-8 py-4",
+  base: "px-4  py-4",
 });
 
 export interface CardFooterProps extends VariantProps<typeof cardFooter> {}

@@ -3,10 +3,12 @@ import Layout from "@/layouts/Layout.astro";
 import BaseHead from "@/components/BaseHead.astro";
 import { Main } from "@/ui/Main";
 
-import PrincipleSection from "@/domains/home/PrincipleSection.astro";
-import TechStackSection from "@/domains/home/TechStackSection.astro";
+import TeamSection from "@/domains/home/TeamSection.astro";
 import HiringSection from "@/domains/home/HiringSection.astro";
 import StartSection from "@/domains/home/StartSection.astro";
+import HowWeWorkSection from "@/domains/home/HowWeWorkSection.astro";
+import ServicesSection from "@/domains/home/ServicesSection.astro";
+import ToolsSection from "@/domains/home/ToolsSection.astro";
 ---
 
 <Layout>
@@ -18,8 +20,10 @@ import StartSection from "@/domains/home/StartSection.astro";
 
   <Main>
     <StartSection />
-    <PrincipleSection />
-    <TechStackSection />
+    <HowWeWorkSection />
+    <ServicesSection />
+    <TeamSection />
+    <ToolsSection />
     <HiringSection />
   </Main>
 </Layout>

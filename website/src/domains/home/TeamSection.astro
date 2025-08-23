@@ -1,0 +1,122 @@
+---
+import { Card } from "@/ui/Card";
+import { Image } from "astro:assets";
+import { LogoOutline } from "@/ui/icons/LogoOutline";
+import yusuf from "@/assets/images/team/yusuf.png";
+import oemer from "@/assets/images/team/oemer.png";
+---
+
+<section id="team" class="overflow-x-clip relative flex items-start bg-neutral-950 pb-40">
+  <div class="container mx-auto px-6 z-10 flex flex-col">
+    <div class="flex flex-col items-center justify-center">
+      <h2
+        class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      >
+        Wir, das A3-Team
+      </h2>
+      <p class="text-lg font-thin max-w-prose mt-4 text-neutral-400 font-serif text-center">
+        Drei Köpfe. Ein Puls. Seit Jahren schlagen wir im selben Takt – vertraut, eingespielt und voller
+        Energie für Projekte, die spürbar anders sind.
+      </p>
+    </div>
+    <div class="flex flex-col gap-100 w-full items-center lg:items-start mt-60">
+      <div class="flex flex-col-reverse lg:flex-row">
+        <Card
+          className="backdrop-blur-sm  bg-primary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-l border-primary-800"
+        >
+          <Card.Header className="flex flex-col items-start">
+            <h3 class="text-4xl font-bold">
+              <span
+                class="bg-gradient-to-br from-white via-white to-primary-500 text-transparent bg-clip-text"
+              >
+                FERHAT
+              </span>
+            </h3>
+
+            <p class="text-primary-500">DEPLOYER &#x2022; PIPELINER &#x2022; VISIONÄR</p>
+          </Card.Header>
+          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
+            <p class="text-xl">
+              „Für mich ist gute Infra unsichtbar – stabil, leise und verlässlich. Wenn keiner über
+              Deployments spricht, weiß ich: es funktioniert.“
+            </p>
+          </Card.Body>
+        </Card>
+
+        <div
+          class="flex-shrink-0 relative scale-x-[-1] min-h-[300px] w-full max-w-[400px] bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+        >
+          <div class="absolute bottom-0 left-0 pr-4 flex items-start justify-start w-full">
+            <Image class="w-[270px]" src={oemer} alt="Bild von Ömer." />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse lg:flex-row-reverse lg:self-end">
+        <Card
+          className="backdrop-blur-sm  bg-secondary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-r border-secondary-800"
+        >
+          <Card.Header className="flex flex-col ">
+            <h3 class="text-4xl">
+              <span
+                class="bg-gradient-to-br font-bold from-white via-white to-secondary-500 text-transparent bg-clip-text"
+              >
+                YUSUF
+              </span>
+            </h3>
+
+            <p class="text-secondary-500">FULL-STACKLER &#x2022; ARCHITEKT &#x2022; BRÜCKENBAUER</p>
+          </Card.Header>
+          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
+            <p class="text-xl">
+              „Ich übersetze Technik so, dass sie jeder versteht. Mir macht’s Spaß, wenn aus Chaos Klarheit
+              wird – und keiner das Gefühl hat, draußen zu stehen.“
+            </p>
+          </Card.Body>
+        </Card>
+        <div
+          class="flex-shrink-0 relative scale-x-[-1] min-h-[300px] w-full max-w-[400px] bg-secondary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+        >
+          <div class="absolute bottom-0 right-0 lg:left-0 px-4">
+            <Image class="w-[350px]" src={yusuf} alt="Bild von Yusuf." />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse lg:flex-row">
+        <Card
+          className="backdrop-blur-sm  bg-primary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-l border-primary-800"
+        >
+          <Card.Header className="flex flex-col items-start">
+            <h3 class="text-4xl font-bold">
+              <span
+                class="bg-gradient-to-br from-white via-white to-primary-500 text-transparent bg-clip-text"
+              >
+                ÖMER
+              </span>
+            </h3>
+
+            <p class="text-primary-500">FRONTENDLER &#x2022; DESIGNER &#x2022; ERLEBNISMACHER</p>
+          </Card.Header>
+          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
+            <p class="text-xl">
+              „Für mich muss es nicht nur schön aussehen, sondern sich auch selbstverständlich anfühlen. Wenn
+              ich zufrieden bin, merken es die Nutzer sofort.“
+            </p>
+          </Card.Body>
+        </Card>
+
+        <div
+          class="flex-shrink-0 relative scale-x-[-1] min-h-[300px] w-full max-w-[400px] bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+        >
+          <div class="absolute bottom-0 left-0 pr-4 flex items-start justify-start w-full">
+            <Image class="w-[270px]" src={oemer} alt="Bild von Ömer." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="techstack-background" class="absolute w-full h-full top-0 left-0 overflow-x-clip">
+    <LogoOutline
+      className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-neutral-900/50"
+    />
+  </div>
+</section>

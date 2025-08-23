@@ -11,20 +11,27 @@ import { CheckSquare, User, Users } from "lucide-react";
 
   const hiringTeamBackground = document.querySelectorAll(".hiring-team-backgorund");
 
+  console.log("hiringTeamBackground", hiringTeamBackground);
   hiringTeamBackground.forEach((el) => {
     if (el) {
-      scroll(animate(el, { skewX: ["0deg", "-30deg"] }), {
+      console.log("el", el);
+      scroll(animate(el, { skewX: [0, -30] }), {
         target: el,
         offset: ["0 0.7", "0.5 0.5"],
       });
     }
   });
 
+  //  scroll(animate(element, { y: [200, 0], opacity: [0, 1] }), {
+  //       target: element,
+  //       offset: [`-300px 0.5`, "0 0.5"],
+  //     });
+
   const hiringTeamBackgroundMobile = document.querySelectorAll(".hiring-team-backgorund-mobile");
 
   hiringTeamBackgroundMobile.forEach((el) => {
     if (el) {
-      scroll(animate(el, { skewY: ["-20deg", "-5deg"] }), {
+      scroll(animate(el, { skewY: [-20, -5] }), {
         target: el,
         offset: ["1 1", "1.2 1"],
       });
@@ -81,15 +88,15 @@ import { CheckSquare, User, Users } from "lucide-react";
       <Card.Header className="flex flex-col items-center justify-center">
         <Users size={64} className="text-primary-300" />
 
-        <h3 class="text-center text-fl-lg font-bold text-primary-300 relative">
+        <h3 class="text-center text-lg font-bold text-primary-300 relative">
           Als Team <div
-            class="absolute -translate-y-1/2 top-1/2 text-xs font-bold -right-3/4 px-2 py-1 rounded bg-secondary-700/50 text-secondary-300"
+            class="absolute translate-x-1 -translate-y-1/2 top-1/2 text-xs font-bold -right-full px-2 py-1 rounded bg-secondary-700/50 text-secondary-300"
           >
             empfohlen
           </div>
         </h3>
       </Card.Header>
-      <Card.Body className="text-fl-sm leading-[1.2]">
+      <Card.Body className="text-sm leading-[1.2]">
         <p class="text-center">Engagiere uns als Team für</p>
         <ul class="flex flex-col gap-8 mt-10">
           <li class="flex gap-4 items-center">
@@ -109,21 +116,21 @@ import { CheckSquare, User, Users } from "lucide-react";
       <Card.Footer className="flex items-center justify-center mt-8">
         <BackPattern className="self-start" color="neutralOnDark" animated>
           <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
-            >Experten anfordern</a
+            >Experten anheuern</a
           >
         </BackPattern>
       </Card.Footer>
     </Card>
-    <div id="hiring-team-or" class="h-full italic self-center font-extralight text-fl-sm tracking-widest">
+    <div id="hiring-team-or" class="h-full italic self-center font-extralight text-sm tracking-widest">
       ODER
     </div>
 
     <Card id="hiring-individual-card" className="w-[350px]" color="transparent">
       <Card.Header className="flex flex-col items-center justify-center">
         <User size={64} className="text-neutral-400" />
-        <h3 class="text-center text-fl-lg font-bold text-neutral-400">Einzeln</h3>
+        <h3 class="text-center text-lg font-bold text-neutral-400">Einzeln</h3>
       </Card.Header>
-      <Card.Body className="text-fl-sm leading-[1.2]">
+      <Card.Body className="text-sm leading-[1.2]">
         <p class="text-center">Engagiere einen Experten für</p>
         <ul class="flex flex-col gap-8 mt-10">
           <li class="flex gap-4 items-center">
@@ -143,7 +150,7 @@ import { CheckSquare, User, Users } from "lucide-react";
       <Card.Footer className="flex items-center justify-center mt-8">
         <BackPattern className="self-start" color="neutralOnDark" animated>
           <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
-            >Experten anfordern</a
+            >Experten anheuern</a
           >
         </BackPattern>
       </Card.Footer>

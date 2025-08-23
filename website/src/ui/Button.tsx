@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const button = tv({
-  base: "relative cursor-pointer inline-flex items-center justify-center transition-all text-fl-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  base: "relative cursor-pointer inline-flex items-center justify-center rounded-pill transition-all text-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   variants: {
     variant: {
       default:
@@ -17,6 +17,8 @@ export const button = tv({
       neutralOnDark:
         "bg-neutral-50 text-neutral-950 hover:bg-neutral-950 hover:text-neutral-50 hover:shadow-lg ",
       link: "text-primary underline-offset-4 hover:underline",
+      "gradient-primary":
+        "bg-gradient-to-br from-primary-500 to-primary-900 text-neutral-50 hover:from-primary-300 hover:to-primary-100 hover:text-black hover:shadow-lg hover:shadow-primary-500",
     },
     increaseHitbox: {
       true: "before:absolute before:h-[calc(100%+1rem)] relative before:w-[calc(100%+1rem)]",
