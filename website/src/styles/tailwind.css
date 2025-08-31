@@ -63,6 +63,12 @@
   --spacing-72: clamp(18rem, 16.4348rem + 7.8261vw, 22.5rem); /* 288px → 360px */
   --spacing-80: clamp(20rem, 18.2609rem + 8.6957vw, 25rem); /* 320px → 400px */
   --spacing-96: clamp(24rem, 21.913rem + 10.4348vw, 30rem); /* 384px → 480px */
+  /* 
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --rounded-full: 0px; */
 
   /* ==========================================================================
    * FLUID TYPOGRAPHY VARIABLES
@@ -70,18 +76,43 @@
 
   /* Generated fluid typography scale */
   --text-xs: clamp(0.75rem, 0.6848rem + 0.3261vw, 0.9375rem); /* 12px → 15px */
+  --text-xs--line-height: 1.6; /* Relaxed line height for small text */
+
   --text-sm: clamp(0.875rem, 0.7989rem + 0.3804vw, 1.09375rem); /* 14px → 18px */
+  --text-sm--line-height: 1.5; /* Comfortable for small text */
+
   --text-base: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem); /* 16px → 20px */
+  --text-base--line-height: 1.5; /* Standard reading line height */
+
   --text-lg: clamp(1.125rem, 1.0272rem + 0.4891vw, 1.40625rem); /* 18px → 23px */
+  --text-lg--line-height: 1.45; /* Slightly tighter than base */
+
   --text-xl: clamp(1.25rem, 1.1413rem + 0.5435vw, 1.5625rem); /* 20px → 25px */
-  --text-2xl: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem); /* 24px → 30px */
+  --text-xl--line-height: 1.4; /* Balanced for larger text */
+
+  --text-xl: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem); /* 24px → 30px */
+  --text-xl--line-height: 1.35; /* Starting to tighten for headings */
+
   --text-3xl: clamp(1.875rem, 1.712rem + 0.8152vw, 2.34375rem); /* 30px → 38px */
+  --text-3xl--line-height: 1.3; /* Heading line height */
+
   --text-4xl: clamp(2.25rem, 2.0543rem + 0.9783vw, 2.8125rem); /* 36px → 45px */
+  --text-4xl--line-height: 1.25; /* Tighter for larger headings */
+
   --text-5xl: clamp(3rem, 2.7391rem + 1.3043vw, 3.75rem); /* 48px → 60px */
+  --text-5xl--line-height: 1.2; /* Tight but safe for descenders */
+
   --text-6xl: clamp(3.75rem, 3.4239rem + 1.6304vw, 4.6875rem); /* 60px → 75px */
+  --text-6xl--line-height: 1.3; /* Very tight but accommodates descenders */
+
   --text-7xl: clamp(4.5rem, 4.1087rem + 1.9565vw, 5.625rem); /* 72px → 90px */
+  --text-7xl--line-height: 1.2; /* Extremely tight but safe */
+
   --text-8xl: clamp(6rem, 5.4783rem + 2.6087vw, 7.5rem); /* 96px → 120px */
+  --text-8xl--line-height: 1.05; /* Nearly display tight */
+
   --text-9xl: clamp(8rem, 7.3043rem + 3.4783vw, 10rem); /* 128px → 160px */
+  --text-9xl--line-height: 1; /* Display tight */
 
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;

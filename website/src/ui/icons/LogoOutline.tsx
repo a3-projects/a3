@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import type { ElementRef, ComponentPropsWithoutRef } from "react";
 
 export interface LogoOutlineProps {
-  size?: number;
+  size?: number | string;
 }
 
 const LogoOutline = forwardRef<ElementRef<"svg">, LogoOutlineProps & ComponentPropsWithoutRef<"svg">>(

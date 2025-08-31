@@ -7,8 +7,11 @@ import TeamSection from "@/domains/home/TeamSection.astro";
 import HiringSection from "@/domains/home/HiringSection.astro";
 import StartSection from "@/domains/home/StartSection.astro";
 import HowWeWorkSection from "@/domains/home/HowWeWorkSection.astro";
-import ServicesSection from "@/domains/home/ServicesSection.astro";
 import ToolsSection from "@/domains/home/ToolsSection.astro";
+import FAQSection from "@/domains/home/FAQSection.astro";
+import PricingSection from "@/domains/home/PricingSection.astro";
+import WhatWeDo from "@/domains/home/WhatWeDo.astro";
+import OutroSection from "@/domains/home/OutroSection.astro";
 ---
 
 <Layout>
@@ -20,10 +23,15 @@ import ToolsSection from "@/domains/home/ToolsSection.astro";
 
   <Main>
     <StartSection />
+    <WhatWeDo />
+
     <HowWeWorkSection />
-    <ServicesSection />
+    <OutroSection />
+
     <TeamSection />
+    <PricingSection />
+    <FAQSection />
+    <!-- <HiringSection /> -->
     <ToolsSection />
-    <HiringSection />
   </Main>
 </Layout>

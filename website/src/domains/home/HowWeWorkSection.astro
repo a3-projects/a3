@@ -2,130 +2,189 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Image } from "astro:assets";
 
-import ListenPicture from "@/assets/images/pictures/listen.jpg";
-import ThinkPicture from "@/assets/images/pictures/think.jpg";
+import ListenPicture from "@/assets/images/pictures/listen.png";
+import ThinkPicture from "@/assets/images/pictures/think.png";
 import DeliveryPicture from "@/assets/images/pictures/delivery.jpg";
 import StabilizePicture from "@/assets/images/pictures/stabilize.jpg";
 import { DotBackground } from "@/domains/home/DotBackground";
 ---
 
-<section
-  id="unsere-prinzipien"
-  class="overflow-hidden py-20 relative border-t border-dashed border-neutral-900 flex flex-col bg-gradient-to-t from-black to-neutral-950 pb-40"
->
+<section id="wie-wir-arbeiten" class="overflow-hidden py-20 relative flex flex-col bg-black pb-40">
   <div class="flex flex-col items-center justify-center">
     <h1
       class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
     >
-      WIE WIR ARBEITEN
+      Wie wir arbeiten
     </h1>
-    <p class="text-lg font-thin mt-4 text-neutral-400 font-serif">
-      Ehrlich, einfach, effektiv – unser Anspruch an jede Zusammenarbeit.
+    <p class="text-lg font-thin mt-4 text-neutral-400 text-center font-serif px-6">
+      Ehrlich, klar, effektiv – unser Anspruch an jede Zusammenarbeit.
     </p>
   </div>
-  <div class="container mx-auto mt-20">
-    <div class="grid grid-cols-2 gap-20">
-      <div class="flex flex-col justify-center border-l py-4 border-neutral-800 w-full max-w-[500px]">
-        <div class="pl-4 inline-flex">
-          <p
-            class="text-6xl font-serif bg-gradient-to-br font-thin from-white to-primary-500 text-transparent bg-clip-text"
-          >
-            01.
-          </p>
-        </div>
-        <p class="font-serif flex gap-2 items-center font-bold text-2xl p-4">
-          Zuhören <ArrowRightIcon size="24" strokeWidth="4" /> Verstehen
-        </p>
-        <div class="px-4 pb-4 pt-2">
-          <p class="text-neutral-400 text-lg font-serif">
+  <div class="container mx-auto mt-20 space-y-32 px-6">
+    <!-- Step 01 -->
+    <div class="relative group z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
+      >
+      </div>
+      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
+        <div class="flex-1 space-y-6">
+          <div class="space-y-4">
+            <span
+              class="text-7xl font-thin bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
+            >
+              01.
+            </span>
+            <h3 class="text-xl font-bold text-white">
+              Zuhören <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" /> Verstehen
+            </h3>
+          </div>
+          <p class="text-neutral-400 font-serif text-lg">
             Wir starten mit Zielen, nicht mit Tools. Was soll sich für wen verbessern? Erst wenn das klar ist,
             entscheiden wir die Mittel.
           </p>
         </div>
-      </div>
-
-      <div class="rounded-3xl overflow-hidden my-10 max-h-[300px]">
-        <Image class="w-full h-full object-cover" src={ListenPicture} alt="Ohr das aus einem Loch schaut." />
-      </div>
-
-      <div class="rounded-3xl overflow-hidden my-10 max-h-[300px]">
-        <Image class="w-full h-full object-cover" src={ThinkPicture} alt="Think Statues." />
-      </div>
-
-      <div class="flex flex-col justify-center border-l py-4 border-neutral-800 w-full max-w-[500px]">
-        <div class="pl-4 inline-flex">
-          <p
-            class="text-6xl font-serif bg-gradient-to-br font-thin from-white to-secondary-500 text-transparent bg-clip-text"
+        <div class="flex-1 relative">
+          <div
+            class="absolute -inset-4 bg-gradient-to-br from-primary-500/20 to-transparent rounded-3xl blur-xl"
           >
-            02.
-          </p>
+          </div>
+          <div
+            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
+          >
+            <Image
+              class="w-full h-full object-cover"
+              src={ListenPicture}
+              alt="Ohr das aus einem Loch schaut."
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          </div>
         </div>
-        <p class="font-serif flex gap-2 items-center font-bold text-2xl p-4">
-          Mitdenken <ArrowRightIcon size="24" strokeWidth="4" /> Vereinfachen
-        </p>
-        <div class="px-4 pb-4 pt-2">
-          <p class="text-neutral-400 text-lg font-serif">
+      </div>
+    </div>
+
+    <!-- Step 02 -->
+    <div class="relative group z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
+      >
+      </div>
+      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
+        <div class="flex-1 space-y-6 lg:order-2">
+          <div class="space-y-4">
+            <span
+              class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+            >
+              02.
+            </span>
+            <h3 class="text-xl font-bold text-white">
+              Mitdenken <ArrowRightIcon
+                size="24"
+                strokeWidth="3"
+                className="inline mx-3 text-secondary-500"
+              /> Vereinfachen
+            </h3>
+          </div>
+          <p class="text-neutral-400 font-serif text-lg">
             Wir hinterfragen Annahmen und kürzen Wege. Gute Lösungen wirken oft selbstverständlich – genau das
             ist die Kunst.
           </p>
         </div>
-      </div>
-
-      <div class="flex flex-col justify-center border-l py-4 border-neutral-800 w-full max-w-[500px]">
-        <div class="pl-4 inline-flex">
-          <p
-            class="text-6xl font-serif bg-gradient-to-br font-thin from-white to-primary-500 text-transparent bg-clip-text"
+        <div class="flex-1 relative lg:order-1">
+          <div
+            class="absolute -inset-4 bg-gradient-to-bl from-secondary-500/20 to-transparent rounded-3xl blur-xl"
           >
-            03.
-          </p>
+          </div>
+          <div
+            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
+          >
+            <Image class="w-full h-full object-cover" src={ThinkPicture} alt="Think Statues." />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          </div>
         </div>
-        <p class="font-serif flex gap-2 items-center font-bold text-2xl p-4">
-          Umsetzen <ArrowRightIcon size="24" strokeWidth="4" /> Liefern
-        </p>
-        <div class="px-4 pb-4 pt-2">
-          <p class="text-neutral-400 text-lg font-serif">
+      </div>
+    </div>
+
+    <!-- Step 03 -->
+    <div class="relative group z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
+      >
+      </div>
+      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
+        <div class="flex-1 space-y-6">
+          <div class="space-y-4">
+            <span
+              class="text-7xl font-thin bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
+            >
+              03.
+            </span>
+            <h3 class="text-xl font-bold text-white">
+              Umsetzen <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" /> Liefern
+            </h3>
+          </div>
+          <p class="text-neutral-400 font-serif text-lg">
             Kurze Zyklen, sichtbare Schritte. Lieber jede Woche nutzbarer Fortschritt als einmal im Quartal
             eine Überraschung.
           </p>
         </div>
-      </div>
-
-      <div class="rounded-3xl overflow-hidden my-10 max-h-[300px]">
-        <Image class="w-full h-full object-cover" src={DeliveryPicture} alt="Delivery Car" />
-      </div>
-      <div class="rounded-3xl overflow-hidden my-10 max-h-[300px]">
-        <Image class="w-full h-full object-cover" src={StabilizePicture} alt="" />
-      </div>
-      <div class="flex flex-col justify-center border-l py-4 border-neutral-800 w-full max-w-[500px]">
-        <div class="pl-4 inline-flex">
-          <p
-            class="text-6xl font-serif bg-gradient-to-br font-thin from-white to-secondary-500 text-transparent bg-clip-text"
+        <div class="flex-1 relative">
+          <div
+            class="absolute -inset-4 bg-gradient-to-br from-primary-500/20 to-transparent rounded-3xl blur-xl"
           >
-            04.
-          </p>
+          </div>
+          <div
+            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
+          >
+            <Image class="w-full h-full object-cover" src={DeliveryPicture} alt="Delivery Car" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          </div>
         </div>
-        <p class="font-serif flex gap-2 items-center font-bold text-2xl p-4">
-          Verfeinern <ArrowRightIcon size="24" strokeWidth="4" /> Stabilisieren
-        </p>
-        <div class="px-4 pb-4 pt-2">
-          <p class="text-neutral-400 text-lg font-serif">
+      </div>
+    </div>
+
+    <!-- Step 04 -->
+    <div class="relative group z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
+      >
+      </div>
+      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
+        <div class="flex-1 space-y-6 lg:order-2">
+          <div class="space-y-4">
+            <span
+              class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+            >
+              04.
+            </span>
+            <h3 class="text-xl font-bold text-white">
+              Verfeinern <ArrowRightIcon
+                size="24"
+                strokeWidth="3"
+                className="inline mx-3 text-secondary-500"
+              /> Stabilisieren
+            </h3>
+          </div>
+          <p class="text-neutral-400 font-serif text-lg">
             Schnell beeindruckend, langfristig stabil – wir schleifen so lange, bis Ruhe einkehrt.
           </p>
+        </div>
+        <div class="flex-1 relative lg:order-1">
+          <div
+            class="absolute -inset-4 bg-gradient-to-bl from-secondary-500/20 to-transparent rounded-3xl blur-xl"
+          >
+          </div>
+          <div
+            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
+          >
+            <Image class="w-full h-full object-cover" src={StabilizePicture} alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="py-40 mt-10 relative container px-6 mx-auto">
-    <div
-      class="absolute top-0 z-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-background opacity-50 pointer-events-none"
-    >
-      <DotBackground
-        width={20}
-        height={20}
-        className="[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
-        client:load
-      />
-    </div>
+  <div class="pt-40 mt-10 relative container px-6 mx-auto z-10">
     <div class="flex flex-col items-center justify-center">
       <h1
         class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
@@ -139,15 +198,25 @@ import { DotBackground } from "@/domains/home/DotBackground";
       </p>
     </div>
 
-    <div class="flex flex-col relative items-center mt-34 px-4">
+    <div class="flex flex-col relative items-center py-20 px-4">
+      <div
+        class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
+      >
+        <DotBackground
+          width={20}
+          height={20}
+          className="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          client:load
+        />
+      </div>
       <div class="relative w-full max-w-[550px]">
         <div
           class="relative flex items-between justify-between mb-4 bg-gradient-to-r rounded-2xl from-primary-500/50 via-black/0 to-secondary-500/50"
         >
-          <div class="left-0 text-2xl rounded-xl px-4 py-1">TEMPO</div>
+          <div class="left-0 text-xl font-bold rounded-xl px-4 py-10">TEMPO</div>
           <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[120%] w-px bg-white">
           </div>
-          <div class="right-0 -top-10 text-2xl rounded-xl px-4 py-1">SORGFALT</div>
+          <div class="right-0 -top-10 text-xl rounded-xl font-bold px-4 py-10">SORGFALT</div>
         </div>
 
         <div class="flex justify-center">

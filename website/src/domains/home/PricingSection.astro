@@ -1,0 +1,132 @@
+---
+import { User, UsersIcon, CheckIcon } from "lucide-react";
+import { button } from "@/ui/Button";
+---
+
+<section id="engagement-section" class="py-20 border-t border-neutral-800">
+  <div class="container mx-auto px-4 max-w-prose">
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-thin text-white">Unsere Modelle</h2>
+      <p class="text-neutral-400 text-lg mt-3 max-w-prose mx-auto">
+        Das komplette A3-Team oder einen Experten. Kurz, klar, transparent.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-8 mt-20">
+      <!-- Team -->
+      <article
+        class="relative bg-gradient-to-tr from-primary-600 via-neutral-800 to-neutral-800 p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200"
+      >
+        <!-- pronounced bottom-left gradient accent (only for recommended team card) -->
+        <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
+          <div
+            class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-blue-500 blur-3xl opacity-40"
+          >
+          </div>
+        </div>
+
+        <div class="py-10 px-6 bg-black rounded-xl w-full h-full flex flex-col justify-between">
+          <div>
+            <header class="mb-4 flex flex-col items-start gap-4">
+              <UsersIcon size={36} className="shrink-0 " />
+              <div>
+                <h3 class="text-2xl font-bold text-white">A3-Team</h3>
+                <!-- <p class="text-neutral-400">
+                  Drei Experten — <TextHighlight>Full Service</TextHighlight>
+                </p> -->
+                <p class="text-neutral-400 mt-4 font-serif">
+                  Üblicherweise Stundenpreis, Pauschalpreis möglich.
+                </p>
+              </div>
+            </header>
+
+            <div class="absolute -top-3 right-3 pointer-events-none">
+              <span
+                class="bg-gradient-to-r from-primary-500 to-black text-white pl-2 pr-4 py-1 rounded-full text-xs"
+                >empfohlen</span
+              >
+            </div>
+
+            <ul class="list-none relative text-white space-y-3 mb-4 font-serif">
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" />Drei Experten
+              </li>
+
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" />Full Service
+              </li>
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" />Komplexe Projekte
+              </li>
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" /> Projekt-Setups von A-Z
+              </li>
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" /> Effiziente Iterationen
+              </li>
+            </ul>
+          </div>
+          <div class="text-center mt-4">
+            <a
+              href="#kontakt"
+              class={button({
+                size: "lg",
+              })}>Team anfragen</a
+            >
+          </div>
+        </div>
+      </article>
+      <!-- Single Expert -->
+      <article
+        class="relative bg-black rounded-xl border border-neutral-800 hover:shadow-lg transition-shadow duration-200"
+      >
+        <div class="px-6 py-10 bg-black rounded-xl w-full h-full flex flex-col justify-between">
+          <div>
+            <header class="mb-4 flex flex-col items-start gap-4">
+              <User size={36} className="shrink-0" />
+              <div>
+                <h3 class="text-2xl font-bold text-white">Single</h3>
+                <!-- <p class="text-neutral-400 mt-1">Einen Spezialist</p> -->
+                <p class="text-neutral-400 mt-4 font-serif">Pauschalpreis oder Stundenpreis möglich.</p>
+              </div>
+            </header>
+
+            <div class="flex flex-col justify-between">
+              <div>
+                <ul class="list-none text-white space-y-3 mb-4 font-serif">
+                  <li class="flex items-start gap-3">
+                    <CheckIcon size={24} className="shrink-0 mt-1" /> Spezifische Aufgaben
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <CheckIcon size={24} className="shrink-0 mt-1" /> Individuelle Beratung
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <CheckIcon size={24} className="shrink-0 mt-1" /> Fokussierte Unterstützung
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a
+              href="#kontakt"
+              class={button({
+                size: "lg",
+                variant: "neutral",
+              })}>Anfragen</a
+            >
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-10 bg-black p-6 text-neutral-400 font-serif">
+      <strong class="block text-white mb-2">Kurz zur Preisgestaltung</strong>
+      <p>
+        Unsere Preise richten sich nach Umfang, Zeitrahmen und ob Sie einmalige Unterstützung oder eine
+        laufende Zusammenarbeit wünschen. Sprechen Sie kurz mit uns — wir machen einen klaren, transparenten
+        Vorschlag, abgestimmt auf Budget und Zeitplan.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import { FAQAccordion } from "./FAQAccordion";
+
+const faqItems = [
+  {
+    question: "Wie läuft eine Zusammenarbeit typisch ab?",
+    answer:
+      "Wir starten immer mit einem unverbindlichen Kennenlern-Call von 15-30 Minuten. Dort besprechen wir Ihre Ziele und schauen, ob die Chemie stimmt. Danach entwickeln wir gemeinsam einen Plan – transparent, mit klaren Meilensteinen und regelmäßigen Updates. Kurze Entwicklungszyklen sorgen dafür, dass Sie schnell sichtbare Fortschritte sehen.",
+  },
+  {
+    question: "Was kostet ein Projekt bei euch?",
+    answer:
+      "Unsere Preise orientieren sich an Umfang, Zeitrahmen und der Frage, ob Sie einmalig Unterstützung benötigen oder eine laufende Zusammenarbeit wünschen. Wir sind transparent: Lassen Sie uns Ihr Ziel kurz besprechen — wir machen einen konkreten Vorschlag, der zu Ihrem Budget und Zeitplan passt.",
+  },
+  {
+    question: "Arbeitet ihr remote oder vor Ort?",
+    answer:
+      "Beides! Wir sind in Nürnberg ansässig und können gerne vor Ort sein, wenn es das Projekt erfordert. Aber die meiste Arbeit machen wir remote – das hat sich bewährt und ist oft effizienter. Regelmäßige Video-Calls sorgen für den nötigen Austausch. Sie entscheiden, was für Ihr Projekt am besten passt.",
+  },
+  {
+    question: "Welche Technologien nutzt ihr?",
+    answer:
+      "Wir sind breit aufgestellt: React, Next.js, Vue, Astro für Frontend; Node.js, Python für Backend; PostgreSQL, MongoDB für Datenbanken. Aber wir sind keine Tool-Fanatiker – wir wählen die Technologie, die zu Ihrem Problem passt. Legacy-Code ist auch kein Problem für uns. Pragmatismus vor Perfektionismus.",
+  },
+  {
+    question: "Wie schnell könnt ihr starten?",
+    answer:
+      "Das kommt auf unsere aktuelle Auslastung an. Für dringende Kleinprojekte oder Beratung können wir oft binnen weniger Tage loslegen. Bei größeren Projekten planen wir gerne 1-2 Wochen Vorlauf ein, um uns richtig vorzubereiten. Ein kurzer Anruf verrät Ihnen sofort, wie es gerade aussieht.",
+  },
+  {
+    question: "Bietet ihr auch langfristige Betreuung an?",
+    answer:
+      "Ja, das ist sogar unser Lieblings-Szenario! Wir entwickeln nicht nur, sondern bleiben auch gerne langfristig als Partner an Bord. Wartung, Weiterentwicklung, Support – alles aus einer Hand. So können wir das System richtig kennenlernen und es kontinuierlich verbessern, anstatt es nach dem Launch alleine zu lassen.",
+  },
+];
+---
+
+<section id="faq-section" class="overflow-hidden py-20 relative flex flex-col bg-black">
+  <div class="flex flex-col items-center justify-center z-10 mb-16">
+    <h2
+      class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+    >
+      Häufige Fragen
+    </h2>
+    <p class="text-lg font-thin mt-4 text-neutral-400 font-serif text-center max-w-2xl">
+      Klare Antworten auf die wichtigsten Fragen zur Zusammenarbeit mit uns.
+    </p>
+  </div>
+
+  <div class="container mx-auto px-4 max-w-4xl z-20">
+    <FAQAccordion items={faqItems} client:load />
+  </div>
+</section>

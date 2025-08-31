@@ -1,17 +1,9 @@
----
-import { BackPattern } from "@/ui/BackPattern";
-import { button } from "@/ui/Button";
-import { Card } from "@/ui/Card";
-import { CheckSquare, User, Users } from "lucide-react";
----
-
 <script>
   import { scroll, animate } from "motion";
   const hiringSection = document.querySelector("#hiring-section")!;
 
   const hiringTeamBackground = document.querySelectorAll(".hiring-team-backgorund");
 
-  console.log("hiringTeamBackground", hiringTeamBackground);
   hiringTeamBackground.forEach((el) => {
     if (el) {
       console.log("el", el);
@@ -21,11 +13,6 @@ import { CheckSquare, User, Users } from "lucide-react";
       });
     }
   });
-
-  //  scroll(animate(element, { y: [200, 0], opacity: [0, 1] }), {
-  //       target: element,
-  //       offset: [`-300px 0.5`, "0 0.5"],
-  //     });
 
   const hiringTeamBackgroundMobile = document.querySelectorAll(".hiring-team-backgorund-mobile");
 
@@ -41,19 +28,25 @@ import { CheckSquare, User, Users } from "lucide-react";
   const hiringTeamCard = document.querySelector("#hiring-team-card");
 
   if (hiringTeamCard) {
-    scroll(animate(hiringTeamCard, { x: ["-200px", 0], opacity: [0, 1] }), {
-      target: hiringTeamCard,
-      offset: ["0.5 1", "0 0.5"],
-    });
+    scroll(
+      animate(hiringTeamCard, { filter: ["blur(5px)", "blur(0px)"], x: ["-200px", 0], opacity: [0, 1] }),
+      {
+        target: hiringTeamCard,
+        offset: ["0.5 1", "0 0.5"],
+      }
+    );
   }
 
   const hiringInvidiualCard = document.querySelector("#hiring-individual-card");
 
   if (hiringInvidiualCard) {
-    scroll(animate(hiringInvidiualCard, { x: ["100px", 0], opacity: [0, 1] }), {
-      target: hiringSection,
-      offset: ["0.4 0.5", "0.6 0.5"],
-    });
+    scroll(
+      animate(hiringInvidiualCard, { filter: ["blur(5px)", "blur(0px)"], x: ["100px", 0], opacity: [0, 1] }),
+      {
+        target: hiringSection,
+        offset: ["0.4 0.5", "0.6 0.5"],
+      }
+    );
   }
 
   const hiringTeamOr = document.querySelector("#hiring-team-or");
@@ -67,93 +60,37 @@ import { CheckSquare, User, Users } from "lucide-react";
 </script>
 <section
   id="hiring-section"
-  class="relative z-10 bg-neutral-950 border-t border-solid border-neutral-800 overflow-hidden py-20"
+  class="relative z-10 bg-black border-t border-solid border-neutral-800 overflow-hidden py-20"
 >
-  <div class="hiring-team-backgorund hidden lg:flex absolute bg-primary-800 w-1/2 h-full top-0 left-0 z-0">
+  <div class="hiring-team-backgorund hidden lg:flex absolute bg-black w-1/2 h-full top-0 left-0 z-0"></div>
+  <div class="hiring-team-backgorund hidden lg:flex absolute bg-black w-full h-full top-0 -left-1/2 z-0">
   </div>
   <div
-    class="hiring-team-backgorund hidden lg:flex absolute bg-primary-800 w-full h-full top-0 -left-1/2 z-0"
+    class="hiring-team-backgorund-mobile lg:hidden absolute bg-black w-full h-1/2 top-0 left-0 z-0 skew-y-[10deg]"
   >
   </div>
-  <div
-    class="hiring-team-backgorund-mobile lg:hidden absolute bg-primary-800 w-full h-1/2 top-0 left-0 z-0 skew-y-[10deg]"
-  >
-  </div>
-  <div class="lg:hidden absolute bg-primary-800 w-full h-1/4 top-0 left-0 z-0"></div>
+  <div class="lg:hidden absolute bg-black w-full h-1/4 top-0 left-0 z-0"></div>
 
   <div
-    class="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-20 relative z-10"
+    class="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-20 relative z-10 h-full min-h-[300px]"
   >
-    <Card id="hiring-team-card" className="w-[350px] " color="transparent">
-      <Card.Header className="flex flex-col items-center justify-center">
-        <Users size={64} className="text-primary-300" />
-
-        <h3 class="text-center text-lg font-bold text-primary-300 relative">
-          Als Team <div
-            class="absolute translate-x-1 -translate-y-1/2 top-1/2 text-xs font-bold -right-full px-2 py-1 rounded bg-secondary-700/50 text-secondary-300"
-          >
-            empfohlen
-          </div>
-        </h3>
-      </Card.Header>
-      <Card.Body className="text-sm leading-[1.2]">
-        <p class="text-center">Engagiere uns als Team für</p>
-        <ul class="flex flex-col gap-8 mt-10">
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-primary-300" />
-            <p>Komplexe Projekte</p>
-          </li>
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-primary-300" />
-            <p>Projekt-Setups von A-Z</p>
-          </li>
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-primary-300" />
-            <p>Effiziente Iterationen</p>
-          </li>
-        </ul>
-      </Card.Body>
-      <Card.Footer className="flex items-center justify-center mt-8">
-        <BackPattern className="self-start" color="neutralOnDark" animated>
-          <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
-            >Experten anheuern</a
-          >
-        </BackPattern>
-      </Card.Footer>
-    </Card>
-    <div id="hiring-team-or" class="h-full italic self-center font-extralight text-sm tracking-widest">
+    <div class="max-w-1/2">
+      <h2 id="hiring-team-card" class="text-5xl text-white/40 font-bold">
+        Software endlich <span class="text-white">richtig anpacken</span>
+      </h2>
+      <!-- <div id="hiring-team-or" class="h-full italic self-center font-extralight text-sm tracking-widest">
       ODER
+    </div> -->
     </div>
 
-    <Card id="hiring-individual-card" className="w-[350px]" color="transparent">
-      <Card.Header className="flex flex-col items-center justify-center">
-        <User size={64} className="text-neutral-400" />
-        <h3 class="text-center text-lg font-bold text-neutral-400">Einzeln</h3>
-      </Card.Header>
-      <Card.Body className="text-sm leading-[1.2]">
-        <p class="text-center">Engagiere einen Experten für</p>
-        <ul class="flex flex-col gap-8 mt-10">
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-neutral-400" />
-            <p>Spezifische Aufgaben</p>
-          </li>
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-neutral-400" />
-            <p>Individuelle Beratung</p>
-          </li>
-          <li class="flex gap-4 items-center">
-            <CheckSquare size={32} className="text-neutral-400" />
-            <p>Fokussierte Unterstützung</p>
-          </li>
-        </ul>
-      </Card.Body>
-      <Card.Footer className="flex items-center justify-center mt-8">
-        <BackPattern className="self-start" color="neutralOnDark" animated>
-          <a href="#kontakt" class={button({ variant: "neutralOnDark", increaseHitbox: true })}
-            >Experten anheuern</a
-          >
-        </BackPattern>
-      </Card.Footer>
-    </Card>
+    <div class="max-w-1/2 lg:self-end">
+      <h2 id="hiring-individual-card" class="text-5xl text-white/40 font-bold">
+        Mit dem <br />
+        <span
+          class="text-7xl font-bold inline-block text-center bg-gradient-to-br from-white via-white to-primary-500 text-transparent bg-clip-text"
+          >A3-Team</span
+        >
+      </h2>
+    </div>
   </div>
 </section>

@@ -12,8 +12,11 @@ import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html class="bg-black text-neutral-50 font-sans text-xs scroll-pt-header" lang="en">
-  <slot />
+<html class="bg-black text-neutral-50 font-sans scroll-pt-header" style="font-size:16px;" lang="en">
+  <div class="text-base">
+    <slot />
+  </div>
+
   <style is:global>
     @reference "tailwindcss";
 

@@ -1,3 +1,11 @@
 {
-    "prettier.configPath": "./website/.prettierrc"
+    "prettier.configPath": "./website/.prettierrc",
+    "prettier.withNodeModules": false,
+    "prettier.prettierPath": "./website/node_modules/prettier",
+    "prettier.resolveGlobalModules": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

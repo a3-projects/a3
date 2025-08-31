@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const button = tv({
-  base: "relative cursor-pointer inline-flex items-center justify-center rounded-pill transition-all text-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  base: "relative cursor-pointer rounded-xl inline-flex items-center justify-center  transition-all text-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   variants: {
     variant: {
       default:
@@ -13,7 +13,7 @@ export const button = tv({
       outline: "border border-input bg-background hover:bg-secondary hover:text-secondary-500",
       secondary: "bg-secondary-600 text-white hover:bg-white hover:text-black",
       ghost: "hover:bg-secondary hover:text-secondary-500",
-      neutral: "bg-neutral-950 text-neutral-50 hover:bg-neutral-50 hover:text-neutral-950 hover:shadow-lg",
+      neutral: "bg-neutral-600 text-neutral-50 hover:bg-neutral-50 hover:text-neutral-950 hover:shadow-lg",
       neutralOnDark:
         "bg-neutral-50 text-neutral-950 hover:bg-neutral-950 hover:text-neutral-50 hover:shadow-lg ",
       link: "text-primary underline-offset-4 hover:underline",

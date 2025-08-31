@@ -27,7 +27,7 @@ const companyLogos = [
 ---
 
 <section
-  class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-12 bg-gradient-to-r from-black to via-neutral-900 to-black"
+  class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-12 bg-[linear-gradient(to_right,theme(colors.black),theme(colors.neutral.900),theme(colors.black))]"
 >
   <div class="flex items-center justify-center">
     <h1
@@ -36,15 +36,15 @@ const companyLogos = [
       GAME-CHANGER BEI
     </h1>
   </div>
+  <div
+    class="absolute top-0 left-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"
+  >
+  </div>
+  <div
+    class="absolute top-0 right-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
+  >
+  </div>
   <div class="relative overflow-hidden py--20">
-    <div
-      class="absolute top-0 left-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"
-    >
-    </div>
-    <div
-      class="absolute top-0 right-0 h-full w-[10vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
-    >
-    </div>
     <div class="flex animate-marquee w-max py-10 marquee-container hover:pause-animation">
       <!-- First set of logos -->
       <div class="flex items-center gap-20 pl-20 justify-center">

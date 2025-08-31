@@ -1,0 +1,124 @@
+---
+import { Logo } from "@/ui/icons/Logo";
+import { TextHighlight } from "@/ui/TextHighlight";
+import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
+import { DotBackground } from "@/domains/home/DotBackground";
+---
+
+<style></style>
+
+<section id="was-wir-bewirken" class="overflow-hidden z-10 py-32 relative flex flex-col bg-black">
+  <div class="flex flex-col items-center justify-center z-10">
+    <h2
+      class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+    >
+      Was wir bewirken
+    </h2>
+    <p class="font-thin text-lg mt-4 text-neutral-400 font-serif text-center max-w-2xl">
+      Maßgeschneiderte Software mit echtem ROI: Kosten sparen oder neue Einnahmequellen generieren – spürbar
+      und real.
+    </p>
+  </div>
+  <div class="container mx-auto px-4 z-10 mt-20 max-w-[1200px]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-template-columns-[300px]">
+      <GradientHoverCard
+        client:load
+        className="bento-card relative z-10 bento-1  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <h4 class="text-xl font-bold text-white">Zahlende Kunden</h4>
+          </div>
+          <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <TextHighlight>Software, die überzeugt</TextHighlight> – benutzerfreundlich, schnell und so intuitiv,
+            dass Kunden gerne wiederkommen und weiterempfehlen.
+          </p>
+        </div>
+      </GradientHoverCard>
+
+      <GradientHoverCard
+        client:load
+        className="bento-card relative z-10  backdrop-blur-sm bento-2 border border-neutral-800 p-6 rounded-xl"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <h4 class="text-xl font-bold text-white">Mehr Fokus</h4>
+          </div>
+          <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <TextHighlight>Intelligente Automatisierung</TextHighlight> übernimmt repetitive Aufgaben und schafft
+            Raum für kreative und strategische Arbeit.
+          </p>
+        </div>
+      </GradientHoverCard>
+
+      <GradientHoverCard
+        client:load
+        className="bento-card relative z-10 bento-4  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <h4 class="text-xl font-bold text-white">Zufriedene Mitarbeiter</h4>
+          </div>
+          <p class="text-neutral-400 font-serif text-base leading-relaxed flex-grow">
+            <TextHighlight>Durchdachte interne Tools</TextHighlight> und <TextHighlight
+              >Dashboards</TextHighlight
+            >, vereinfachen komplexe Arbeitsabläufe und eliminieren Frustration.
+          </p>
+        </div>
+      </GradientHoverCard>
+
+      <GradientHoverCard
+        client:load
+        className="bento-card relative z-10 bento-5  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <h4 class="text-xl font-bold text-white">Nachhaltiges Wachstum</h4>
+          </div>
+          <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <TextHighlight>Durchdachte Software-Architektur</TextHighlight> schafft Qualität und baut ein solides
+            Fundament – für Wachstum, das hält.
+          </p>
+        </div>
+      </GradientHoverCard>
+
+      <div
+        class="bento-3 relative rounded-xl p-8 flex items-center justify-center w-full aspect-square md:aspect-auto"
+      >
+        <div class="absolute flex inset-0">
+          <DotBackground
+            client:load
+            width={16}
+            height={16}
+            className="[mask-image:radial-gradient(220px_circle_at_center,white,transparent)]"
+          />
+        </div>
+
+        <div class="absolute flex w-full h-full -translate-y-2 translate-x-2">
+          <Logo className="text-primary-500 blur-xl m-auto  transition-colors duration-300 z-0" size="70%" />
+        </div>
+        <div class="absolute flex w-full h-full -translate-y-2 translate-x-2">
+          <Logo className="text-primary-200  m-auto hover:text-primary-300 " size="70%" />
+        </div>
+      </div>
+      <!-- Card 6: Energie für Innovation -->
+      <GradientHoverCard
+        client:load
+        className="bento-card relative z-10 bento-6  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- <div class="icon-wrapper">
+              <LightbulbIcon className="w-8 h-8 text-primary-400" strokeWidth={1.5} />
+            </div> -->
+            <h4 class="text-xl font-bold text-white">Energie für Innovation</h4>
+          </div>
+          <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <TextHighlight>Flüssige Abläufe</TextHighlight> ohne Unterbrechungen. Weniger Reibung, mehr Flow –
+            so entstehen die besten Ideen.
+          </p>
+        </div>
+      </GradientHoverCard>
+    </div>
+  </div>
+</section>

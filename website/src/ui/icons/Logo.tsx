@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import type { ElementRef, ComponentPropsWithoutRef } from "react";
 
 export interface LogoProps {
-  size?: number;
+  size?: number | string;
 }
 
 const Logo = forwardRef<ElementRef<"svg">, LogoProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {

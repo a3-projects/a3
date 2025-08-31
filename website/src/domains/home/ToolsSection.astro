@@ -93,13 +93,8 @@ interface TechIcon {
     const techIcons = document.querySelectorAll(".tech-stack-icon");
     if (techIcons.length === 0) return;
 
-    let isHovering = false;
-    let animationInterval: number;
-
-    // Apply hover animation to each tech icon
     techIcons.forEach((icon) => {
       hover(icon, () => {
-        isHovering = true;
         animate(icon, {
           scale: [1, 1.5, 1.5],
           filter: ["blur(0) grayscale(1)", "blur(5px) grayscale(0.5)", "blur(0) grayscale(0)"],
@@ -109,56 +104,13 @@ interface TechIcon {
             scale: 1,
             filter: "blur(0) grayscale(1)",
           });
-          isHovering = false;
-          // Restart the cycle animation when hover ends
-          if (!animationInterval) {
-            startRandomAnimation();
-          }
         };
       });
     });
-
-    // Function to animate a single random icon
-    const animateRandomIcon = () => {
-      if (isHovering) return;
-
-      const randomIndex = Math.floor(Math.random() * techIcons.length);
-      const icon = techIcons[randomIndex] as HTMLElement;
-
-      animate(
-        icon,
-        {
-          scale: [1, 1.5, 1.5, 1.5, 1, 1],
-          filter: [
-            "blur(0) grayscale(1)",
-            "blur(3px) grayscale(0)",
-            "blur(0) grayscale(0)",
-            "blur(0) grayscale(0)",
-            "blur(3px) grayscale(0)",
-            "blur(0) grayscale(1)",
-          ],
-        },
-        {
-          duration: 4,
-        }
-      );
-    };
-
-    // Function to start the random animation
-    const startRandomAnimation = () => {
-      animationInterval = window.setInterval(() => {
-        if (!isHovering) {
-          animateRandomIcon();
-        }
-      }, 4000);
-    };
-
-    // Start the animation
-    startRandomAnimation();
   });
 </script>
 
-<section id="tools" class="overflow-x-clip relative flex items-start bg-neutral-950 pb-40">
+<section id="tools" class="overflow-x-clip relative flex items-start bg-black py-20">
   <div class="container mx-auto px-4 z-10 flex flex-col">
     <div class="flex flex-col items-center justify-center">
       <h2
@@ -170,11 +122,13 @@ interface TechIcon {
         So vielseitig wie die Probleme, die wir lösen.
       </p>
     </div>
-    <div class="flex gap-14 pt-10 flex-wrap max-w-[1200px] items-center justify-center mx-auto px-3 mt-20">
+    <div
+      class="grid grid-cols-7 md:grid-cols-13 gap-4 flex-wrap max-w-[1200px] align-center justify-center mx-auto px-3 mt-10"
+    >
       {
         shuffledIcons.map((icon) => (
           <a href={icon.href} title={icon.title} target="_blank" class="tech-stack-icon grayscale ">
-            <Image src={icon.src} alt={icon.alt} class="transition-all duration-300 size-14" />
+            <Image src={icon.src} alt={icon.alt} class="transition-all duration-300 size-8" />
           </a>
         ))
       }
