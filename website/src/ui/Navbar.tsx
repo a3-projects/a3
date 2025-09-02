@@ -7,7 +7,7 @@ export const navbar = tv({
   base: "h-header flex fixed top-0 left-0 w-full transition-all duration-1000 z-50 border-b border-solid ",
   variants: {
     isBackgroundVisible: {
-      true: "bg-black/70 backdrop-blur-sm border-neutral-900",
+      true: "bg-black/70 backdrop-blur-sm border-neutral-800",
       false: " bg-transparent border-transparent",
     },
   },

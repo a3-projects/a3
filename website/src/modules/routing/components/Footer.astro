@@ -25,9 +25,9 @@ import react from "@/assets/images/react.svg";
 </script>
 <footer
   id="kontakt"
-  class="bg-black heropattern-texture-neutral-950 text-neutral-50 pt-40 border-t border-solid border-neutral-900 flex flex-col gap-6"
+  class="bg-neutral-950 text-neutral-50 pt-20 border-t border-solid border-neutral-800 flex flex-col gap-6"
 >
-  <div class="flex flex-col gap-4 px-10">
+  <div class="flex flex-col gap-4 px-6">
     <div>
       <form
         name="contact"
@@ -38,7 +38,7 @@ import react from "@/assets/images/react.svg";
       >
         <h2
           id="contact-title"
-          class="text-4xl font-thin inline-block text-left bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+          class="text-4xl inline-block text-left bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
         >
           Kurzer Kennenlern‑Call?
         </h2>
@@ -50,20 +50,20 @@ import react from "@/assets/images/react.svg";
           <label class="text-neutral-400 mt-10 flex flex-col gap-3"
             >Email
             <input
-              class="border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-              placeholder="Mit welcher Email sollen wir Sie kontaktieren?"
+              class="border-4 border-solid rounded-xl text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+              placeholder="Deine E-Mail für Rückmeldung"
               required
               name="email"
               type="email"
             /></label
           >
           <label class="text-neutral-400 mt-4 flex flex-col gap-3"
-            >Ihre Anfrage
+            >Anfrage
             <textarea
-              class="h-[200px] border border-solid text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+              class="h-[200px] border-4 border-solid rounded-xl text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
               required
               name="message"
-              placeholder="Erzähle Sie uns etwas über Ihr Projekt."></textarea>
+              placeholder="Erzähle uns etwas über dein Projekt."></textarea>
           </label>
           <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
             Anfrage absenden
@@ -73,22 +73,22 @@ import react from "@/assets/images/react.svg";
     </div>
     <div class=""></div>
 
-    <p class="mx-auto font-light mt-40">Powered by</p>
+    <p class="mx-auto font-light mt-20">Powered by</p>
     <div class="flex items-center justify-center gap-4">
       <a href="https://tailwindcss.com/" title="reactjs" target="_blank">
-        <Image width={32} height={32} src={react} alt="react logo" />
+        <Image class="grayscale" width={32} height={32} src={react} alt="react logo" />
 
         <a href="https://astro.build/" title="astrojs" target="_blank">
-          <Image width={32} height={32} src={astro} alt="astro logo" />
+          <Image class="grayscale" width={32} height={32} src={astro} alt="astro logo" />
         </a>
 
         <a href="https://tailwindcss.com/" title="tailwindcss" target="_blank">
-          <Image width={32} height={32} src={tailwind} alt="tailwind logo" />
+          <Image class="grayscale" width={32} height={32} src={tailwind} alt="tailwind logo" />
         </a>
       </a>
 
       <a href="https://lucide.dev/" title="lucide" target="_blank">
-        <Image width={32} height={32} src={lucide} alt="lucide logo" />
+        <Image class="grayscale" width={32} height={32} src={lucide} alt="lucide logo" />
       </a>
     </div>
   </div>

@@ -37,7 +37,7 @@ import type { VariantProps } from "tailwind-variants";
 // export { TextHighlight };
 
 export const textHighlight = tv({
-  base: "relative inline-block text-white before:h-1/2  before:-bottom-[0px] before:absolute before:bg-primary-600/0  before:-z-10 before:w-[calc(100%+6px)] before:-left-[3px]  z-10 before:-z-1",
+  base: "relative inline text-white before:h-1/2  before:-bottom-[0px] before:absolute before:bg-primary-600/0  before:-z-10 before:w-[calc(100%+6px)] before:-left-[3px]  z-10 before:-z-1",
 });
 
 export interface TextHighlightProps extends VariantProps<typeof textHighlight> {}

@@ -2,9 +2,6 @@
 import { button } from "@/ui/Button";
 import { Image } from "astro:assets";
 import blackWaveBackground from "@/assets/images/logo-background.svg";
-import CompanyMarquee from "./CompanyMarquee.astro";
-import { BackPattern } from "@/ui/BackPattern";
-import { TextHighlight } from "@/ui/TextHighlight";
 ---
 
 <script>
@@ -62,7 +59,7 @@ import { TextHighlight } from "@/ui/TextHighlight";
         </div>
       </BackPattern> -->
 
-      <h1 id="hero-title" class="font-sans text-7xl text-primary-200 font-thin mt-4">
+      <h1 id="hero-title" class="font-sans text-7xl text-primary-200 mt-4">
         <span
           class="bg-gradient-to-br from-primary-200 via-primary-200 to-primary-500 text-transparent bg-clip-text"
           >Drei Köpfe.</span
@@ -76,45 +73,42 @@ import { TextHighlight } from "@/ui/TextHighlight";
         >
       </h1>
 
-      <p id="hero-description" class="text-2xl max-w-[800px] pt-8 font-serif">
-        Verwandt im echten Leben, eingespielt im Projekt. Wir sind drei Sofware-Entwickler, die Klartext
-        sprechen, mitdenken und so liefern, dass es alle verstehen.
+      <p id="hero-description" class="text-xl max-w-[800px] pt-8">
+        Verwandt im echten Leben, eingespielt im Projekt – drei Entwickler, die Klartext sprechen und echten
+        Mehrwert schaffen.
       </p>
       <div id="hero-button" class="mt-14">
         <a
           href="#was-wir-bewirken"
           class={button({
             size: "lg",
-            class: "text-lg ",
+            class: "text-lg",
             increaseHitbox: true,
-          })}>Wieso du uns brauchst</a
+          })}>Was wir für dich erreichen</a
         >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-4 mt-14">
         <div
-          class="border border-solid border-primary-600 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-neutral-800 bg-black/80 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Pragmatisch
         </div>
         <div
-          class="border border-solid border-primary-600 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-neutral-800 bg-black/80 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Qualitätsbewusst
         </div>
         <div
-          class="border border-solid border-primary-600 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-neutral-800 bg-black/80 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Kommunikativ
         </div>
         <div
-          class="border border-solid border-primary-600 bg-black/80 font-thin backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
+          class="border border-solid border-neutral-800 bg-black/80 backdrop-blur-lg rounded-full px-4 py-2 text-primary-100"
         >
           Verlässlich
         </div>
       </div>
     </div>
   </div>
-</section>
-<section>
-  <CompanyMarquee />
 </section>

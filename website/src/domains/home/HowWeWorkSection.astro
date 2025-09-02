@@ -1,27 +1,143 @@
 ---
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, EarIcon, Grid2X2CheckIcon, LightbulbIcon, PackageOpenIcon } from "lucide-react";
 import { Image } from "astro:assets";
 
 import ListenPicture from "@/assets/images/pictures/listen.png";
 import ThinkPicture from "@/assets/images/pictures/think.png";
-import DeliveryPicture from "@/assets/images/pictures/delivery.jpg";
-import StabilizePicture from "@/assets/images/pictures/stabilize.jpg";
+import DeliveryPicture from "@/assets/images/pictures/delivery.png";
+import StabilizePicture from "@/assets/images/pictures/stabilize.png";
 import { DotBackground } from "@/domains/home/DotBackground";
+import { button } from "@/ui/Button";
 ---
 
-<section id="wie-wir-arbeiten" class="overflow-hidden py-20 relative flex flex-col bg-black pb-40">
-  <div class="flex flex-col items-center justify-center">
+<section
+  id="wie-wir-arbeiten"
+  class="overflow-hidden py-20 relative animate-how-we-work opacity-0 flex flex-col bg-gradient-to-b from-black to-neutral-950"
+>
+  <div class="animate-how-we-work flex flex-col items-start max-w-[1200px] w-full mx-auto px-6">
     <h1
-      class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      class="text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
     >
-      Wie wir arbeiten
+      So läuft unsere Zusammenarbeit
     </h1>
-    <p class="text-lg font-thin mt-4 text-neutral-400 text-center font-serif px-6">
-      Ehrlich, klar, effektiv – unser Anspruch an jede Zusammenarbeit.
+    <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose">
+      Erfolgreiche Software entsteht nicht durch Zufall. Wir folgen einem klaren Rhythmus – von den ersten
+      Zielen bis zum stabilen Betrieb. Das sorgt für Transparenz, Tempo und Verlässlichkeit.
     </p>
   </div>
-  <div class="container mx-auto mt-20 space-y-32 px-6">
-    <!-- Step 01 -->
+
+  <div class="animate-how-we-work max-w-[1200px] w-full relative mx-auto mt-10 grid grid-cols-1">
+    <!-- <div
+      class="hidden lg:block w-[calc(100%_+_40px)] h-[1px] bg-neutral-800 z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
+    >
+    </div>
+    <div
+      class="hidden lg:block h-[calc(100%_+_40px)] w-[1px] bg-neutral-800 z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
+    >
+    </div> -->
+
+    <div class="px-10 absolute left-0 top-0 h-full flex items-center justify-center">
+      <EarIcon size="48" className="text-primary-500 opacity-0" strokeWidth="0.6" />
+
+      <div class="w-[1px] absolute bg-neutral-800 h-full"></div>
+    </div>
+    <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
+      <div class="flex flex-col items-start">
+        <span
+          class="text-4xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text flex gap-4 items-center w-full"
+        >
+          <div class="p-4 rounded-xl bg-primary-950 relative">
+            <EarIcon size="48" className="text-primary-500" strokeWidth="0.6" />
+
+            <div class="absolute top-1 left-1 leading-none text-primary-500 text-xs">01</div>
+          </div>
+        </span>
+      </div>
+      <div>
+        <h3 class="text-xl text-white flex gap-1 items-center">
+          Zuhören <ArrowRightIcon size="32" strokeWidth="1" className="inline  text-primary-500" /> Verstehen
+        </h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          Wir hören zu, stellen die richtigen Fragen und schaffen Klarheit. Erst wenn wir deine Ziele
+          verstanden haben, entscheiden wir über die Mittel.
+        </p>
+      </div>
+    </div>
+
+    <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
+      <div class="flex flex-col items-start">
+        <span
+          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text flex gap-4 items-center justify-between w-full"
+        >
+          <!-- 02. -->
+          <div class="p-4 rounded-xl bg-secondary-950 relative">
+            <LightbulbIcon size="48" className="text-secondary-500" strokeWidth="0.6" />
+            <div class="absolute top-1 left-1 leading-none text-secondary-500 text-xs">02</div>
+          </div>
+        </span>
+      </div>
+      <div>
+        <h3 class="text-xl text-white flex gap-1 items-center">
+          Mitdenken
+          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-secondary-500" /> Vereinfachen
+        </h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          Wir hinterfragen Annahmen und kürzen Wege. Gute Lösungen wirken oft selbstverständlich – genau das
+          ist die Kunst.
+        </p>
+      </div>
+    </div>
+    <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
+      <div class="flex flex-col items-start">
+        <span
+          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+        >
+          <!-- 03. -->
+          <div class="p-4 rounded-xl bg-primary-950 relative">
+            <PackageOpenIcon size="48" className="text-primary-500" strokeWidth="0.6" />
+            <div class="absolute top-1 left-1 leading-none text-primary-500 text-xs">03</div>
+          </div>
+        </span>
+      </div>
+      <div>
+        <h3 class="text-xl text-white flex gap-1 items-center">
+          Umsetzen
+          <ArrowRightIcon size="32" strokeWidth="1" className="inline  text-primary-500" /> Liefern
+        </h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          Kurze Zyklen, sichtbare Fortschritte – lieber jede Woche nutzbare Ergebnisse als späte
+          Überraschungen.
+        </p>
+      </div>
+    </div>
+
+    <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
+      <div class="flex flex-col items-start">
+        <span
+          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+        >
+          <!-- 04. -->
+          <div class="p-4 rounded-xl bg-secondary-950 relative">
+            <Grid2X2CheckIcon size="48" className="text-secondary-500" strokeWidth="0.6" />
+            <div class="absolute top-1 left-1 leading-none text-secondary-500 text-xs">04</div>
+          </div>
+        </span>
+      </div>
+
+      <div>
+        <h3 class="text-xl text-white flex gap-1 items-center">
+          Stabilisieren
+          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-secondary-500" /> Verfeinern
+        </h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          Wir beheben Fehler, räumen Stolpersteine aus und machen die Lösung robust. So hält sie dem Alltag
+          und dem Wachstum stand.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  <div class="container mx-auto mt-10 space-y-32 px-6">
     <div class="relative group z-10">
       <div
         class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
@@ -31,7 +147,7 @@ import { DotBackground } from "@/domains/home/DotBackground";
         <div class="flex-1 space-y-6">
           <div class="space-y-4">
             <span
-              class="text-7xl font-thin bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
+              class="text-7xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
             >
               01.
             </span>
@@ -40,30 +156,24 @@ import { DotBackground } from "@/domains/home/DotBackground";
             </h3>
           </div>
           <p class="text-neutral-400 font-serif text-lg">
-            Wir starten mit Zielen, nicht mit Tools. Was soll sich für wen verbessern? Erst wenn das klar ist,
-            entscheiden wir die Mittel.
+            Wir hören zu, stellen die richtigen Fragen und schaffen Klarheit. Erst wenn wir deine Ziele
+            wirklich verstanden haben, entscheiden wir über die Mittel.
           </p>
         </div>
-        <div class="flex-1 relative">
-          <div
-            class="absolute -inset-4 bg-gradient-to-br from-primary-500/20 to-transparent rounded-3xl blur-xl"
-          >
-          </div>
-          <div
-            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
-          >
+        <div class="flex-1 relative transform hover:scale-105 transition-transform duration-300 rounded-3xl">
+          <div class="relative rounded-3xl overflow-hidden h-80">
+            <Image class="w-[400px]" src={ListenPicture} alt="Ohr das aus einem Loch schaut." />
+
             <Image
-              class="w-full h-full object-cover"
+              class="w-[400px] absolute blur-xl"
               src={ListenPicture}
               alt="Ohr das aus einem Loch schaut."
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Step 02 -->
     <div class="relative group z-10">
       <div
         class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
@@ -73,7 +183,7 @@ import { DotBackground } from "@/domains/home/DotBackground";
         <div class="flex-1 space-y-6 lg:order-2">
           <div class="space-y-4">
             <span
-              class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+              class="text-7xl bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
             >
               02.
             </span>
@@ -90,22 +200,14 @@ import { DotBackground } from "@/domains/home/DotBackground";
             ist die Kunst.
           </p>
         </div>
-        <div class="flex-1 relative lg:order-1">
-          <div
-            class="absolute -inset-4 bg-gradient-to-bl from-secondary-500/20 to-transparent rounded-3xl blur-xl"
-          >
-          </div>
-          <div
-            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
-          >
+        <div class="flex-1 relative lg:order-1 transform hover:scale-105 transition-transform duration-300">
+          <div class="relative rounded-3xl overflow-hidden h-80">
             <Image class="w-full h-full object-cover" src={ThinkPicture} alt="Think Statues." />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Step 03 -->
     <div class="relative group z-10">
       <div
         class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
@@ -115,35 +217,28 @@ import { DotBackground } from "@/domains/home/DotBackground";
         <div class="flex-1 space-y-6">
           <div class="space-y-4">
             <span
-              class="text-7xl font-thin bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
+              class="text-7xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
             >
               03.
             </span>
             <h3 class="text-xl font-bold text-white">
-              Umsetzen <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" /> Liefern
+              Umsetzen <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" />
+              Liefern
             </h3>
           </div>
           <p class="text-neutral-400 font-serif text-lg">
-            Kurze Zyklen, sichtbare Schritte. Lieber jede Woche nutzbarer Fortschritt als einmal im Quartal
-            eine Überraschung.
+            Kurze Zyklen, sichtbare Fortschritte – lieber jede Woche nutzbare Ergebnisse als späte
+            Überraschungen.
           </p>
         </div>
-        <div class="flex-1 relative">
-          <div
-            class="absolute -inset-4 bg-gradient-to-br from-primary-500/20 to-transparent rounded-3xl blur-xl"
-          >
-          </div>
-          <div
-            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
-          >
+        <div class="flex-1 relative transform hover:scale-105 transition-transform duration-300">
+          <div class="relative rounded-3xl overflow-hidden h-80">
             <Image class="w-full h-full object-cover" src={DeliveryPicture} alt="Delivery Car" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Step 04 -->
     <div class="relative group z-10">
       <div
         class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
@@ -153,7 +248,7 @@ import { DotBackground } from "@/domains/home/DotBackground";
         <div class="flex-1 space-y-6 lg:order-2">
           <div class="space-y-4">
             <span
-              class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
+              class="text-7xl bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
             >
               04.
             </span>
@@ -166,38 +261,20 @@ import { DotBackground } from "@/domains/home/DotBackground";
             </h3>
           </div>
           <p class="text-neutral-400 font-serif text-lg">
-            Schnell beeindruckend, langfristig stabil – wir schleifen so lange, bis Ruhe einkehrt.
+            Wir beheben Fehler, räumen Stolpersteine aus und machen die Lösung robust. So hält sie dem Alltag
+            und dem Wachstum stand.
           </p>
         </div>
-        <div class="flex-1 relative lg:order-1">
-          <div
-            class="absolute -inset-4 bg-gradient-to-bl from-secondary-500/20 to-transparent rounded-3xl blur-xl"
-          >
-          </div>
+        <div class="flex-1 relative lg:order-1 transform hover:scale-105 transition-transform duration-300">
           <div
             class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
           >
             <Image class="w-full h-full object-cover" src={StabilizePicture} alt="" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="pt-40 mt-10 relative container px-6 mx-auto z-10">
-    <div class="flex flex-col items-center justify-center">
-      <h1
-        class="text-4xl font-thin inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
-      >
-        Auf die Balance kommt es an
-      </h1>
-
-      <p class="text-lg font-thin mt-4 text-neutral-400 font-serif max-w-prose text-center">
-        Nicht entweder–oder. Sondern genau richtig. Tempo hält Projekte lebendig, Sorgfalt macht sie
-        verlässlich. Wir setzen auf beides – in der passenden Dosis.
-      </p>
-    </div>
-
+    </div> -->
+  <div class="animate-how-we-work relative container px-6 mx-auto mt-20 z-10">
     <div class="flex flex-col relative items-center py-20 px-4">
       <div
         class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
@@ -211,12 +288,12 @@ import { DotBackground } from "@/domains/home/DotBackground";
       </div>
       <div class="relative w-full max-w-[550px]">
         <div
-          class="relative flex items-between justify-between mb-4 bg-gradient-to-r rounded-2xl from-primary-500/50 via-black/0 to-secondary-500/50"
+          class="relative flex items-between justify-between mb-4 rounded-2xl bg-gradient-to-r from-primary-500/50 via-black/0 to-secondary-500/50"
         >
-          <div class="left-0 text-xl font-bold rounded-xl px-4 py-10">TEMPO</div>
+          <div class="left-0 text-xl rounded-xl px-8 py-10">TEMPO</div>
           <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[120%] w-px bg-white">
           </div>
-          <div class="right-0 -top-10 text-xl rounded-xl font-bold px-4 py-10">SORGFALT</div>
+          <div class="right-0 -top-6 text-xl rounded-xl px-8 py-10">SORGFALT</div>
         </div>
 
         <div class="flex justify-center">
@@ -228,4 +305,62 @@ import { DotBackground } from "@/domains/home/DotBackground";
       </div>
     </div>
   </div>
+  <div class="flex flex-col items-center justify-center">
+    <!-- <h1
+      class="text-4xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+    >
+      Nicht entweder–oder. Sondern genau richtig.
+    </h1> -->
+
+    <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose text-center">
+      Nicht entweder–oder. Sondern genau richtig. Tempo hält Projekte lebendig, Sorgfalt macht sie
+      verlässlich. Wir setzen auf beides – in der passenden Dosis.
+    </p>
+  </div>
+  <div class="animate-how-we-work text-center flex items-center justify-center px-6">
+    <a
+      href="#kontakt"
+      class={button({
+        size: "lg",
+      })}>Kennenlern-Call vereinbaren</a
+    >
+  </div>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Small helper that finds the meaningful pieces inside the section
+  const animateEls = document.querySelectorAll(".animate-how-we-work");
+  const section = animateEls[0];
+
+  // If there are no elements, warn and exit early.
+  if (!section || animateEls.length === 0) {
+    console.warn("No elements with class 'animate-how-we-work' found.");
+  } else {
+    const elements = [...animateEls].filter(Boolean);
+
+    // Use motion's inView helper to detect visibility and animate with a stagger
+    inView(
+      section,
+      () => {
+        elements.forEach((el, index) => {
+          if (!el) return;
+          animate(
+            el,
+            {
+              opacity: [0, 1],
+              y: [100, 0],
+              filter: ["blur(20px)", "blur(0px)"],
+            },
+            {
+              delay: (index || 0) * 0.18,
+              duration: 0.55,
+            }
+          );
+        });
+      },
+      { amount: 0.2 }
+    );
+  }
+</script>
