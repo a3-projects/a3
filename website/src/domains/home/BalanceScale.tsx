@@ -34,13 +34,13 @@ export const BalanceScale = () => {
   const rotate = useTransform(springRotation, (v) => `${Math.max(Math.min(v, 15), -15)}deg`);
 
   return (
-    <div className="relative w-full max-w-[550px]">
+    <div className="relative z-10 w-full max-w-[550px]">
       <motion.div
         style={{ rotate }}
         className="items-between relative flex w-full justify-between rounded-2xl"
       >
         <div className="left-0 rounded-xl p-2 text-xl">TEMPO</div>
-        <div className="-top-0 right-0 rounded-xl p-2 text-xl">SORGFALT</div>
+        <div className="-top-0 right-0 rounded-xl p-2 text-xl">QUALITÄT</div>
       </motion.div>
       <motion.div style={{ rotate }} className="absolute bottom-0 h-[2px] w-[100%] bg-white"></motion.div>
     </div>

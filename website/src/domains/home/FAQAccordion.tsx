@@ -39,7 +39,6 @@ export function FAQAccordion({ items, className }: FAQAccordionProps) {
               animate={{
                 rotate: openItems.includes(index) ? 180 : 0,
               }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <ChevronDownIcon className="flex-shrink-0 text-neutral-400" size={20} />
             </motion.div>
@@ -50,14 +49,9 @@ export function FAQAccordion({ items, className }: FAQAccordionProps) {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{
-                  duration: 0.4,
-                  ease: [0.4, 0.0, 0.2, 1], // Custom easing for smooth animation
-                  opacity: { duration: 0.3 },
-                }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pt-0 pb-5">
+                <div className="px-5 py-4">
                   <p className="font-serif text-neutral-400">{item.answer}</p>
                 </div>
               </motion.div>

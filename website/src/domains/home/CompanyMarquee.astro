@@ -12,24 +12,24 @@ import SiemensLogo from "../../assets/images/company-logos/company-logo-siemens-
 
 // Create array of company logos with alt text and height
 const companyLogos = [
-  { src: AdidasLogo, alt: "Adidas", width: 100 },
-  { src: KickerLogo, alt: "Kicker", width: 200 },
+  { src: AdidasLogo, alt: "Adidas", width: 75 },
+  { src: KickerLogo, alt: "Kicker", width: 150 },
 
-  { src: NordbayernLogo, alt: "Nordbayern", width: 200 },
-  { src: DatevLogo, alt: "Datev", width: 100 },
+  { src: NordbayernLogo, alt: "Nordbayern", width: 150 },
+  { src: DatevLogo, alt: "Datev", width: 75 },
 
-  { src: FraunhoferIISLogo, alt: "Fraunhofer IIS", width: 200 },
+  { src: FraunhoferIISLogo, alt: "Fraunhofer IIS", width: 150 },
 
-  { src: PaesslerLogo, alt: "Paessler", width: 200 },
-  { src: SellwerkLogo, alt: "Sellwerk", width: 200 },
-  { src: SiemensLogo, alt: "Siemens", width: 200 },
+  { src: PaesslerLogo, alt: "Paessler", width: 150 },
+  { src: SellwerkLogo, alt: "Sellwerk", width: 150 },
+  { src: SiemensLogo, alt: "Siemens", width: 150 },
 ];
 ---
 
-<section class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-12 bg-black">
+<section class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-10 bg-black">
   <div class="flex items-center justify-center">
     <h1
-      class="text-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      class="text-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-750 text-transparent bg-clip-text"
     >
       GAME-CHANGER BEI
     </h1>
@@ -42,10 +42,10 @@ const companyLogos = [
     class="absolute top-0 right-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
   >
   </div>
-  <div class="relative overflow-hidden py--20">
-    <div class="flex animate-marquee w-max py-10 marquee-container hover:pause-animation">
+  <div class="relative overflow-hidden">
+    <div class="flex animate-marquee w-max py-6 marquee-container hover:pause-animation">
       <!-- First set of logos -->
-      <div class="flex items-center gap-20 pl-20 justify-center">
+      <div class="flex items-center gap-16 pl-20 justify-center">
         {
           companyLogos.map((logo) => (
             <div class="flex-shrink-0 group cursor-pointer">
@@ -62,7 +62,7 @@ const companyLogos = [
       </div>
 
       <!-- Duplicate set for seamless loop -->
-      <div class="flex items-center gap-20 pl-20 justify-center">
+      <div class="flex items-center gap-16 pl-20 justify-center">
         {
           companyLogos.map((logo) => (
             <div class="flex-shrink-0 group cursor-pointer">
