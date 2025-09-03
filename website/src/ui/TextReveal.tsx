@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   text: string;
+  children?: ReactNode;
 }
 
-export const TextReveal: FC<TextRevealProps> = ({ text, className }) => {
+export const TextReveal: FC<TextRevealProps> = ({ text, children, className }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -19,12 +20,13 @@ export const TextReveal: FC<TextRevealProps> = ({ text, className }) => {
 
   return (
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+      {children}
       <div
         className={
           "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
         }
       >
-        <span ref={targetRef} className={"flex flex-wrap p-5"}>
+        <span ref={targetRef} className={"flex flex-wrap"}>
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
@@ -52,7 +54,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
   const y = useTransform(progress, range, ["50px", "0px"]);
 
   return (
-    <span className="xl:lg-3 relative mx-1 overflow-hidden lg:mx-1.5">
+    <span className="xl:lg-3 relative mx-1 overflow-hidden text-center lg:mx-1.5">
       {/* <span
         className={cn("absolute opacity-30", {
           "text-9xl font-bold text-white": children === "A3-Team",
@@ -61,9 +63,9 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
         {children}
       </span> */}
       <motion.span
-        style={{ opacity, filter, y }}
-        className={cn("inline-block text-white", {
-          "text-9xl font-bold text-white": children === "A3-Team",
+        style={{ opacity, filter }}
+        className={cn("inline-block font-thin text-neutral-400", {
+          "font-bold text-white": children === "A3-Team",
         })}
       >
         {children}

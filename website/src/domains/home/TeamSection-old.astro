@@ -19,7 +19,7 @@ import oemer from "@/assets/images/team/oemer.png";
 </script>
 <section id="team" class="overflow-x-clip relative flex items-start bg-black pb-40">
   <div class="container mx-auto px-6 z-10 flex flex-col">
-    <!-- <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center justify-center">
       <h2
         class="text-4xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
       >
@@ -29,11 +29,11 @@ import oemer from "@/assets/images/team/oemer.png";
         Drei Köpfe. Ein Puls. Seit Jahren schlagen wir im selben Takt – vertraut, eingespielt und voller
         Energie für Projekte, die spürbar anders sind.
       </p>
-    </div> -->
-    <div class="grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 w-full items-stretch mt-40">
-      <div class="flex flex-col-reverse max-w-[400px]">
+    </div>
+    <div class="flex flex-col gap-60 w-full items-center lg:items-start mt-60">
+      <div class="flex flex-col-reverse lg:flex-row">
         <Card
-          className="backdrop-blur-sm  flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
+          className="backdrop-blur-sm  bg-primary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-l border-primary-800"
         >
           <Card.Header className="flex flex-col items-start">
             <h3 class="text-4xl font-bold">
@@ -44,7 +44,7 @@ import oemer from "@/assets/images/team/oemer.png";
               </span>
             </h3>
 
-            <p class="text-primary-500 text-xs">FRONTENDLER &#x2022; DESIGNER &#x2022; ERLEBNISMACHER</p>
+            <p class="text-primary-500">FRONTENDLER &#x2022; DESIGNER &#x2022; ERLEBNISMACHER</p>
           </Card.Header>
           <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
             <p class="text-base">
@@ -55,27 +55,27 @@ import oemer from "@/assets/images/team/oemer.png";
         </Card>
 
         <div
-          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 relative min-h-[300px] w-full max-w-[800px] lg:max-w-[400px] bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
         >
           <div class="absolute bottom-0 left-0 px-4 flex items-start justify-start w-full">
             <Image class="" src={oemer} width="500" alt="Bild von Ömer." />
           </div>
         </div>
       </div>
-      <div class="flex flex-col-reverse max-w-[400px]">
+      <div class="flex flex-col-reverse lg:flex-row-reverse lg:self-end">
         <Card
-          className="backdrop-blur-sm  flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
+          className="backdrop-blur-sm  bg-secondary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-r border-secondary-800"
         >
           <Card.Header className="flex flex-col ">
             <h3 class="text-4xl">
               <span
-                class="bg-gradient-to-br font-bold from-white via-white to-primary-500 text-transparent bg-clip-text"
+                class="bg-gradient-to-br font-bold from-white via-white to-secondary-500 text-transparent bg-clip-text"
               >
                 YUSUF
               </span>
             </h3>
 
-            <p class="text-primary-500 text-xs">FULL-STACKLER &#x2022; ARCHITEKT &#x2022; BRÜCKENBAUER</p>
+            <p class="text-secondary-500">FULL-STACKLER &#x2022; ARCHITEKT &#x2022; BRÜCKENBAUER</p>
           </Card.Header>
           <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
             <p class="text-base">
@@ -85,16 +85,16 @@ import oemer from "@/assets/images/team/oemer.png";
           </Card.Body>
         </Card>
         <div
-          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 relative scale-x-[-1] min-h-[300px] w-full max-w-[800px] lg:max-w-[400px] bg-secondary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
         >
-          <div class="absolute bottom-0 right-0 px-4">
+          <div class="absolute bottom-0 right-0 lg:left-0 px-4">
             <Image class="w-[350px]" width="500" src={yusuf} alt="Bild von Yusuf." />
           </div>
         </div>
       </div>
-      <div class="flex flex-col-reverse max-w-[400px]">
+      <div class="flex flex-col-reverse lg:flex-row">
         <Card
-          className="backdrop-blur-sm flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
+          className="backdrop-blur-sm  bg-primary-950/30 max-w-[1000px] border-t lg:border-t-0 lg:border-l border-primary-800"
         >
           <Card.Header className="flex flex-col items-start">
             <h3 class="text-4xl font-bold">
@@ -105,7 +105,7 @@ import oemer from "@/assets/images/team/oemer.png";
               </span>
             </h3>
 
-            <p class="text-primary-500 text-xs">DEPLOYER &#x2022; PIPELINER &#x2022; VISIONÄR</p>
+            <p class="text-primary-500">DEPLOYER &#x2022; PIPELINER &#x2022; VISIONÄR</p>
           </Card.Header>
           <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-8 font-serif">
             <p class="text-base">
@@ -116,10 +116,10 @@ import oemer from "@/assets/images/team/oemer.png";
         </Card>
 
         <div
-          class="flex-shrink-0 scale-x-[-1] relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 relative scale-x-[-1] min-h-[300px] w-full max-w-[800px] lg:max-w-[400px] bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
         >
-          <div class="absolute bottom-0 left-0 px-4 flex items-start justify-start w-full">
-            <Image class="" src={oemer} width="500" alt="Bild von Ömer." />
+          <div class="absolute bottom-0 left-0 pr-4 flex items-start justify-start w-full">
+            <Image class="w-[270px]" src={oemer} alt="Bild von Ömer." />
           </div>
         </div>
       </div>

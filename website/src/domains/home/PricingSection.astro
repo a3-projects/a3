@@ -17,7 +17,6 @@ import { button } from "@/ui/Button";
       <article
         class="relative bg-gradient-to-tr from-primary-600 via-neutral-800 to-neutral-800 p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200"
       >
-        <!-- pronounced bottom-left gradient accent (only for recommended team card) -->
         <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
           <div
             class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-blue-500 blur-3xl opacity-40"
@@ -28,7 +27,11 @@ import { button } from "@/ui/Button";
         <div class="py-10 px-6 bg-black rounded-xl w-full h-full flex flex-col justify-between">
           <div>
             <header class="mb-4 flex flex-col items-start gap-4">
-              <UsersIcon size={36} className="shrink-0 " />
+              <div class="flex items-center gap-2">
+                <UsersIcon size={36} className="shrink-0 " />
+
+                <span class="bg-primary-600 rounded-full text-white px-2 text-xs">empfohlen</span>
+              </div>
               <div>
                 <h3 class="text-2xl font-bold text-white">A3-Team</h3>
                 <!-- <p class="text-neutral-400">
@@ -40,16 +43,14 @@ import { button } from "@/ui/Button";
               </div>
             </header>
 
-            <div class="absolute -top-3 right-3 pointer-events-none">
-              <span
-                class="bg-gradient-to-r from-primary-500 to-black text-white pl-2 pr-4 py-1 rounded-full text-xs"
-                >empfohlen</span
-              >
-            </div>
+            <div class="absolute -top-3 right-3 pointer-events-none"></div>
 
             <ul class="list-none relative text-white space-y-3 mb-4 font-serif">
               <li class="flex items-start gap-3">
                 <CheckIcon size={24} className="shrink-0 mt-1" />Drei Experten
+              </li>
+              <li class="flex items-start gap-3">
+                <CheckIcon size={24} className="shrink-0 mt-1" />Alle Bereiche abgedeckt
               </li>
 
               <li class="flex items-start gap-3">

@@ -1,18 +1,14 @@
 ---
 import { ArrowRightIcon, EarIcon, Grid2X2CheckIcon, LightbulbIcon, PackageOpenIcon } from "lucide-react";
-import { Image } from "astro:assets";
 
-import ListenPicture from "@/assets/images/pictures/listen.png";
-import ThinkPicture from "@/assets/images/pictures/think.png";
-import DeliveryPicture from "@/assets/images/pictures/delivery.png";
-import StabilizePicture from "@/assets/images/pictures/stabilize.png";
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
+import { BalanceScale } from "@/domains/home/BalanceScale";
 ---
 
 <section
   id="wie-wir-arbeiten"
-  class="overflow-hidden py-20 relative animate-how-we-work opacity-0 flex flex-col bg-gradient-to-b from-black to-neutral-950"
+  class="overflow-hidden py-20 relative animate-how-we-work opacity-0 flex flex-col bg-black"
 >
   <div class="animate-how-we-work flex flex-col items-start max-w-[1200px] w-full mx-auto px-6">
     <h1
@@ -27,29 +23,19 @@ import { button } from "@/ui/Button";
   </div>
 
   <div class="animate-how-we-work max-w-[1200px] w-full relative mx-auto mt-10 grid grid-cols-1">
-    <!-- <div
-      class="hidden lg:block w-[calc(100%_+_40px)] h-[1px] bg-neutral-800 z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
-    >
-    </div>
-    <div
-      class="hidden lg:block h-[calc(100%_+_40px)] w-[1px] bg-neutral-800 z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
-    >
-    </div> -->
-
     <div class="px-10 absolute left-0 top-0 h-full flex items-center justify-center">
       <EarIcon size="48" className="text-primary-500 opacity-0" strokeWidth="0.6" />
 
-      <div class="w-[1px] absolute bg-neutral-800 h-full"></div>
+      <div class="w-px absolute bg-neutral-800 h-full"></div>
+      <div class="w-px absolute bg-white h-full" id="timeline-line"></div>
     </div>
     <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
       <div class="flex flex-col items-start">
-        <span
-          class="text-4xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text flex gap-4 items-center w-full"
-        >
-          <div class="p-4 rounded-xl bg-primary-950 relative">
-            <EarIcon size="48" className="text-primary-500" strokeWidth="0.6" />
-
-            <div class="absolute top-1 left-1 leading-none text-primary-500 text-xs">01</div>
+        <span class="text-4xl flex gap-4 items-center w-full">
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <EarIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">01</div>
           </div>
         </span>
       </div>
@@ -66,20 +52,19 @@ import { button } from "@/ui/Button";
 
     <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
       <div class="flex flex-col items-start">
-        <span
-          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text flex gap-4 items-center justify-between w-full"
-        >
+        <span class="text-7xl font-thin flex gap-4 items-center justify-between w-full">
           <!-- 02. -->
-          <div class="p-4 rounded-xl bg-secondary-950 relative">
-            <LightbulbIcon size="48" className="text-secondary-500" strokeWidth="0.6" />
-            <div class="absolute top-1 left-1 leading-none text-secondary-500 text-xs">02</div>
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <LightbulbIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">02</div>
           </div>
         </span>
       </div>
       <div>
         <h3 class="text-xl text-white flex gap-1 items-center">
           Mitdenken
-          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-secondary-500" /> Vereinfachen
+          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-primary-500" /> Vereinfachen
         </h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
           Wir hinterfragen Annahmen und kürzen Wege. Gute Lösungen wirken oft selbstverständlich – genau das
@@ -89,13 +74,12 @@ import { button } from "@/ui/Button";
     </div>
     <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
       <div class="flex flex-col items-start">
-        <span
-          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
-        >
+        <span class="text-7xl font-thin block">
           <!-- 03. -->
-          <div class="p-4 rounded-xl bg-primary-950 relative">
-            <PackageOpenIcon size="48" className="text-primary-500" strokeWidth="0.6" />
-            <div class="absolute top-1 left-1 leading-none text-primary-500 text-xs">03</div>
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <PackageOpenIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">03</div>
           </div>
         </span>
       </div>
@@ -113,13 +97,12 @@ import { button } from "@/ui/Button";
 
     <div class="animate-how-we-work relative z-10 flex gap-4 flex-1 px-6 py-10">
       <div class="flex flex-col items-start">
-        <span
-          class="text-7xl font-thin bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
-        >
+        <span class="text-7xl font-thin block">
           <!-- 04. -->
-          <div class="p-4 rounded-xl bg-secondary-950 relative">
-            <Grid2X2CheckIcon size="48" className="text-secondary-500" strokeWidth="0.6" />
-            <div class="absolute top-1 left-1 leading-none text-secondary-500 text-xs">04</div>
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <Grid2X2CheckIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">04</div>
           </div>
         </span>
       </div>
@@ -127,7 +110,7 @@ import { button } from "@/ui/Button";
       <div>
         <h3 class="text-xl text-white flex gap-1 items-center">
           Stabilisieren
-          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-secondary-500" /> Verfeinern
+          <ArrowRightIcon size="32" strokeWidth="1" className="inline text-primary-500" /> Verfeinern
         </h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
           Wir beheben Fehler, räumen Stolpersteine aus und machen die Lösung robust. So hält sie dem Alltag
@@ -136,145 +119,8 @@ import { button } from "@/ui/Button";
       </div>
     </div>
   </div>
-  <!-- 
-  <div class="container mx-auto mt-10 space-y-32 px-6">
-    <div class="relative group z-10">
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
-      >
-      </div>
-      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
-        <div class="flex-1 space-y-6">
-          <div class="space-y-4">
-            <span
-              class="text-7xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
-            >
-              01.
-            </span>
-            <h3 class="text-xl font-bold text-white">
-              Zuhören <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" /> Verstehen
-            </h3>
-          </div>
-          <p class="text-neutral-400 font-serif text-lg">
-            Wir hören zu, stellen die richtigen Fragen und schaffen Klarheit. Erst wenn wir deine Ziele
-            wirklich verstanden haben, entscheiden wir über die Mittel.
-          </p>
-        </div>
-        <div class="flex-1 relative transform hover:scale-105 transition-transform duration-300 rounded-3xl">
-          <div class="relative rounded-3xl overflow-hidden h-80">
-            <Image class="w-[400px]" src={ListenPicture} alt="Ohr das aus einem Loch schaut." />
 
-            <Image
-              class="w-[400px] absolute blur-xl"
-              src={ListenPicture}
-              alt="Ohr das aus einem Loch schaut."
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative group z-10">
-      <div
-        class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
-      >
-      </div>
-      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
-        <div class="flex-1 space-y-6 lg:order-2">
-          <div class="space-y-4">
-            <span
-              class="text-7xl bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
-            >
-              02.
-            </span>
-            <h3 class="text-xl font-bold text-white">
-              Mitdenken <ArrowRightIcon
-                size="24"
-                strokeWidth="3"
-                className="inline mx-3 text-secondary-500"
-              /> Vereinfachen
-            </h3>
-          </div>
-          <p class="text-neutral-400 font-serif text-lg">
-            Wir hinterfragen Annahmen und kürzen Wege. Gute Lösungen wirken oft selbstverständlich – genau das
-            ist die Kunst.
-          </p>
-        </div>
-        <div class="flex-1 relative lg:order-1 transform hover:scale-105 transition-transform duration-300">
-          <div class="relative rounded-3xl overflow-hidden h-80">
-            <Image class="w-full h-full object-cover" src={ThinkPicture} alt="Think Statues." />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative group z-10">
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-transparent to-transparent rounded-3xl transform -skew-y-1"
-      >
-      </div>
-      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
-        <div class="flex-1 space-y-6">
-          <div class="space-y-4">
-            <span
-              class="text-7xl bg-gradient-to-br from-white to-primary-500 text-transparent bg-clip-text block"
-            >
-              03.
-            </span>
-            <h3 class="text-xl font-bold text-white">
-              Umsetzen <ArrowRightIcon size="24" strokeWidth="3" className="inline mx-3 text-primary-500" />
-              Liefern
-            </h3>
-          </div>
-          <p class="text-neutral-400 font-serif text-lg">
-            Kurze Zyklen, sichtbare Fortschritte – lieber jede Woche nutzbare Ergebnisse als späte
-            Überraschungen.
-          </p>
-        </div>
-        <div class="flex-1 relative transform hover:scale-105 transition-transform duration-300">
-          <div class="relative rounded-3xl overflow-hidden h-80">
-            <Image class="w-full h-full object-cover" src={DeliveryPicture} alt="Delivery Car" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative group z-10">
-      <div
-        class="absolute inset-0 bg-gradient-to-l from-secondary-500/10 via-transparent to-transparent rounded-3xl transform skew-y-1"
-      >
-      </div>
-      <div class="relative flex flex-col lg:flex-row items-center gap-16 p-8">
-        <div class="flex-1 space-y-6 lg:order-2">
-          <div class="space-y-4">
-            <span
-              class="text-7xl bg-gradient-to-br from-white to-secondary-500 text-transparent bg-clip-text block"
-            >
-              04.
-            </span>
-            <h3 class="text-xl font-bold text-white">
-              Verfeinern <ArrowRightIcon
-                size="24"
-                strokeWidth="3"
-                className="inline mx-3 text-secondary-500"
-              /> Stabilisieren
-            </h3>
-          </div>
-          <p class="text-neutral-400 font-serif text-lg">
-            Wir beheben Fehler, räumen Stolpersteine aus und machen die Lösung robust. So hält sie dem Alltag
-            und dem Wachstum stand.
-          </p>
-        </div>
-        <div class="flex-1 relative lg:order-1 transform hover:scale-105 transition-transform duration-300">
-          <div
-            class="relative rounded-3xl overflow-hidden h-80 transform hover:scale-105 transition-transform duration-300"
-          >
-            <Image class="w-full h-full object-cover" src={StabilizePicture} alt="" />
-          </div>
-        </div>
-      </div>
-    </div> -->
-  <div class="animate-how-we-work relative container px-6 mx-auto mt-20 z-10">
+  <!-- <div class="animate-how-we-work relative container px-6 mx-auto mt-20 z-10">
     <div class="flex flex-col relative items-center py-20 px-4">
       <div
         class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
@@ -288,14 +134,21 @@ import { button } from "@/ui/Button";
       </div>
       <div class="relative w-full max-w-[550px]">
         <div
-          class="relative flex items-between justify-between mb-4 rounded-2xl bg-gradient-to-r from-primary-500/50 via-black/0 to-secondary-500/50"
+          class="relative flex items-between w-full justify-between mb-4 rounded-2xl bg-gradient-to-r from-primary-900 via-black/0 to-primary-900"
         >
-          <div class="left-0 text-xl rounded-xl px-8 py-10">TEMPO</div>
-          <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[120%] w-px bg-white">
-          </div>
-          <div class="right-0 -top-6 text-xl rounded-xl px-8 py-10">SORGFALT</div>
-        </div>
+          <div class="left-0 text-xl rounded-xl px-6 py-10">TEMPO</div>
 
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[120%] w-px bg-neutral-800"
+          >
+          </div>
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[120%] w-px bg-white"
+            id="scale-line"
+          >
+          </div>
+          <div class="right-0 -top-6 text-xl rounded-xl px-6 py-10">SORGFALT</div>
+        </div>
         <div class="flex justify-center">
           <div
             class="w-0 h-0 border-l-[50px] border-r-[50px] border-b-[20px] border-l-transparent border-r-transparent border-b-white"
@@ -303,9 +156,30 @@ import { button } from "@/ui/Button";
           </div>
         </div>
       </div>
+    </div> -->
+
+  <div class="animate-how-we-work relative container px-6 mx-auto mt-20 z-10">
+    <div class="flex flex-col relative items-center py-20 px-4">
+      <div
+        class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
+      >
+        <DotBackground
+          width={20}
+          height={20}
+          className="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          client:load
+        />
+      </div>
+      <BalanceScale client:idle />
+      <div class="flex justify-center">
+        <div
+          class="w-0 h-0 border-l-[50px] border-r-[50px] border-b-[60px] border-l-transparent border-r-transparent border-b-white"
+        >
+        </div>
+      </div>
     </div>
   </div>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center px-6">
     <!-- <h1
       class="text-4xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
     >
@@ -317,7 +191,7 @@ import { button } from "@/ui/Button";
       verlässlich. Wir setzen auf beides – in der passenden Dosis.
     </p>
   </div>
-  <div class="animate-how-we-work text-center flex items-center justify-center px-6">
+  <div class="animate-how-we-work text-center flex items-center justify-center px-6 mt-10">
     <a
       href="#kontakt"
       class={button({
@@ -326,6 +200,40 @@ import { button } from "@/ui/Button";
     >
   </div>
 </section>
+
+<script>
+  import { animate, scroll } from "motion";
+
+  const rotationElements = document.querySelectorAll(".rotation-element");
+
+  if (rotationElements) {
+    rotationElements.forEach((el) => {
+      scroll(animate(el, { rotate: [0, -15, 15, 0] }), {
+        target: rotationElements[0],
+        offset: ["-3 0.5", "1 0.5"],
+      });
+    });
+  }
+  const timelineLine = document.getElementById("timeline-line");
+
+  if (timelineLine) {
+    scroll(animate(timelineLine, { scaleY: [0, 1], originX: 0, originY: 0 }), {
+      target: timelineLine,
+
+      offset: ["0 0.5", "1 0.5"],
+    });
+  }
+
+  const scaleLine = document.getElementById("scale-line");
+
+  if (scaleLine) {
+    scroll(animate(scaleLine, { scaleY: [0, 1], originX: 0, originY: 0 }), {
+      target: scaleLine,
+
+      offset: ["0 0.7", "0 0.5"],
+    });
+  }
+</script>
 
 <script>
   import { animate, inView } from "motion";
@@ -360,7 +268,7 @@ import { button } from "@/ui/Button";
           );
         });
       },
-      { amount: 0.2 }
+      { amount: 0.1 }
     );
   }
 </script>

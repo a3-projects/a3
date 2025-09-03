@@ -142,7 +142,7 @@ import { button } from "@/ui/Button";
     // Small helper that finds the meaningful pieces inside the section
     const animateEls = document.querySelectorAll(".animate-what-we-do");
     const section = animateEls[0];
-    if (section || animateEls.length > 0) {
+    if (section && animateEls.length > 0) {
       console.warn("No elements with class 'animate-what-we-do' found.");
 
       // Query the main parts we want to animate by explicit ids.
