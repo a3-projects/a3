@@ -6,22 +6,24 @@ import { Main } from "@/ui/Main";
 import TeamSection from "@/domains/home/TeamSection.astro";
 import StartSection from "@/domains/home/StartSection.astro";
 import HowWeWorkSection from "@/domains/home/HowWeWorkSection.astro";
-import ToolsSection from "@/domains/home/ToolsSection.astro";
 import FAQSection from "@/domains/home/FAQSection.astro";
 import PricingSection from "@/domains/home/PricingSection.astro";
 import WhatWeDo from "@/domains/home/WhatWeDo.astro";
 import OutroSection from "@/domains/home/OutroSection.astro";
 import CompanyMarquee from "@/domains/home/CompanyMarquee.astro";
+import WhatWeImplementSection from "@/domains/home/WhatWeImplementSection.astro";
+import AnimateBlurFadeIn from "@/domains/home/AnimateBlurFadeIn.astro";
 ---
 
 <Layout>
   <BaseHead
     slot="head"
-    title="A3 Team"
-    description="Egal ob Legacy oder Greenfield. Wir bringen Ihren Code mit modernen, agilen Prozessen in Einklang."
+    title="A3 Team - Drei Köpfe. Ein Puls."
+    description="Verwandt im echten Leben, eingespielt im Projekt – drei Entwickler, die Klartext sprechen und echten Mehrwert schaffen."
   />
 
   <Main>
+    <AnimateBlurFadeIn />
     <StartSection />
     <WhatWeDo />
     <CompanyMarquee />
@@ -30,9 +32,10 @@ import CompanyMarquee from "@/domains/home/CompanyMarquee.astro";
     <OutroSection />
 
     <TeamSection />
+    <WhatWeImplementSection />
     <PricingSection />
     <FAQSection />
     <!-- <HiringSection /> -->
-    <ToolsSection />
+    <!-- <ToolsSection /> -->
   </Main>
 </Layout>

@@ -10,14 +10,14 @@ import { button } from "@/ui/Button";
   id="was-wir-bewirken"
   class="overflow-hidden z-10 py-20 relative border-t border-neutral-800 flex flex-col bg-black"
 >
-  <div class="animate-what-we-do opacity-0">
+  <div>
     <div class="flex flex-col items-start z-10 max-w-7xl w-full mx-auto px-6">
       <h2
-        class="animate-what-we-do text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+        class="animate-blur-fade-in text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
       >
         Software, die nicht bremst – <br />sondern dein Business voranbringt.
       </h2>
-      <p class="animate-what-we-do text-lg mt-4 text-neutral-400 font-serif max-w-prose">
+      <p class="animate-blur-fade-in text-lg mt-4 text-neutral-400 font-serif max-w-prose">
         Viele Unternehmen kämpfen mit Tools und Anwendungen, die kompliziert sind, Zeit fressen oder nicht
         mitwachsen. Wir entwickeln Software, die spürbar entlastet und echten ROI bringt.
       </p>
@@ -26,7 +26,7 @@ import { button } from "@/ui/Button";
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-template-columns-[300px]">
         <GradientHoverCard
           client:idle
-          className="animate-what-we-do relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
@@ -41,7 +41,7 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-what-we-do relative z-10  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
@@ -56,7 +56,7 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-what-we-do relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
@@ -71,7 +71,7 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-what-we-do relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
@@ -85,7 +85,7 @@ import { button } from "@/ui/Button";
         </GradientHoverCard>
 
         <div
-          class="hidden lg:flex animate-what-we-do relative rounded-xl p-8 items-center justify-center w-full aspect-square md:aspect-auto"
+          class="hidden lg:flex animate-blur-fade-in relative rounded-xl p-8 items-center justify-center w-full aspect-square md:aspect-auto"
         >
           <div class="absolute flex inset-0">
             <DotBackground
@@ -109,7 +109,7 @@ import { button } from "@/ui/Button";
         <!-- Card 6: Energie für Innovation -->
         <GradientHoverCard
           client:idle
-          className="animate-what-we-do relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
@@ -126,7 +126,7 @@ import { button } from "@/ui/Button";
         </GradientHoverCard>
       </div>
     </div>
-    <div class="animate-what-we-do text-center flex items-center justify-center px-6 mt-20">
+    <div class="animate-blur-fade-in text-center flex items-center justify-center px-6 mt-20">
       <a
         href="#kontakt"
         class={button({
@@ -136,42 +136,4 @@ import { button } from "@/ui/Button";
       >
     </div>
   </div>
-
-  <script>
-    import { animate, inView } from "motion";
-
-    // Small helper that finds the meaningful pieces inside the section
-    const animateEls = document.querySelectorAll(".animate-what-we-do");
-    const section = animateEls[0];
-    if (section && animateEls.length > 0) {
-      console.warn("No elements with class 'animate-what-we-do' found.");
-
-      // Query the main parts we want to animate by explicit ids.
-
-      const elements = [...animateEls].filter(Boolean);
-
-      // Use motion's inView helper to detect visibility and animate with a stagger
-      inView(
-        section,
-        () => {
-          elements.forEach((el, index) => {
-            if (!el) return;
-            animate(
-              el,
-              {
-                opacity: [0, 1],
-                y: [100, 0],
-                filter: ["blur(20px)", "blur(0px)"],
-              },
-              {
-                delay: (index || 0) * 0.2,
-                duration: 0.5,
-              }
-            );
-          });
-        },
-        { amount: 0.2 }
-      );
-    }
-  </script>
 </section>

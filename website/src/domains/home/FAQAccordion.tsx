@@ -26,7 +26,7 @@ export function FAQAccordion({ items, className }: FAQAccordionProps) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/50 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700"
+          className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700"
         >
           <button
             onClick={() => toggleItem(index)}

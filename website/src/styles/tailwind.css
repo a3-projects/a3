@@ -90,8 +90,8 @@
   --text-xl: clamp(1.25rem, 1.1413rem + 0.5435vw, 1.5625rem); /* 20px → 25px */
   --text-xl--line-height: 1.4; /* Balanced for larger text */
 
-  --text-xl: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem); /* 24px → 30px */
-  --text-xl--line-height: 1.35; /* Starting to tighten for headings */
+  --text-2xl: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem); /* 24px → 30px */
+  --text-2xl--line-height: 1.35; /* Starting to tighten for headings */
 
   --text-3xl: clamp(1.875rem, 1.712rem + 0.8152vw, 2.34375rem); /* 30px → 38px */
   --text-3xl--line-height: 1.3; /* Heading line height */
@@ -202,7 +202,48 @@
 
   --animate-marquee: marquee 30s linear infinite;
 }
+@utility transition-spring {
+  transition-property: all;
+  transition-timing-function: var(
+    --tw-ease,
+    /* copied output from spring() function from motion library: https://motion.dev/docs/spring */
+      linear(
+        0,
+        0.1144,
+        0.3475,
+        0.5885,
+        0.7844,
+        0.9194,
+        0.9987,
+        1.0359,
+        1.046,
+        1.0413,
+        1.0308,
+        1.0196,
+        1.0104,
+        1.004,
+        1.0002,
+        0.9984,
+        1
+      )
+  );
+  transition-duration: var(--tw-duration, 500ms);
+}
 
+@theme inline {
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px))
+        rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px))
+        rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+}
 @keyframes marquee {
   0% {
     transform: translateX(0);

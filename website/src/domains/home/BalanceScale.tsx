@@ -1,6 +1,7 @@
+import { cn } from "@/lib/utils";
 import { motion, useScroll, useSpring, useTransform, useVelocity } from "motion/react";
 
-export const BalanceScale = () => {
+export const BalanceScale = ({ className }: { className: string }) => {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
 
@@ -34,7 +35,7 @@ export const BalanceScale = () => {
   const rotate = useTransform(springRotation, (v) => `${Math.max(Math.min(v, 15), -15)}deg`);
 
   return (
-    <div className="relative z-10 w-full max-w-[550px]">
+    <div className={cn("relative z-10 w-full max-w-[550px]", className)}>
       <motion.div
         style={{ rotate }}
         className="items-between relative flex w-full justify-between rounded-2xl"

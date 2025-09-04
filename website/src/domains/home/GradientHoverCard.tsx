@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 interface GradientHoverCardProps {
   children?: React.ReactNode;
   className?: string;
+  id?: string;
   gradientSize?: number;
   gradientColor?: string;
   gradientOpacity?: number;
@@ -22,6 +23,7 @@ export function GradientHoverCard({
   gradientOpacity = 0.8,
   gradientFrom = "#9E7AFF",
   gradientTo = "#FE8BBB",
+  ...props
 }: GradientHoverCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(-gradientSize);
@@ -75,7 +77,7 @@ export function GradientHoverCard({
   }, [gradientSize, mouseX, mouseY]);
 
   return (
-    <div ref={cardRef} className={cn("group relative rounded-[inherit]", className)}>
+    <div ref={cardRef} className={cn("group relative rounded-[inherit]", className)} {...props}>
       <motion.div
         className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
         style={{
@@ -98,7 +100,7 @@ export function GradientHoverCard({
           opacity: gradientOpacity,
         }}
       />
-      <div className="relative">{children}</div>
+      <div className="relative h-full w-full">{children}</div>
     </div>
   );
 }
