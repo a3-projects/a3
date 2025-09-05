@@ -350,16 +350,16 @@ interface TechIcon {
           </div>
 
           <div
-            class="font-mono text-lg absolute bottom-0 right-0 translate-x-12 pl-4 group-hover:scale-120 transition-spring"
+            class="font-mono opacity-50 lg:opacity-100 text-lg absolute bottom-0 right-0 translate-x-12 pl-4 group-hover:scale-120 transition-spring"
           >
             <div class="flex gap-2">
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-50 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-50 group-hover:blur-none transition-spring"
               >
                 def
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-100 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-100 group-hover:blur-none transition-spring"
               >
                 fizzbuzz():
               </div>
@@ -367,23 +367,23 @@ interface TechIcon {
 
             <div class="pl-2 flex gap-2">
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-150 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-150 group-hover:blur-none transition-spring"
               >
                 for
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-200 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-200 group-hover:blur-none transition-spring"
               >
                 i
               </div>
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-250 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-250 group-hover:blur-none transition-spring"
               >
                 in
               </div>
 
               <div
-                class="relative inline-block lg:blur-[4px] delay-300 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-300 group-hover:blur-none transition-spring"
               >
                 <span class="text-primary-500">range</span>(1,101):
               </div>
@@ -391,18 +391,18 @@ interface TechIcon {
 
             <div class="pl-4 flex gap-2">
               <div
-                class="relative inline-block lg:blur-[4px] delay-350 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-350 group-hover:blur-none transition-spring"
               >
                 print_number
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-400 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-400 group-hover:blur-none transition-spring"
               >
                 =
               </div>
 
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-450 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-450 group-hover:blur-none transition-spring"
               >
                 true
               </div>
@@ -410,28 +410,28 @@ interface TechIcon {
 
             <div class="flex gap-2 pl-2">
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-500 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-500 group-hover:blur-none transition-spring"
               >
                 if
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-550 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-550 group-hover:blur-none transition-spring"
               >
                 i
               </div>
 
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-650 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-650 group-hover:blur-none transition-spring"
               >
                 is
               </div>
               <div
-                class="relative text-primary-500 inline-block lg:blur-[4px] delay-700 group-hover:blur-none transition-spring"
+                class="relative text-primary-500 inline-block lg:blur-[4px] group-hover:delay-700 group-hover:blur-none transition-spring"
               >
                 divisibleBy
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-750 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-750 group-hover:blur-none transition-spring"
               >
                 3:
               </div>
@@ -439,12 +439,12 @@ interface TechIcon {
 
             <div class="flex gap-2 pl-4">
               <div
-                class="relative inline-block lg:blur-[4px] delay-800 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-800 group-hover:blur-none transition-spring"
               >
                 print
               </div>
               <div
-                class="relative inline-block lg:blur-[4px] delay-850 group-hover:blur-none transition-spring"
+                class="relative inline-block lg:blur-[4px] group-hover:delay-850 group-hover:blur-none transition-spring"
               >
                 "Fizz"
               </div>
@@ -517,7 +517,7 @@ interface TechIcon {
                 class="absolute top-1/2 left-1/2 -translate-1/2 w-full h-full flex gap-4 flex-wrap max-w-7xl align-center justify-center"
               >
                 <div
-                  class="relative h-[700px] w-full flex items-center justify-center grayscale group-hover:grayscale-0 group-hover:scale-110 transition-spring"
+                  class="relative h-[700px] w-full flex items-center justify-center lg:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-spring"
                 >
                   <OrbitingTools
                     tools={outerCircleIcons}
@@ -535,19 +535,6 @@ interface TechIcon {
                     speed={0.7}
                   />
                 </div>
-                <!-- {
-                  shuffledIcons.map((icon) => (
-                    <a href={icon.href} title={icon.title} target="_blank" class="tech-stack-icon grayscale ">
-                      <Image
-                        src={icon.src}
-                        alt={icon.alt}
-                        width="50"
-                        height="50"
-                        class="transition-all duration-300 size-8"
-                      />
-                    </a>
-                  ))
-                } -->
               </div>
             </GradientHoverCard>
           </div>
@@ -565,4 +552,3 @@ interface TechIcon {
     </div>
   </div>
 </section>
-<div class="container mx-auto flex items-center justify-center py-10"></div>

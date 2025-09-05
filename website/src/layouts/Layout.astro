@@ -14,8 +14,10 @@ import Footer from "@/modules/routing/components/Footer.astro";
 </BaseLayout>
 
 <style>
+  @reference "tailwindcss";
+
   body {
     /* Workaround: Somehow adding class or id  on body element will get removed when opening it in the browser*/
-    @apply flex min-h-screen flex-col;
+    @apply flex min-h-screen flex-col text-base;
   }
 </style>

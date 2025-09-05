@@ -6,109 +6,177 @@ import { button } from "@/ui/Button";
 import { BalanceScale } from "@/domains/home/BalanceScale";
 ---
 
-<section id="wie-wir-arbeiten" class="overflow-hidden py-20 relative flex flex-col bg-black">
-  <div class="animate-blur-fade-in flex flex-col items-start max-w-7xl w-full mx-auto px-6">
+<section id="wie-wir-arbeiten" class="overflow-hidden pt-20 relative flex flex-col bg-black">
+  <div class="animate-blur-fade-in flex flex-col items-start max-w-7xl w-full mx-auto px-4">
     <h1
       class="text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
     >
-      So läuft unsere Zusammenarbeit
+      Unser agiler Arbeitsrhythmus
     </h1>
     <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose">
-      Erfolgreiche Software entsteht nicht durch Zufall. Wir folgen einem klaren Rhythmus – von den ersten
-      Zielen bis zum stabilen Betrieb. Das sorgt für Transparenz, Tempo und Verlässlichkeit.
+      Erfolgreiche Software entsteht in Zyklen, nicht in starren Phasen. Wir arbeiten agil – mit kurzen
+      Iterationen, ständigem Feedback und kontinuierlicher Verbesserung. Jeder Zyklus bringt nutzbaren
+      Fortschritt.
     </p>
   </div>
 
-  <div class="max-w-7xl w-full relative mx-auto mt-10 grid grid-cols-1">
-    <div class="px-10 absolute left-0 top-0 h-full flex items-center justify-center">
+  <div class="max-w-7xl w-full relative mx-auto grid grid-cols-1">
+    <div class="px-8 absolute left-0 top-0 h-full flex items-center justify-center">
       <EarIcon size="48" className="text-primary-500 opacity-0" strokeWidth="0.6" />
+      <div class="absolute flex gap-2 w-[80%] top-[180px]">
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div
+          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-neutral-500 tracking-widest"
+        >
+          3. ITERATION
+        </div>
+      </div>
+      <div class="absolute flex gap-2 w-[80%] bottom-[180px]">
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div class="h-px w-full bg-neutral-700"></div>
+        <div
+          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-neutral-500 tracking-widest"
+        >
+          4. ITERATION
+        </div>
+      </div>
 
-      <div class="w-px absolute bg-neutral-800 h-full"></div>
-      <div class="w-px absolute bg-white h-full" id="timeline-line"></div>
+      <div class="w-px absolute bg-neutral-800 h-full z-0"></div>
+      <div class="w-px absolute bg-gradient-to-b from-neutral-800 to-white h-full z-0" id="timeline-line">
+      </div>
     </div>
-    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-6 py-10">
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 mb-4 flex-1 px-4 py-10">
+      <div
+        class="absolute bottom-0 left-0 z-20 bg-gradient-to-b from-black from-40% to-black/0 h-full w-full"
+      >
+      </div>
+      <div class="flex flex-col items-start">
+        <span class="text-4xl flex gap-4 items-center w-full">
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <Grid2X2CheckIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          </div>
+        </span>
+      </div>
+      <div>
+        <!-- <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
+          Kontinuierliches Feedback hält uns auf Kurs.
+        </p> -->
+      </div>
+    </div>
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
         <span class="text-4xl flex gap-4 items-center w-full">
           <div class="p-4 rounded-xl bg-black relative">
             <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
             <EarIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
-            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">01</div>
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Zuhören</h3>
+        <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
-          Wir hören zu, stellen die richtigen Fragen und schaffen Klarheit. Erst wenn wir deine Ziele
-          verstanden haben, entscheiden wir über die Mittel.
+          In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
+          Kontinuierliches Feedback hält uns auf Kurs.
         </p>
       </div>
     </div>
 
-    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-6 py-10">
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin flex gap-4 items-center justify-between w-full">
           <!-- 02. -->
           <div class="p-4 rounded-xl bg-black relative">
             <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
             <LightbulbIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
-            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">02</div>
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Mitdenken</h3>
+        <h3 class="text-xl text-white flex gap-1 items-center">Entwickeln & Testen</h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
-          Wir hinterfragen Annahmen und kürzen Wege. Gute Lösungen wirken oft selbstverständlich – genau das
-          ist die Kunst.
+          Wir entwickeln iterativ, testen früh und oft. Jede Iteration liefert funktionsfähige Features, die
+          wir gemeinsam bewerten und weiterentwickeln.
         </p>
       </div>
     </div>
-    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-6 py-10">
+
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin block">
           <!-- 03. -->
           <div class="p-4 rounded-xl bg-black relative">
             <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
             <PackageIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
-            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">03</div>
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Liefern</h3>
+        <h3 class="text-xl text-white flex gap-1 items-center">Ausliefern & Lernen</h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
-          Kurze Zyklen, sichtbare Fortschritte – lieber jede Woche nutzbare Ergebnisse als späte
-          Überraschungen.
+          Jede Iteration endet mit nutzbaren Ergebnissen. Wir liefern regelmäßig aus, sammeln Feedback und
+          lernen kontinuierlich dazu.
         </p>
       </div>
     </div>
 
-    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-6 py-10">
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin block">
           <!-- 04. -->
           <div class="p-4 rounded-xl bg-black relative">
             <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
             <Grid2X2CheckIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
-            <div class="absolute top-1.5 left-1.5 leading-none text-primary-500 text-xs">04</div>
           </div>
         </span>
       </div>
 
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Stabilisieren</h3>
+        <h3 class="text-xl text-white flex gap-1 items-center">Optimieren & Weiterentwickeln</h3>
         <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
-          Wir beheben Fehler, räumen Stolpersteine aus und machen die Lösung robust. So hält sie dem Alltag
-          und dem Wachstum stand.
+          Nach jeder Iteration reflektieren wir: Was lief gut? Was können wir verbessern? So wird unser
+          Arbeitsrhythmus und das Produkt kontinuierlich besser.
         </p>
+      </div>
+    </div>
+
+    <div class="animate-blur-fade-in relative z-10 flex gap-4 mt-4 flex-1 px-4 py-10">
+      <div
+        class="absolute bottom-0 left-0 z-10 bg-gradient-to-t from-black from-40% to-black/0 h-full w-full"
+      >
+      </div>
+      <div class="flex flex-col items-start">
+        <span class="text-4xl flex gap-4 items-center w-full">
+          <div class="p-4 rounded-xl bg-black relative">
+            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <EarIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          </div>
+        </span>
+      </div>
+      <div>
+        <!-- <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
+        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+          In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
+          Kontinuierliches Feedback hält uns auf Kurs.
+        </p> -->
       </div>
     </div>
   </div>
 </section>
 
 <section class="animate-blur-fade-in">
-  <div class="relative container px-6 mx-auto mt-20 z-10">
+  <div class="relative container px-4 mx-auto mt-20 z-10">
     <div class="flex flex-col relative items-center py-20 px-4">
       <div
         class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
@@ -129,13 +197,13 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       </div>
     </div>
   </div>
-  <div class="animate-blur-fade-in flex flex-col items-center justify-center px-6">
+  <div class="animate-blur-fade-in flex flex-col items-center justify-center px-4">
     <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose text-center">
       Nicht entweder–oder. Sondern genau richtig. Tempo hält Projekte lebendig, Qualität macht sie
       verlässlich. Wir setzen auf beides – in der passenden Dosis.
     </p>
   </div>
-  <div class="animate-blur-fade-in text-center flex items-center justify-center px-6 mt-10">
+  <div class="animate-blur-fade-in text-center flex items-center justify-center px-4 mt-10">
     <a
       href="#kontakt"
       class={button({

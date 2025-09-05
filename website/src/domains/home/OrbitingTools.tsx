@@ -20,7 +20,7 @@ export const OrbitingTools = ({
   return (
     <OrbitingCircles {...props}>
       {tools.map((tool, index) => (
-        <img key={index} src={tool.src} alt={tool.alt} title={tool.title} />
+        <img key={index} src={tool.src} alt={tool.alt} title={tool.title} loading="lazy" />
       ))}
     </OrbitingCircles>
   );
