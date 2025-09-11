@@ -8,7 +8,7 @@ import { button } from "@/ui/Button";
     <div class="text-center mb-8">
       <h2 class="text-4xl text-front animate-blur-fade-in">Unsere Preismodelle</h2>
       <p class="text-muted-front text-lg mt-4 max-w-prose mx-auto font-serif animate-blur-fade-in">
-        Das komplette A3-Team oder einen Experten. Kurz, klar, transparent.
+        Das komplette A3 Team oder einen Experten. Kurz, klar, transparent.
       </p>
     </div>
 
@@ -17,29 +17,34 @@ import { button } from "@/ui/Button";
       <article
         class="relative bg-gradient-to-tr from-primary-back via-border to-border p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
-        <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
+        <div class="py-10 px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between">
+          <!-- Dots background with circular mask -->
           <div
-            class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-primary-back/80 blur-3xl opacity-40"
+            class="absolute inset-0 z-0 bg-dots-primary-back/10"
+            style="mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%); -webkit-mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%);"
           >
           </div>
-        </div>
-
-        <div class="py-10 px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between">
+          <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
+            <div
+              class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-primary-back/80 blur-3xl opacity-40"
+            >
+            </div>
+          </div>
           <div>
-            <header class="mb-4 flex flex-col items-start gap-4">
+            <div class="mb-4 flex flex-col items-start gap-4">
               <div class="flex items-center gap-2">
                 <UsersIcon size={36} className="shrink-0 " />
 
                 <span class="bg-primary-back rounded-full text-primary-front px-2 text-xs">empfohlen</span>
               </div>
               <div>
-                <h3 class="text-2xl font-bold text-front">A3-Team</h3>
+                <h3 class="text-2xl font-bold text-front">A3 Team</h3>
 
                 <p class="text-muted-front mt-4 font-serif">
                   Üblicherweise Stundenpreis, Pauschalpreis möglich.
                 </p>
               </div>
-            </header>
+            </div>
 
             <div class="absolute -top-3 right-3 pointer-events-none"></div>
 
@@ -79,15 +84,23 @@ import { button } from "@/ui/Button";
       <article
         class="relative bg-back rounded-xl border border-border hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
-        <div class="px-6 py-10 bg-back rounded-xl w-full h-full flex flex-col justify-between">
+        <div
+          class="px-6 py-10 bg-back rounded-xl w-full h-full flex flex-col justify-between relative overflow-hidden"
+        >
+          <!-- Dots background with circular mask -->
+          <div
+            class="absolute inset-0 z-0 bg-dots-border/30"
+            style="mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%); -webkit-mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%);"
+          >
+          </div>
           <div>
-            <header class="mb-4 flex flex-col items-start gap-4">
+            <div class="mb-4 flex flex-col items-start gap-4">
               <User size={36} className="shrink-0" />
               <div>
                 <h3 class="text-2xl font-bold text-front">Single</h3>
                 <p class="text-muted-front mt-4 font-serif">Pauschalpreis oder Stundenpreis möglich.</p>
               </div>
-            </header>
+            </div>
 
             <div class="flex flex-col justify-between">
               <div>
@@ -118,7 +131,7 @@ import { button } from "@/ui/Button";
       </article>
     </div>
 
-    <div class="mt-10 p-6 text-muted-front font-serif animate-blur-fade-in">
+    <div class="mt-10 py-6 text-muted-front font-serif animate-blur-fade-in">
       <strong class="block text-front mb-2">Kurz zur Preisgestaltung</strong>
       <p>
         Unsere Preise richten sich nach Umfang, Zeitrahmen und ob du einmalige Unterstützung oder eine

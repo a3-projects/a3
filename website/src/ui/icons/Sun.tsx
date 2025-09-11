@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 export interface SunProps {
   size?: number;
 }
 
-const Sun = forwardRef<ElementRef<"svg">, SunProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {
-  const { children, className, size = 24, ...rest } = props;
+const Sun = (props: SunProps & ComponentProps<"svg">) => {
+  const { children, className, size = 24, ref, ...rest } = props;
 
   return (
     <svg
@@ -28,7 +27,7 @@ const Sun = forwardRef<ElementRef<"svg">, SunProps & ComponentPropsWithoutRef<"s
       {children}
     </svg>
   );
-});
+};
 
 Sun.displayName = "Sun";
 

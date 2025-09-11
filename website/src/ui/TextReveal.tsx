@@ -51,21 +51,13 @@ interface WordProps {
 const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   const filter = useTransform(progress, range, ["blur(10px)", "blur(0px)"]);
-  const y = useTransform(progress, range, ["50px", "0px"]);
 
   return (
     <span className="xl:lg-3 relative mx-1 overflow-hidden text-center lg:mx-1.5">
-      {/* <span
-        className={cn("absolute opacity-30", {
-          "text-9xl font-bold text-front": children === "A3-Team",
-        })}
-      >
-        {children}
-      </span> */}
       <motion.span
         style={{ opacity, filter }}
         className={cn("text-muted-front inline-block font-thin", {
-          "text-front font-bold": children === "A3-Team",
+          "text-front font-bold": children === "A3" || children === "Team",
         })}
       >
         {children}

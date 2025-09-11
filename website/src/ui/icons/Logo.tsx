@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 export interface LogoProps {
   size?: number | string;
 }
 
-const Logo = forwardRef<ElementRef<"svg">, LogoProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {
-  const { children, className, size, ...rest } = props;
+const Logo = (props: LogoProps & ComponentProps<"svg">) => {
+  const { children, className, size, ref, ...rest } = props;
 
   return (
     <svg
@@ -25,7 +24,7 @@ const Logo = forwardRef<ElementRef<"svg">, LogoProps & ComponentPropsWithoutRef<
       {children}
     </svg>
   );
-});
+};
 
 Logo.displayName = "Logo";
 

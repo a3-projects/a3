@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 export interface MoonProps {
   size?: number;
 }
 
-const Moon = forwardRef<ElementRef<"svg">, MoonProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {
-  const { children, className, size = 24, ...rest } = props;
+const Moon = (props: MoonProps & ComponentProps<"svg">) => {
+  const { children, className, size = 24, ref, ...rest } = props;
 
   return (
     <svg
@@ -27,7 +26,7 @@ const Moon = forwardRef<ElementRef<"svg">, MoonProps & ComponentPropsWithoutRef<
       {children}
     </svg>
   );
-});
+};
 
 Moon.displayName = "Moon";
 

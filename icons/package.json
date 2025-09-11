@@ -7,7 +7,7 @@
     "build"
   ],
   "scripts": {
-    "build": "npm run pre-build && npm run generate ",
+    "build": "npm run pre-build && npm run generate",
     "pre-build": "del-cli build",
     "post-build": "npm pack && move ./*.tgz .release",
     "generate": "npm run generate:sprite && npm run generate:icon-set",

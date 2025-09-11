@@ -1,11 +1,10 @@
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const backPattern = tv({
   slots: {
-    base: "flex  border border-solid ",
+    base: "flex  border border-solid",
     body: "transform translate-x-2 -translate-y-2",
   },
   variants: {
@@ -34,17 +33,15 @@ export const backPattern = tv({
 
 export interface BackPatternProps extends VariantProps<typeof backPattern> {}
 
-const BackPattern = forwardRef<ElementRef<"div">, BackPatternProps & ComponentPropsWithoutRef<"div">>(
-  (props, ref) => {
-    const { children, className, animated, color, ...rest } = props;
+const BackPattern = (props: BackPatternProps & ComponentProps<"div">) => {
+  const { children, className, animated, color, ref, ...rest } = props;
 
-    const { base, body } = backPattern({ animated, color });
-    return (
-      <div ref={ref} className={base({ className })} {...rest}>
-        <div className={body()}>{children}</div>
-      </div>
-    );
-  }
-);
+  const { base, body } = backPattern({ animated, color });
+  return (
+    <div ref={ref} className={base({ className })} {...rest}>
+      <div className={body()}>{children}</div>
+    </div>
+  );
+};
 
 export { BackPattern };

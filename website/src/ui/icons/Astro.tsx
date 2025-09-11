@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 export interface AstroProps {
   size?: number;
 }
 
-const Astro = forwardRef<ElementRef<"svg">, AstroProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {
-  const { children, className, size = 24, ...rest } = props;
+const Astro = (props: AstroProps & ComponentProps<"svg">) => {
+  const { children, className, size = 24, ref, ...rest } = props;
 
   return (
     <svg
@@ -25,7 +24,7 @@ const Astro = forwardRef<ElementRef<"svg">, AstroProps & ComponentPropsWithoutRe
       {children}
     </svg>
   );
-});
+};
 
 Astro.displayName = "Astro";
 

@@ -99,10 +99,10 @@ export function FAQAccordion() {
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
-            Am effektivsten sind wir, wenn wir selbständig und unabhängig arbeiten können, egal ob wir ein
-            Projekt von Grund auf aufsetzen oder uns in dein bestehendes Team oder Projekt integrieren. Für
-            dich heißt das: Weniger Koordinationsaufwand, mehr Ergebnisse. Dein Ziel steht immer im
-            Mittelpunkt.
+            Wir arbeiten am effektivsten, wenn wir eigenverantwortlich handeln können, egal ob bei einem neuen
+            Projekt oder als Teil deines bestehenden Teams (z.B. SCRUM). Das bedeutet für dich weniger
+            Mikromanagement und bessere Ergebnisse. Dabei behalten wir deine Ziele stets im Fokus und sorgen
+            für transparente Kommunikation ohne unnötigen Overhead.
           </p>
         </Accordion.Body>
       </Accordion>

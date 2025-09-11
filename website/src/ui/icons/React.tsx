@@ -1,13 +1,12 @@
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 
 export interface ReactProps {
   size?: number;
 }
 
-const React = forwardRef<ElementRef<"svg">, ReactProps & ComponentPropsWithoutRef<"svg">>((props, ref) => {
-  const { children, className, size = 24, ...rest } = props;
+const React = (props: ReactProps & ComponentProps<"svg">) => {
+  const { children, className, size = 24, ref, ...rest } = props;
 
   return (
     <svg
@@ -25,7 +24,7 @@ const React = forwardRef<ElementRef<"svg">, ReactProps & ComponentPropsWithoutRe
       {children}
     </svg>
   );
-});
+};
 
 React.displayName = "React";
 

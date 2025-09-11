@@ -4,7 +4,7 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const navbar = tv({
-  base: "h-header flex fixed group/navbar top-0 left-0 w-full duration-1000 z-50 border-b border-solid ",
+  base: "h-header flex fixed group/navbar top-0 left-0 w-full duration-1000 z-50 border-b border-solid",
   variants: {
     isBackgroundVisible: {
       true: "bg-back/70 backdrop-blur-sm border-border",

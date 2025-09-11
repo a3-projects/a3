@@ -40,7 +40,6 @@ export const ThemeToggle = (props: ComponentProps<typeof Button>) => {
           `polygon(${centerX}px ${centerY}px, ${centerX}px ${centerY}px, ${centerX}px ${centerY}px)`,
           `polygon(${centerX - triangleSize}px ${centerY + triangleSize}px, ${centerX + triangleSize}px ${centerY + triangleSize}px, ${centerX}px ${centerY - triangleSize}px)`,
         ],
-        filter: ["blur(0px)", "blur(2px)", "blur(0px)"],
       },
       {
         duration: 700,

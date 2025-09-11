@@ -1,5 +1,4 @@
-import { forwardRef } from "react";
-import type { ElementRef, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
@@ -14,7 +13,7 @@ export const button = tv({
       ghost: " text-front/50 hover:bg-front/10 hover:text-front",
       secondary: "bg-secondary-back text-secondary-front hover:bg-front hover:text-back",
       neutral: "bg-neutral-back text-neutral-front hover:bg-front hover:text-back hover:shadow-md",
-      link: "text-primary-front underline-offset-4 underline hover:underline",
+      link: "text-front underline-offset-4 underline hover:underline",
     },
     increaseHitbox: {
       true: "before:absolute before:h-[calc(100%+1rem)] relative before:w-[calc(100%+1rem)]",
@@ -38,16 +37,14 @@ export const button = tv({
 
 export interface ButtonProps extends VariantProps<typeof button> {}
 
-const Button = forwardRef<ElementRef<"button">, ButtonProps & ComponentPropsWithoutRef<"button">>(
-  (props, ref) => {
-    const { children, className, variant, size, increaseHitbox, ...rest } = props;
+const Button = (props: ButtonProps & ComponentProps<"button">) => {
+  const { children, className, variant, size, increaseHitbox, ref, ...rest } = props;
 
-    return (
-      <button ref={ref} className={button({ className, variant, size, increaseHitbox })} {...rest}>
-        {children}
-      </button>
-    );
-  }
-);
+  return (
+    <button ref={ref} className={button({ className, variant, size, increaseHitbox })} {...rest}>
+      {children}
+    </button>
+  );
+};
 
 export { Button };
