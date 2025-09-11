@@ -4,10 +4,10 @@ import { button } from "@/ui/Button";
 ---
 
 <section id="preise" class="py-20">
-  <div class="container mx-auto px-4 max-w-prose">
+  <div class="mx-auto px-4 max-w-prose">
     <div class="text-center mb-8">
-      <h2 class="text-4xl text-white">Unsere Preismodelle</h2>
-      <p class="text-neutral-400 text-lg mt-4 max-w-prose mx-auto font-serif">
+      <h2 class="text-4xl text-front animate-blur-fade-in">Unsere Preismodelle</h2>
+      <p class="text-muted-front text-lg mt-4 max-w-prose mx-auto font-serif animate-blur-fade-in">
         Das komplette A3-Team oder einen Experten. Kurz, klar, transparent.
       </p>
     </div>
@@ -15,29 +15,27 @@ import { button } from "@/ui/Button";
     <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-8 mt-20">
       <!-- Team -->
       <article
-        class="relative bg-gradient-to-tr from-primary-600 via-neutral-800 to-neutral-800 p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200"
+        class="relative bg-gradient-to-tr from-primary-back via-border to-border p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
         <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
           <div
-            class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-blue-500 blur-3xl opacity-40"
+            class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-primary-back/80 blur-3xl opacity-40"
           >
           </div>
         </div>
 
-        <div class="py-10 px-6 bg-black rounded-xl w-full h-full flex flex-col justify-between">
+        <div class="py-10 px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between">
           <div>
             <header class="mb-4 flex flex-col items-start gap-4">
               <div class="flex items-center gap-2">
                 <UsersIcon size={36} className="shrink-0 " />
 
-                <span class="bg-primary-600 rounded-full text-white px-2 text-xs">empfohlen</span>
+                <span class="bg-primary-back rounded-full text-primary-front px-2 text-xs">empfohlen</span>
               </div>
               <div>
-                <h3 class="text-2xl font-bold text-white">A3-Team</h3>
-                <!-- <p class="text-neutral-400">
-                  Drei Experten — <TextHighlight>Full Service</TextHighlight>
-                </p> -->
-                <p class="text-neutral-400 mt-4 font-serif">
+                <h3 class="text-2xl font-bold text-front">A3-Team</h3>
+
+                <p class="text-muted-front mt-4 font-serif">
                   Üblicherweise Stundenpreis, Pauschalpreis möglich.
                 </p>
               </div>
@@ -45,7 +43,7 @@ import { button } from "@/ui/Button";
 
             <div class="absolute -top-3 right-3 pointer-events-none"></div>
 
-            <ul class="list-none relative text-white space-y-3 mb-4 font-serif">
+            <ul class="list-none relative text-front space-y-3 mb-4 font-serif">
               <li class="flex items-start gap-3">
                 <CheckIcon size={24} className="shrink-0 mt-1" />Drei Experten
               </li>
@@ -79,22 +77,21 @@ import { button } from "@/ui/Button";
       </article>
       <!-- Single Expert -->
       <article
-        class="relative bg-black rounded-xl border border-neutral-800 hover:shadow-lg transition-shadow duration-200"
+        class="relative bg-back rounded-xl border border-border hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
-        <div class="px-6 py-10 bg-black rounded-xl w-full h-full flex flex-col justify-between">
+        <div class="px-6 py-10 bg-back rounded-xl w-full h-full flex flex-col justify-between">
           <div>
             <header class="mb-4 flex flex-col items-start gap-4">
               <User size={36} className="shrink-0" />
               <div>
-                <h3 class="text-2xl font-bold text-white">Single</h3>
-                <!-- <p class="text-neutral-400 mt-1">Einen Spezialist</p> -->
-                <p class="text-neutral-400 mt-4 font-serif">Pauschalpreis oder Stundenpreis möglich.</p>
+                <h3 class="text-2xl font-bold text-front">Single</h3>
+                <p class="text-muted-front mt-4 font-serif">Pauschalpreis oder Stundenpreis möglich.</p>
               </div>
             </header>
 
             <div class="flex flex-col justify-between">
               <div>
-                <ul class="list-none text-white space-y-3 mb-4 font-serif">
+                <ul class="list-none text-front space-y-3 mb-4 font-serif">
                   <li class="flex items-start gap-3">
                     <CheckIcon size={24} className="shrink-0 mt-1" /> Spezifische Aufgaben
                   </li>
@@ -121,12 +118,12 @@ import { button } from "@/ui/Button";
       </article>
     </div>
 
-    <div class="mt-10 bg-black p-6 text-neutral-400 font-serif">
-      <strong class="block text-white mb-2">Kurz zur Preisgestaltung</strong>
+    <div class="mt-10 p-6 text-muted-front font-serif animate-blur-fade-in">
+      <strong class="block text-front mb-2">Kurz zur Preisgestaltung</strong>
       <p>
-        Unsere Preise richten sich nach Umfang, Zeitrahmen und ob Sie einmalige Unterstützung oder eine
-        laufende Zusammenarbeit wünschen. Sprechen Sie kurz mit uns — wir machen einen klaren, transparenten
-        Vorschlag, abgestimmt auf Budget und Zeitplan.
+        Unsere Preise richten sich nach Umfang, Zeitrahmen und ob du einmalige Unterstützung oder eine
+        laufende Zusammenarbeit wünschst. Sprich kurz mit uns — wir machen einen klaren, transparenten
+        Vorschlag, abgestimmt auf dein Budget und deinen Zeitplan.
       </p>
     </div>
   </div>

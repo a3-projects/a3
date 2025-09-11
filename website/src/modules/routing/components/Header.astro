@@ -1,26 +1,34 @@
 ---
 import { Navbar } from "@/ui/Navbar";
 import { Logo } from "@/ui/icons/Logo";
+import { ThemeToggle } from "@/ui/ThemeToggle";
+import { button } from "@/ui/Button";
 ---
 
 <header>
   <Navbar client:load>
     <Navbar.List>
-      <Navbar.ListItem
-        className="group hover:before:bg-primary-700 before:hover:heropattern-diagonallines-primary-600"
-      >
-        <Navbar.Link href="/#start" className="flex items-center px-2 gap-3 z-10 h-full w-full text-white">
-          <Logo size={24} className="text-white" />
+      <Navbar.ListItem className="group hover:before:bg-front ">
+        <Navbar.Link
+          href="/#start"
+          className="flex items-center gap-2 z-10 h-full w-full text-front group-hover:text-white "
+        >
+          <Logo size={24} className="text-front group-hover:text-back" />
 
-          <div class="font-bold">
-            A3 <span class="font-extralight">Team</span>
-          </div>
+          <div class="text-front group-hover:text-back hidden lg:inline">A3 Team</div>
         </Navbar.Link>
       </Navbar.ListItem>
 
-      <Navbar.ListItem>
+      <!-- <Navbar.ListItem>
         <Navbar.Link href="/#kontakt">Kontakt</Navbar.Link>
-      </Navbar.ListItem>
+      </Navbar.ListItem> -->
+
+      <div
+        class="p-1 ml-auto flex gap-2 group-data-[navbar-visible=true]/navbar:opacity-100 opacity-0 transition-opacity duration-500"
+      >
+        <ThemeToggle client:idle />
+        <a class={button({ size: "sm" })} href="#kontakt">Kennenlern-Call</a>
+      </div>
     </Navbar.List>
   </Navbar>
 </header>

@@ -1,11 +1,6 @@
 ---
 import { Button } from "@/ui/Button";
-
-import { Image } from "astro:assets";
-import astro from "@/assets/images/astro.svg";
-import tailwind from "@/assets/images/tailwind.svg";
-import lucide from "@/assets/images/lucide.svg";
-import react from "@/assets/images/react.svg";
+import { LogoDots } from "@/ui/LogoDots";
 ---
 
 <script>
@@ -23,65 +18,76 @@ import react from "@/assets/images/react.svg";
   fadeInUp("#contact-description");
   fadeInUp("#contact-form");
 </script>
-<footer
-  id="kontakt"
-  class="bg-neutral-950 text-neutral-50 pt-20 border-t border-solid border-neutral-800 flex flex-col gap-6"
->
-  <div class="flex flex-col gap-4 px-6">
-    <div>
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        action="/anfrage-erfolgreich-uebermittelt"
-        class="flex flex-col gap-4 max-w-prose mx-auto"
-      >
-        <h2
-          id="contact-title"
-          class="text-4xl inline-block text-left bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
-        >
-          Kurzer Kennenlern‑Call?
-        </h2>
-        <p id="contact-description" class="mt-5 text-lg font-serif text-neutral-400">
-          15 Minuten reichen oft, um zu sehen, ob es passt. Wir kommen vorbereitet, Sie gehen mit Klarheit.
-        </p>
-        <div id="contact-form">
-          <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
-          <label class="text-neutral-400 mt-10 flex flex-col gap-3"
-            >Email
-            <input
-              class="border-4 border-solid rounded-xl text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-              placeholder="Deine E-Mail für Rückmeldung"
-              required
-              name="email"
-              type="email"
-            /></label
-          >
-          <label class="text-neutral-400 mt-4 flex flex-col gap-3"
-            >Anfrage
-            <textarea
-              class="h-[200px] border-4 border-solid rounded-xl text-white border-neutral-800 p-4 placeholder:opacity-70 bg-neutral-900 focus:border-primary-500 focus:bg-neutral-900 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-              required
-              name="message"
-              placeholder="Erzähle uns etwas über dein Projekt."></textarea>
-          </label>
-          <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
-            Anfrage absenden
-          </Button>
-        </div>
-      </form>
-    </div>
-    <div class=""></div>
+<footer id="kontakt" class="bg-back text-front border-t border-solid border-border flex flex-col relative">
+  <div class="relative pb-10 pt-20">
+    <!-- Logo dots background -->
+    <LogoDots
+      className="z-0 "
+      client:idle
+      dotSize={1.5}
+      dotSpacing={6}
+      bgDotColor="var(--color-muted-back)"
+      logoDotColor="var(--color-primary-back)"
+      logoPercentage={200}
+    />
+    <div class="absolute inset-0 bg-back/10 backdrop-blur-[1px]"></div>
 
-    <p class="text-center mx-auto font-light mt-20 text-neutral-400">
-      Software als Familienbetrieb – A3-Team
-    </p>
+    <div class="flex flex-col gap-4 px-6 relative">
+      <div>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/anfrage-erfolgreich-uebermittelt"
+          class="flex flex-col gap-4 max-w-prose mx-auto"
+        >
+          <h2
+            id="contact-title"
+            class="text-5xl inline-block text-left bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+          >
+            Kurzer Kennenlern‑Call?
+          </h2>
+          <p id="contact-description" class="mt-5 text-2xl">
+            15 Minuten reichen oft, um zu sehen, ob es passt. Wir kommen vorbereitet, du gehst mit Klarheit.
+          </p>
+          <div id="contact-form">
+            <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
+            <label class="text-muted-front mt-10 flex flex-col gap-3"
+              >Email
+              <input
+                class="border-4 rounded-xl text-front border-border p-4 placeholder:opacity-70 bg-input-back backdrop-blur-sm focus:border-primary-500 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+                placeholder="Deine E-Mail für Rückmeldung"
+                required
+                name="email"
+                type="email"
+              /></label
+            >
+            <label class="text-muted-front mt-4 flex flex-col gap-3"
+              >Anfrage
+              <textarea
+                class="h-[200px] border-4 rounded-xl text-front border-border p-4 placeholder:opacity-70 bg-input-back backdrop-blur-sm focus:border-primary-500 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
+                required
+                name="message"
+                placeholder="Erzähle uns etwas über dein Projekt."></textarea>
+            </label>
+            <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
+              Anfrage absenden
+            </Button>
+          </div>
+        </form>
+      </div>
+
+      <p class="text-center mx-auto font-light mt-20 text-muted-front">
+        A3-Team – Software als Familienbetrieb 🤝
+      </p>
+    </div>
   </div>
+
   <div
-    class="self-start flex gap-4 bg-black w-full h-16 px-5 items-center border-t border-solid border-neutral-900 mt-10"
+    class="self-start flex gap-4 bg-back w-full h-12 px-5 items-center border-t border-solid border-border"
   >
     <a class="text-sm hover:underline underline-offset-4" href="/impressum">Impressum</a>
-    <div class="h-1/3 w-[1px] bg-neutral-800"></div>
+    <div class="h-1/3 w-[1px] bg-border"></div>
     <a class="text-sm hover:underline underline-offset-4" href="/datenschutz">Datenschutz</a>
   </div>
 </footer>

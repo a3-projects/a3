@@ -43,7 +43,7 @@ export const BalanceScale = ({ className }: { className: string }) => {
         <div className="left-0 rounded-xl p-2 text-xl">TEMPO</div>
         <div className="-top-0 right-0 rounded-xl p-2 text-xl">QUALITÄT</div>
       </motion.div>
-      <motion.div style={{ rotate }} className="absolute bottom-0 h-[2px] w-[100%] bg-white"></motion.div>
+      <motion.div style={{ rotate }} className="bg-front absolute bottom-0 h-[2px] w-[100%]"></motion.div>
     </div>
   );
 };

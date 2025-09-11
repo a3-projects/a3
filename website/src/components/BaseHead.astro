@@ -43,4 +43,26 @@ const { title, description, image = "/logo-banner.webp", robots } = Astro.props;
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+  <!-- Theme script - must run before page loads to prevent FOUC -->
+  <script is:inline>
+    const theme = (() => {
+      const localStorageTheme = localStorage?.getItem("theme") ?? "";
+      if (["dark", "light"].includes(localStorageTheme)) {
+        return localStorageTheme;
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+
+    window.localStorage.setItem("theme", theme);
+  </script>
 </head>

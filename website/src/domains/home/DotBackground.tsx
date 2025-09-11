@@ -125,7 +125,7 @@ export function DotBackground({
           cy={dot.y}
           r={cr}
           fill={glow ? `url(#${id}-gradient)` : "currentColor"}
-          className="text-neutral-400/80"
+          className="text-muted-front/80"
           initial={glow ? { opacity: 0.4, scale: 1 } : {}}
           animate={
             glow

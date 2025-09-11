@@ -22,7 +22,7 @@ const _PrincipleCard = forwardRef<ElementRef<"div">, PrincipleCardProps & Compon
 );
 
 export const body = tv({
-  base: "p-5 md:p-8  h-full w-full flex flex-col gap-4 lg:gap-12 bg-neutral-900/70 backdrop-blur-sm",
+  base: "p-5 md:p-8  h-full w-full flex flex-col gap-4 lg:gap-12 bg-border/70 backdrop-blur-sm",
 });
 
 export interface BodyProps extends VariantProps<typeof body> {}

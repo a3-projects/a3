@@ -6,13 +6,13 @@ import "@fontsource/poppins/700.css";
 import "@fontsource/merriweather";
 import "@fontsource/merriweather/400.css";
 import "@fontsource/merriweather/700.css";
-import "@/styles/lenis.css";
+// import "@/styles/lenis.css";
 import "@/styles/tailwind.css";
 import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html class="bg-black text-neutral-50 font-sans scroll-pt-header" style="font-size:16px;" lang="en">
+<html class="bg-back text-front font-sans scroll-pt-header" style="font-size:16px;" lang="en">
   <slot />
 
   <style is:global>
@@ -21,21 +21,18 @@ import "@/styles/global.css";
     html {
       scroll-behavior: smooth;
     }
-    /* *::selection {
-      @apply bg-secondary-400/70 text-white;
-    } */
   </style>
   <script>
-    import Lenis from "lenis";
+    // import Lenis from "lenis";
 
-    const lenis = new Lenis();
+    // const lenis = new Lenis();
 
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
+    // const raf = (time: number) => {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // };
 
-    requestAnimationFrame(raf);
+    // requestAnimationFrame(raf);
   </script>
 
 

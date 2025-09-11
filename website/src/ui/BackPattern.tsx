@@ -19,9 +19,6 @@ export const backPattern = tv({
       neutral: {
         base: "heropattern-diagonallines-neutral-950 border-neutral-950",
       },
-      neutralOnDark: {
-        base: "heropattern-diagonallines-neutral-50 border-neutral-50",
-      },
     },
     animated: {
       true: {

@@ -4,37 +4,50 @@ import { TextHighlight } from "@/ui/TextHighlight";
 import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
+import { Container } from "@/domains/home/Container";
 ---
 
-<section
-  id="was-wir-bewirken"
-  class="overflow-hidden z-10 py-20 relative border-t border-neutral-800 flex flex-col bg-black"
->
-  <div>
-    <div class="flex flex-col items-start z-10 max-w-7xl w-full mx-auto px-6">
-      <h2
-        class="animate-blur-fade-in text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
-      >
-        Software, die nicht bremst – <br />sondern dein Business voranbringt.
-      </h2>
-      <p class="animate-blur-fade-in text-lg mt-4 text-neutral-400 font-serif max-w-prose">
-        Viele Unternehmen kämpfen mit Tools und Anwendungen, die kompliziert sind, Zeit fressen oder nicht
-        mitwachsen. Wir entwickeln Software, die spürbar entlastet und echten ROI bringt.
-      </p>
+<section id="was-wir-bewirken" class="overflow-hidden z-10 relative border-t border-border flex flex-col">
+  <div class="py-20 relative">
+    <div
+      class="absolute border-border top-0 left-1/2 -translate-x-1/2 pointer-events-none border-l border-dashed w-[calc(100%_+_4rem)] h-full"
+    >
     </div>
-    <div class="container mx-auto px-4 z-10 mt-10 max-w-7xl">
-      <p class="animate-blur-fade-in text-xl">Was wir für dich bewirken:</p>
+
+    <div
+      class="absolute border-border top-0 left-1/2 -translate-x-1/2 pointer-events-none border-r border-dashed w-[calc(100%_+_8rem)] h-full"
+    >
+    </div>
+
+    <div class="z-10 w-full relative">
+      <Container>
+        <h2
+          class="animate-blur-fade-in text-4xl inline-block bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+        >
+          Software, die nicht bremst – <br />sondern dein Business voranbringt.
+        </h2>
+      </Container>
+
+      <Container>
+        <p class="animate-blur-fade-in max-w-7xl text-lg mt-4 text-muted-front font-serif">
+          Viele Unternehmen kämpfen mit Tools und Anwendungen, die kompliziert sind, Zeit fressen oder nicht
+          mitwachsen. Wir entwickeln Software, die spürbar entlastet und echten ROI bringt.
+        </p>
+      </Container>
+    </div>
+    <Container className="px-6 z-10 mt-10">
+      <p class="animate-blur-fade-in font-serif text-lg text-muted-front">Was wir für dich bewirken:</p>
 
       <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-4 auto-template-columns-[300px]">
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
-              <h4 class="text-xl text-white">Mehr zahlende Kunden</h4>
+              <h4 class="text-xl text-front">Mehr zahlende Kunden</h4>
             </div>
-            <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif text-base leading-relaxed">
               <TextHighlight>Intuitive, ansprechende Anwendungen</TextHighlight>, die Nutzer begeistern – und
               sie gerne wiederkommen lassen.
             </p>
@@ -43,13 +56,13 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-border p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
-              <h4 class="text-xl text-white">Mehr Fokus im Alltag</h4>
+              <h4 class="text-xl text-front">Mehr Fokus im Alltag</h4>
             </div>
-            <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif text-base leading-relaxed">
               <TextHighlight>Intelligente Automatisierung</TextHighlight> nimmt Routineaufgaben ab und schafft
               Raum für Strategie und Kreativität.
             </p>
@@ -58,13 +71,13 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
-              <h4 class="text-xl text-white">Zufriedene Mitarbeiter</h4>
+              <h4 class="text-xl text-front">Zufriedene Mitarbeiter</h4>
             </div>
-            <p class="text-neutral-400 font-serif text-base leading-relaxed flex-grow">
+            <p class="text-muted-front font-serif text-base leading-relaxed flex-grow">
               <TextHighlight>Durchdachte Tools</TextHighlight> vereinfachen komplexe Abläufe – Frust sinkt, Motivation
               steigt.
             </p>
@@ -73,13 +86,13 @@ import { button } from "@/ui/Button";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
-              <h4 class="text-xl text-white">Nachhaltiges Wachstum</h4>
+              <h4 class="text-xl text-front">Nachhaltiges Wachstum</h4>
             </div>
-            <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif text-base leading-relaxed">
               Fundament für morgen – <TextHighlight>Architektur</TextHighlight>, die mit deinem Business
               skaliert.
             </p>
@@ -100,34 +113,34 @@ import { button } from "@/ui/Button";
 
           <div class="flex absolute w-full h-full -translate-y-2 translate-x-2">
             <Logo
-              className="text-primary-500 blur-xl m-auto  transition-colors duration-300 z-0"
+              className="hidden dark:flex text-front/50 blur-xl m-auto  transition-colors duration-300 z-0"
               size="70%"
             />
           </div>
           <div class="absolute flex w-full h-full -translate-y-2 translate-x-2">
-            <Logo className="text-primary-200  m-auto hover:text-primary-300 " size="70%" />
+            <Logo className="text-front m-auto " size="70%" />
           </div>
         </div>
         <!-- Card 6: Energie für Innovation -->
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-neutral-800 p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
         >
           <div class="flex flex-col h-full">
             <div class="flex items-center gap-4 mb-4">
               <!-- <div class="icon-wrapper">
               <LightbulbIcon className="w-8 h-8 text-primary-400" strokeWidth={1.5} />
             </div> -->
-              <h4 class="text-xl text-white">Energie für Innovation</h4>
+              <h4 class="text-xl text-front">Energie für Innovation</h4>
             </div>
-            <p class="text-neutral-400 font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif text-base leading-relaxed">
               <TextHighlight>Reibungslose Abläufe</TextHighlight> lassen Ideen entstehen – statt ständig Feuer
               löschen.
             </p>
           </div>
         </GradientHoverCard>
       </div>
-    </div>
+    </Container>
     <div class="animate-blur-fade-in text-center flex items-center justify-center px-6 mt-20">
       <a
         href="#kontakt"

@@ -19,8 +19,8 @@ export function GradientHoverCard({
   children,
   className,
   gradientSize = 200,
-  gradientColor = "var(--color-primary-950)",
-  gradientOpacity = 0.8,
+  gradientColor = "var(--color-primary-500)",
+  gradientOpacity = 0.15,
   gradientFrom = "#9E7AFF",
   gradientTo = "#FE8BBB",
   ...props
@@ -79,20 +79,20 @@ export function GradientHoverCard({
   return (
     <div ref={cardRef} className={cn("group relative rounded-[inherit]", className)} {...props}>
       <motion.div
-        className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
+        className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 duration-300"
         style={{
           background: useMotionTemplate`
           radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
           ${gradientFrom}, 
           ${gradientTo}, 
-          var(--border) 100%
+          var(--border) 00%
           )
           `,
         }}
       />
       <div className="bg-background absolute inset-px rounded-[inherit]" />
       <motion.div
-        className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300"
         style={{
           background: useMotionTemplate`
             radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)

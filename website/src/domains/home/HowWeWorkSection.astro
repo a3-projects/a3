@@ -6,36 +6,24 @@ import { button } from "@/ui/Button";
 import { BalanceScale } from "@/domains/home/BalanceScale";
 ---
 
-<section id="wie-wir-arbeiten" class="overflow-hidden pt-20 relative flex flex-col bg-black">
+<section id="wie-wir-arbeiten" class="overflow-hidden pt-20 relative flex flex-col bg-back">
   <div class="animate-blur-fade-in flex flex-col items-start max-w-7xl w-full mx-auto px-4">
     <h1
-      class="text-4xl inline-block bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+      class="text-4xl inline-block bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
     >
-      Unser agiler Arbeitsrhythmus
+      So läuft unsere agile Zusammenarbeit
     </h1>
-    <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose">
+    <p class="text-lg mt-4 text-muted-front font-serif max-w-prose">
       Erfolgreiche Software entsteht in Zyklen, nicht in starren Phasen. Wir arbeiten agil – mit kurzen
       Iterationen, ständigem Feedback und kontinuierlicher Verbesserung. Jeder Zyklus bringt nutzbaren
       Fortschritt.
     </p>
   </div>
 
-  <div class="max-w-7xl w-full relative mx-auto grid grid-cols-1">
-    <div class="px-8 absolute left-0 top-0 h-full flex items-center justify-center">
-      <EarIcon size="48" className="text-primary-500 opacity-0" strokeWidth="0.6" />
-      <div class="absolute flex gap-2 w-[80%] top-[180px]">
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div class="h-px w-full bg-neutral-700"></div>
-        <div
-          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-neutral-500 tracking-widest"
-        >
-          3. ITERATION
-        </div>
-      </div>
+  <div class="max-w-7xl w-full relative mx-auto grid grid-cols-1 mt-10">
+    <div class="px-8 absolute left-0 top-0 h-full flex items-center justify-center animate-blur-fade-in">
+      <EarIcon size="48" className="text-primary-back opacity-0" strokeWidth="0.6" />
+
       <div class="absolute flex gap-2 w-[80%] bottom-[180px]">
         <div class="h-px w-full bg-neutral-700"></div>
         <div class="h-px w-full bg-neutral-700"></div>
@@ -44,49 +32,28 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
         <div class="h-px w-full bg-neutral-700"></div>
         <div class="h-px w-full bg-neutral-700"></div>
         <div
-          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-neutral-500 tracking-widest"
+          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-muted-front tracking-widest"
         >
-          4. ITERATION
+          NÄCHSTE ITERATION
         </div>
       </div>
 
-      <div class="w-px absolute bg-neutral-800 h-full z-0"></div>
-      <div class="w-px absolute bg-gradient-to-b from-neutral-800 to-white h-full z-0" id="timeline-line">
-      </div>
+      <div class="w-px absolute bg-border h-full z-0"></div>
+      <div class="w-px absolute bg-gradient-to-b from-border to-front h-full z-0" id="timeline-line"></div>
     </div>
-    <div class="animate-blur-fade-in relative z-10 flex gap-4 mb-4 flex-1 px-4 py-10">
-      <div
-        class="absolute bottom-0 left-0 z-20 bg-gradient-to-b from-black from-40% to-black/0 h-full w-full"
-      >
-      </div>
-      <div class="flex flex-col items-start">
-        <span class="text-4xl flex gap-4 items-center w-full">
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <Grid2X2CheckIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
-          </div>
-        </span>
-      </div>
-      <div>
-        <!-- <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
-          In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
-          Kontinuierliches Feedback hält uns auf Kurs.
-        </p> -->
-      </div>
-    </div>
+
     <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
         <span class="text-4xl flex gap-4 items-center w-full">
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <EarIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          <div class="p-4 rounded-xl bg-back relative">
+            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <EarIcon size="48" className="text-primary-back relative" strokeWidth="0.6" />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+        <h3 class="text-xl text-front flex gap-1 items-center">Verstehen & Planen</h3>
+        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
           In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
           Kontinuierliches Feedback hält uns auf Kurs.
         </p>
@@ -97,15 +64,15 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin flex gap-4 items-center justify-between w-full">
           <!-- 02. -->
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <LightbulbIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          <div class="p-4 rounded-xl bg-back relative">
+            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <LightbulbIcon size="48" className="text-primary-back relative" strokeWidth="0.6" />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Entwickeln & Testen</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+        <h3 class="text-xl text-front flex gap-1 items-center">Entwickeln & Testen</h3>
+        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
           Wir entwickeln iterativ, testen früh und oft. Jede Iteration liefert funktionsfähige Features, die
           wir gemeinsam bewerten und weiterentwickeln.
         </p>
@@ -116,15 +83,15 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin block">
           <!-- 03. -->
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <PackageIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          <div class="p-4 rounded-xl bg-back relative">
+            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <PackageIcon size="48" className="text-primary-back relative" strokeWidth="0.6" />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Ausliefern & Lernen</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+        <h3 class="text-xl text-front flex gap-1 items-center">Ausliefern & Lernen</h3>
+        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
           Jede Iteration endet mit nutzbaren Ergebnissen. Wir liefern regelmäßig aus, sammeln Feedback und
           lernen kontinuierlich dazu.
         </p>
@@ -135,16 +102,16 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div class="flex flex-col items-start">
         <span class="text-7xl font-thin block">
           <!-- 04. -->
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <Grid2X2CheckIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          <div class="p-4 rounded-xl bg-back relative">
+            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <Grid2X2CheckIcon size="48" className="text-primary-back relative" strokeWidth="0.6" />
           </div>
         </span>
       </div>
 
       <div>
-        <h3 class="text-xl text-white flex gap-1 items-center">Optimieren & Weiterentwickeln</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+        <h3 class="text-xl text-front flex gap-1 items-center">Optimieren & Weiterentwickeln</h3>
+        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
           Nach jeder Iteration reflektieren wir: Was lief gut? Was können wir verbessern? So wird unser
           Arbeitsrhythmus und das Produkt kontinuierlich besser.
         </p>
@@ -152,21 +119,19 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
     </div>
 
     <div class="animate-blur-fade-in relative z-10 flex gap-4 mt-4 flex-1 px-4 py-10">
-      <div
-        class="absolute bottom-0 left-0 z-10 bg-gradient-to-t from-black from-40% to-black/0 h-full w-full"
-      >
+      <div class="absolute bottom-0 left-0 z-10 bg-gradient-to-t from-back from-40% to-back/0 h-full w-full">
       </div>
       <div class="flex flex-col items-start">
         <span class="text-4xl flex gap-4 items-center w-full">
-          <div class="p-4 rounded-xl bg-black relative">
-            <div class="absolute w-full h-full bg-primary-500/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <EarIcon size="48" className="text-primary-500 relative" strokeWidth="0.6" />
+          <div class="p-4 rounded-xl bg-back relative">
+            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <EarIcon size="48" className="text-primary-back relative" strokeWidth="0.6" />
           </div>
         </span>
       </div>
       <div>
-        <!-- <h3 class="text-xl text-white flex gap-1 items-center">Verstehen & Planen</h3>
-        <p class="text-neutral-400 font-serif max-w-prose text-base mt-2">
+        <!-- <h3 class="text-xl text-front flex gap-1 items-center">Verstehen & Planen</h3>
+        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
           In jeder Iteration hören wir zu, verstehen Prioritäten und planen gemeinsam die nächsten Schritte.
           Kontinuierliches Feedback hält uns auf Kurs.
         </p> -->
@@ -191,19 +156,19 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <BalanceScale className="animate-blur-fade-in" client:idle />
       <div class="flex justify-center relative">
         <div
-          class="w-0 h-0 border-l-[30px] border-r-[30px] border-b-[40px] border-l-transparent border-r-transparent border-b-white"
+          class="w-0 h-0 border-l-[30px] border-r-[30px] border-b-[40px] border-l-transparent border-r-transparent border-b-front"
         >
         </div>
       </div>
     </div>
   </div>
   <div class="animate-blur-fade-in flex flex-col items-center justify-center px-4">
-    <p class="text-lg mt-4 text-neutral-400 font-serif max-w-prose text-center">
+    <p class="text-lg mt-4 text-muted-front font-serif max-w-prose text-center">
       Nicht entweder–oder. Sondern genau richtig. Tempo hält Projekte lebendig, Qualität macht sie
       verlässlich. Wir setzen auf beides – in der passenden Dosis.
     </p>
   </div>
-  <div class="animate-blur-fade-in text-center flex items-center justify-center px-4 mt-10">
+  <div class="animate-blur-fade-in text-center flex items-center justify-center px-4 my-10">
     <a
       href="#kontakt"
       class={button({

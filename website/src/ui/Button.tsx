@@ -8,17 +8,13 @@ export const button = tv({
   variants: {
     variant: {
       default:
-        "bg-primary-600 text-neutral-50 hover:bg-neutral-50 hover:text-black hover:shadow-lg hover:shadow-primary-500",
-      destructive: "bg-destructive-500 text-destructive-500 hover:bg-destructive/90",
-      outline: "border border-input bg-background hover:bg-secondary hover:text-secondary-500",
-      secondary: "bg-secondary-600 text-white hover:bg-white hover:text-black",
-      ghost: "hover:bg-secondary hover:text-secondary-500",
-      neutral: "bg-neutral-600 text-neutral-50 hover:bg-neutral-50 hover:text-neutral-950 hover:shadow-lg",
-      neutralOnDark:
-        "bg-neutral-50 text-neutral-950 hover:bg-neutral-950 hover:text-neutral-50 hover:shadow-lg ",
-      link: "text-primary underline-offset-4 hover:underline",
-      "gradient-primary":
-        "bg-gradient-to-br from-primary-500 to-primary-900 text-neutral-50 hover:from-primary-300 hover:to-primary-100 hover:text-black hover:shadow-lg hover:shadow-primary-500",
+        "bg-primary-back text-primary-front hover:bg-front hover:text-back hover:shadow-md hover:shadow-primary-back/50",
+      destructive: "bg-destructive-back text-destructive-front hover:bg-destructive-back/90",
+      outline: "border border-border  text-front hover:bg-front/10",
+      ghost: " text-front/50 hover:bg-front/10 hover:text-front",
+      secondary: "bg-secondary-back text-secondary-front hover:bg-front hover:text-back",
+      neutral: "bg-neutral-back text-neutral-front hover:bg-front hover:text-back hover:shadow-md",
+      link: "text-primary-front underline-offset-4 hover:underline",
     },
     increaseHitbox: {
       true: "before:absolute before:h-[calc(100%+1rem)] relative before:w-[calc(100%+1rem)]",
@@ -26,10 +22,10 @@ export const button = tv({
     color: {},
     size: {
       default: "h-10 px-4 py-2",
-      sm: "h-9  px-3",
+      sm: "h-8  px-2",
       lg: "h-12 px-6 py-2",
       xl: "h-16 px-10", // added xl size
-      icon: "h-10 w-10",
+      icon: "h-8 w-8",
     },
   },
   defaultVariants: {

@@ -26,23 +26,23 @@ const companyLogos = [
 ];
 ---
 
-<section class="relative overflow-hidden border-t border-b border-solid border-neutral-800 py-10 bg-black">
+<section class="relative overflow-hidden border-t border-b border-solid border-border py-10 bg-back">
   <div class="flex items-center justify-center">
     <h1
-      class="text-xl inline-block text-center bg-gradient-to-br from-white via-white to-neutral-750 text-transparent bg-clip-text"
+      class="text-xl inline-block text-center bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
     >
       GAME-CHANGER BEI
     </h1>
   </div>
   <div
-    class="absolute top-0 left-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"
+    class="absolute top-0 left-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-r from-back to-transparent"
   >
   </div>
   <div
-    class="absolute top-0 right-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"
+    class="absolute top-0 right-0 h-full w-[20vw] z-10 pointer-events-none bg-gradient-to-l from-back to-transparent"
   >
   </div>
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden brightness-[0.8] dark:brightness-100">
     <div class="flex animate-marquee w-max py-6 marquee-container hover:pause-animation">
       <!-- First set of logos -->
       <div class="flex items-center gap-16 pl-20 justify-center">
@@ -53,7 +53,7 @@ const companyLogos = [
                 src={logo.src.src}
                 alt={logo.alt}
                 style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out animate-blur"
+                class="transition-all duration-300 ease-in-out animate-blur "
                 loading="lazy"
               />
             </div>

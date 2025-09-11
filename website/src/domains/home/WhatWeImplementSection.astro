@@ -1,162 +1,17 @@
 ---
-import astro from "@/assets/images/astro.svg";
-import github from "@/assets/images/github.svg";
-import next from "@/assets/images/next.svg";
-import nuxt from "@/assets/images/nuxt.svg";
-import react from "@/assets/images/react.svg";
-import tailwind from "@/assets/images/tailwind.svg";
-import typescript from "@/assets/images/typescript.svg";
-import vue from "@/assets/images/vue.svg";
-import aws from "@/assets/images/aws.svg";
-import gitlab from "@/assets/images/gitlab.svg";
-import kubernetes from "@/assets/images/kubernetes.svg";
-import go from "@/assets/images/go.svg";
-import docker from "@/assets/images/docker.svg";
-import playwright from "@/assets/images/playwright.svg";
-import vite from "@/assets/images/vite.svg";
-import postgres from "@/assets/images/postgres.svg";
-import storybook from "@/assets/images/storybook.svg";
-import rust from "@/assets/images/rust.svg";
-
 import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
 import shapes from "@/assets/images/pictures/shapes.jpg";
 import development from "@/assets/images/pictures/development.jpg";
 
-import { getImage, Image } from "astro:assets";
+import { Image } from "astro:assets";
 import { LogoOutline } from "@/ui/icons/LogoOutline";
 import { CheckIcon, SettingsIcon, MoreHorizontalIcon } from "lucide-react";
 import { Logo } from "@/ui/icons/Logo";
 import { button } from "@/ui/Button";
 import { OrbitingTools } from "@/domains/home/OrbitingTools";
-
-const innerCircleIcons: TechIcon[] = [
-  {
-    src: (await getImage({ src: aws, width: 100, height: 100 })).src,
-    alt: "aws logo",
-    title: "AWS",
-    href: "https://aws.amazon.com/",
-  },
-  {
-    src: (await getImage({ src: github, width: 100, height: 100 })).src,
-    alt: "github logo",
-    title: "Github",
-    href: "https://github.com/",
-  },
-  {
-    src: (await getImage({ src: docker, width: 100, height: 100 })).src,
-    alt: "docker logo",
-    title: "Docker",
-    href: "https://www.docker.com/",
-  },
-  {
-    src: (await getImage({ src: postgres, width: 100, height: 100 })).src,
-    alt: "postgres logo",
-    title: "Postgres",
-    href: "https://www.postgresql.org/",
-  },
-  {
-    src: (await getImage({ src: rust, width: 100, height: 100 })).src,
-    alt: "rust logo",
-    title: "Rust",
-    href: "https://www.rust-lang.org/",
-  },
-  {
-    src: (await getImage({ src: gitlab, width: 100, height: 100 })).src,
-    alt: "gitlab logo",
-    title: "Gitlab",
-    href: "https://gitlab.com/",
-  },
-  {
-    src: (await getImage({ src: kubernetes, width: 100, height: 100 })).src,
-    alt: "kubernetes logo",
-    title: "Kubernetes",
-    href: "https://kubernetes.io/",
-  },
-  {
-    src: (await getImage({ src: go, width: 100, height: 100 })).src,
-    alt: "go logo",
-    title: "Go",
-    href: "https://go.dev/",
-  },
-];
-
-const outerCircleIcons: TechIcon[] = [
-  {
-    src: (await getImage({ src: next, width: 100, height: 100 })).src,
-    alt: "next logo",
-    title: "Next",
-    href: "https://nextjs.org/",
-  },
-  {
-    src: (await getImage({ src: typescript, width: 100, height: 100 })).src,
-    alt: "typescript logo",
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org/",
-  },
-  {
-    src: (await getImage({ src: nuxt, width: 100, height: 100 })).src,
-    alt: "nuxt logo",
-    title: "Nuxt",
-    href: "https://nuxt.com/",
-  },
-  {
-    src: (await getImage({ src: typescript, width: 100, height: 100 })).src,
-    alt: "typescript logo",
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org/",
-  },
-  {
-    src: (await getImage({ src: react, width: 100, height: 100 })).src,
-    alt: "react logo",
-    title: "React",
-    href: "https://reactjs.org/",
-  },
-  {
-    src: (await getImage({ src: vue, width: 100, height: 100 })).src,
-    alt: "vue logo",
-    title: "Vue",
-    href: "https://vuejs.org/",
-  },
-  {
-    src: (await getImage({ src: playwright, width: 100, height: 100 })).src,
-    alt: "playwright logo",
-    title: "Playwright",
-    href: "https://playwright.dev/",
-  },
-  {
-    src: (await getImage({ src: tailwind, width: 100, height: 100 })).src,
-    alt: "tailwind logo",
-    title: "Tailwind",
-    href: "https://tailwindcss.com/",
-  },
-  {
-    src: (await getImage({ src: astro, width: 100, height: 100 })).src,
-    alt: "astro logo",
-    title: "Astro",
-    href: "https://astro.build/",
-  },
-  {
-    src: (await getImage({ src: storybook, width: 100, height: 100 })).src,
-    alt: "storybook logo",
-    title: "Storybook",
-    href: "https://storybook.js.org/",
-  },
-  {
-    src: (await getImage({ src: vite, width: 100, height: 100 })).src,
-    alt: "vite logo",
-    title: "Vite",
-    href: "https://vitejs.dev/",
-  },
-];
-interface TechIcon {
-  src: string;
-  alt: string;
-  title: string;
-  href: string;
-}
 ---
 
-<section class="container w-full px-4 py-20 mx-auto bg-black min-h-[600px] flex relative">
+<section class="container w-full px-4 py-20 mx-auto bg-back min-h-[600px] flex relative">
   <div
     class="absolute w-[60%] h-[60%] rounded-full left-1/2 top-1/2 -translate-1/2 bg-primary-600/20 blur-[100px] z-0"
   >
@@ -172,11 +27,11 @@ interface TechIcon {
           >
             <div class="px-4 pt-4">
               <h2
-                class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+                class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Web-Apps
               </h2>
-              <p class="text-lg font-serif text-neutral-400">Desktop & Mobile-friendly</p>
+              <p class="text-lg font-serif text-muted-front">Desktop & Mobile-friendly</p>
             </div>
 
             <div
@@ -186,13 +41,13 @@ interface TechIcon {
                 class="border-6 rounded-xl border-neutral-950 flex flex-col relative bg-neutral-950 h-[200px] overflow-hidden"
               >
                 <Logo
-                  className="absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_30px)] text-black/20 flex-grow-1  w-[200%] "
+                  className="absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_30px)] text-back/20 flex-grow-1  w-[200%] "
                 />
                 <div class="w-full overflow-hidden relative bg-neutral-950 flex items-start gap-1 px-1 py-2">
-                  <div class="w-[8px] h-[8px] rounded-full bg-destructive-500/50"></div>
-                  <div class="w-[8px] h-[8px] rounded-full bg-warn-500/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-destructive-back/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-warn-back/50"></div>
 
-                  <div class="w-[8px] h-[8px] rounded-full bg-positive-500/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-positive-back/50"></div>
                 </div>
                 <div class="w-full h-full bg-gradient-to-b from-primary-500 to-primary-500/0"></div>
               </div>
@@ -205,13 +60,13 @@ interface TechIcon {
                 class="rounded-xl relative border-6 border-neutral-950 bg-neutral-950 h-[150px] overflow-hidden"
               >
                 <Logo
-                  className="absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_50px)] text-black/20 flex-grow-1  w-[300%] "
+                  className="absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_50px)] text-back/20 flex-grow-1  w-[300%] "
                 />
                 <div class="w-full overflow-hidden relative bg-neutral-950 flex items-start gap-1 px-1 py-2">
-                  <div class="w-[8px] h-[8px] rounded-full bg-destructive-500/50"></div>
-                  <div class="w-[8px] h-[8px] rounded-full bg-warn-500/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-destructive-back/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-warn-back/50"></div>
 
-                  <div class="w-[8px] h-[8px] rounded-full bg-positive-500/50"></div>
+                  <div class="w-[8px] h-[8px] rounded-full bg-positive-back/50"></div>
                 </div>
                 <div class="w-full h-full bg-gradient-to-b from-primary-500 to-55% to-primary-500/0"></div>
               </div>
@@ -236,8 +91,7 @@ interface TechIcon {
           <div class="flex">
             <GradientHoverCard
               client:idle
-              gradientColor="var(--color-neutral-800)"
-              className="animate-blur-fade-in group-hover backdrop-blur-xl relative rounded-xl border border-neutral-800 p-4 bg-neutral-800/30 flex  w-full h-full overflow-hidden"
+              className="animate-blur-fade-in group-hover backdrop-blur-xl relative rounded-xl border border-border p-4 bg-back/30 flex  w-full h-full overflow-hidden"
             >
               <div class="w-full h-full flex items-center justify-center">
                 <h2
@@ -247,10 +101,10 @@ interface TechIcon {
                 </h2>
               </div>
               <LogoOutline
-                className="absolute flex top-1/2 left-1/2 -translate-x-1/2 translate-y-[-60%] text-white group-hover:text-primary-500 group-hover:blur-xl group-hover:opacity-0 flex-grow-1 w-[200%] group-hover:scale-50 transition-spring"
+                className="absolute flex top-1/2 left-1/2 -translate-x-1/2 translate-y-[-60%] text-front group-hover:text-primary-500 group-hover:blur-xl group-hover:opacity-0 flex-grow-1 w-[200%] group-hover:scale-50 transition-spring"
               />
               <LogoOutline
-                className="absolute flex top-1/2 left-1/2 -translate-x-1/2 translate-y-[-60%] text-white group-hover:text-primary-500 group-hover:opacity-0 blur-lg flex-grow-1 w-[200%] group-hover:scale-50 transition-spring"
+                className="absolute hidden dark:flex top-1/2 left-1/2 -translate-x-1/2 translate-y-[-60%] text-front group-hover:text-primary-500 group-hover:opacity-0 blur-lg flex-grow-1 w-[200%] group-hover:scale-50 transition-spring"
               />
             </GradientHoverCard>
           </div>
@@ -259,48 +113,47 @@ interface TechIcon {
       <div class="flex">
         <GradientHoverCard
           client:idle
-          gradientColor="var(--color-neutral-800)"
-          className="animate-blur-fade-in overflow-hidden group backdrop-blur-xl rounded-xl flex-grow-1 border border-neutral-800 bg-neutral-800/30 "
+          className="animate-blur-fade-in overflow-hidden group backdrop-blur-xl rounded-xl flex-grow-1 border border-border bg-back/30"
         >
           <div class="px-4 pt-4">
             <h2
-              class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+              class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               Infrastruktur-Automatisierung
             </h2>
-            <p class="text-lg font-serif text-neutral-400 transition-all">Skalierbarkeit & Pipelines</p>
+            <p class="text-lg font-serif text-muted-front">Skalierbarkeit & Pipelines</p>
           </div>
           <div
             class="flex items-center mt-4 pb-10 -translate-x-12 group-hover:translate-x-0 transition-spring"
           >
-            <div class="h-[1px] w-2 bg-positive-500"></div>
+            <div class="h-[1px] w-2 bg-positive-back"></div>
             <div
-              class="w-8 h-8 rounded-full bg-positive-500 border border-positive-500 flex items-center justify-center"
+              class="w-8 h-8 rounded-full bg-positive-back border border-positive-back flex items-center justify-center"
             >
-              <CheckIcon className="text-white w-4 h-4" strokeWidth={2} />
+              <CheckIcon className="text-positive-front w-4 h-4" strokeWidth={2} />
             </div>
-            <div class="h-[1px] w-6 bg-positive-500"></div>
+            <div class="h-[1px] w-6 bg-positive-back"></div>
             <div
-              class="w-8 h-8 rounded-full bg-positive-500 border border-positive-500 flex items-center justify-center"
+              class="w-8 h-8 rounded-full bg-positive-back border border-positive-back flex items-center justify-center"
             >
-              <CheckIcon className="text-white w-4 h-4" strokeWidth={2} />
+              <CheckIcon className="text-positive-front w-4 h-4" strokeWidth={2} />
             </div>
-            <div class="h-[1px] w-6 bg-positive-500"></div>
+            <div class="h-[1px] w-6 bg-positive-back"></div>
             <div
-              class="w-8 h-8 rounded-full bg-positive-500 border border-positive-500 flex items-center justify-center"
+              class="w-8 h-8 rounded-full bg-positive-back border border-positive-back flex items-center justify-center"
             >
-              <CheckIcon className="text-white w-4 h-4" strokeWidth={2} />
+              <CheckIcon className="text-positive-front w-4 h-4" strokeWidth={2} />
             </div>
-            <div class="h-[1px] w-6 bg-positive-500"></div>
+            <div class="h-[1px] w-6 bg-positive-back"></div>
             <div
-              class="w-12 h-12 rounded-full bg-neutral-400/20 border border-neutral-400 flex items-center justify-center"
+              class="w-12 h-12 rounded-full bg-neutral-back/20 border border-neutral-back flex items-center justify-center"
             >
-              <MoreHorizontalIcon className="text-white w-6 h-4" strokeWidth={2} />
+              <MoreHorizontalIcon className="text-front w-6 h-4" strokeWidth={2} />
             </div>
             <div class="flex gap-1 mx-1">
-              <div class="h-[1px] w-2 bg-neutral-400"></div>
-              <div class="h-[1px] w-2 bg-neutral-400"></div>
-              <div class="h-[1px] w-2 bg-neutral-400"></div>
+              <div class="h-[1px] w-2 bg-neutral-back"></div>
+              <div class="h-[1px] w-2 bg-neutral-back"></div>
+              <div class="h-[1px] w-2 bg-neutral-back"></div>
             </div>
           </div>
         </GradientHoverCard>
@@ -310,16 +163,15 @@ interface TechIcon {
       <div class="flex flex-grow-1">
         <GradientHoverCard
           client:idle
-          gradientColor="var(--color-neutral-800)"
-          className="animate-blur-fade-in overflow-hidden group backdrop-blur-xl rounded-xl border border-neutral-800 bg-neutral-800/30 w-full"
+          className="animate-blur-fade-in overflow-hidden group backdrop-blur-xl rounded-xl border border-border bg-back/30 w-full"
         >
           <div class="px-4 pt-4 pb-20 relative z-10">
             <h2
-              class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+              class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               UI / UX Design
             </h2>
-            <p class="text-neutral-400 text-lg font-serif">Intuitiv & Ansprechend</p>
+            <p class="text-muted-front text-lg font-serif">Intuitiv & Ansprechend</p>
           </div>
           <div
             class="group-hover:scale-100 lg:scale-0 absolute w-[200%] aspect-square inset-0 bg-primary-500/20 transition-spring rounded-full"
@@ -342,11 +194,11 @@ interface TechIcon {
         >
           <div class="px-4 pt-4 pb-20 relative z-10">
             <h2
-              class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+              class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               Code-Analyse
             </h2>
-            <p class="text-neutral-400 text-lg font-serif">Qualität & Struktur</p>
+            <p class="text-muted-front text-lg font-serif">Qualität & Struktur</p>
           </div>
 
           <div
@@ -462,11 +314,11 @@ interface TechIcon {
           >
             <div class="px-4 pt-4 pb-20">
               <h2
-                class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+                class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Prozessoptimierung
               </h2>
-              <p class="text-lg text-neutral-400 font-serif">Effizienz & Kontrolle</p>
+              <p class="text-lg text-muted-front font-serif">Effizienz & Kontrolle</p>
             </div>
             <SettingsIcon
               className="absolute w-60 h-60 text-primary-500/50 fill-primary-500/10 top-1/2 right-0 translate-x-1/2 -translate-y-1/4 group-hover:rotate-[180deg] transition-spring"
@@ -487,7 +339,7 @@ interface TechIcon {
               <span class="relative z-10"> Projekt anfragen </span>
 
               <div
-                class="absolute top-1/2 left-1/2 -translate-1/2 h-[120%] w-1/3 -skew-x-[30deg] bg-black/20 pointer-events-none group-hover:scale-[3] transition-spring"
+                class="absolute top-1/2 left-1/2 -translate-1/2 h-[120%] w-1/3 -skew-x-[30deg] bg-back/20 pointer-events-none group-hover:scale-[3] transition-spring"
               >
               </div>
             </a>
@@ -503,15 +355,14 @@ interface TechIcon {
               loading="lazy"
               position="top"
             />
-            <div class="absolute bg-black/20 w-full h-full top-0 left-0"></div>
+            <div class="absolute bg-back/20 w-full h-full top-0 left-0"></div>
           </div>
         </div>
         <div class="grid grid-rows-[1fr_0.5fr] gap-4">
           <div class="flex">
             <GradientHoverCard
               client:idle
-              gradientColor="var(--color-neutral-800)"
-              className="animate-blur-fade-in group backdrop-blur-xl relative rounded-xl border border-neutral-800  bg-neutral-800/30 flex  w-full h-full overflow-hidden"
+              className="animate-blur-fade-in group backdrop-blur-xl relative rounded-xl border border-border  bg-back/30 flex  w-full h-full overflow-hidden"
             >
               <div
                 class="absolute top-1/2 left-1/2 -translate-1/2 w-full h-full flex gap-4 flex-wrap max-w-7xl align-center justify-center"
@@ -519,29 +370,15 @@ interface TechIcon {
                 <div
                   class="relative h-[700px] w-full flex items-center justify-center lg:grayscale group-hover:grayscale-0 group-hover:scale-110 transition-spring"
                 >
-                  <OrbitingTools
-                    tools={outerCircleIcons}
-                    client:idle
-                    iconSize={40}
-                    radius={250}
-                    speed={0.5}
-                  />
-                  <OrbitingTools
-                    tools={innerCircleIcons}
-                    client:idle
-                    iconSize={40}
-                    radius={150}
-                    reverse
-                    speed={0.7}
-                  />
+                  <OrbitingTools client:idle />
                 </div>
               </div>
             </GradientHoverCard>
           </div>
           <div class="animate-blur-fade-in flex flex-grow-1">
-            <div class="backdrop-blur-sm flex items-end justify-end rounded-xl flex-grow-1 bg-black/20 p-4">
+            <div class="backdrop-blur-sm flex items-end justify-end rounded-xl flex-grow-1 bg-back/20 p-4">
               <h2
-                class="text-2xl bg-gradient-to-br from-white via-white to-neutral-500 text-transparent bg-clip-text"
+                class="text-2xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Und mehr...
               </h2>

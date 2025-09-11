@@ -1,64 +1,110 @@
-"use client";
-import { useState } from "react";
-import { ChevronDownIcon } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
-import { cn } from "@/lib/utils";
+import { Accordion } from "./Accordion";
 
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-interface FAQAccordionProps {
-  items: FAQItem[];
-  className?: string;
-}
-
-export function FAQAccordion({ items, className }: FAQAccordionProps) {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems((prev) => (prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]));
-  };
-
+export function FAQAccordion() {
   return (
-    <div className={cn("space-y-4", className)}>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700"
-        >
-          <button
-            onClick={() => toggleItem(index)}
-            className="flex w-full items-center justify-between px-6 py-5 text-left transition-all duration-200 hover:bg-neutral-800/30"
-            aria-expanded={openItems.includes(index)}
-            type="button"
-          >
-            <h3 className="pr-4 font-bold text-white">{item.question}</h3>
-            <motion.div
-              animate={{
-                rotate: openItems.includes(index) ? 180 : 0,
-              }}
-            >
-              <ChevronDownIcon className="flex-shrink-0 text-neutral-400" size={20} />
-            </motion.div>
-          </button>
-          <AnimatePresence>
-            {openItems.includes(index) && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="overflow-hidden"
-              >
-                <div className="px-5 py-4">
-                  <p className="font-serif text-neutral-400">{item.answer}</p>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-    </div>
+    <Accordion.Group>
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">Wie läuft eine Zusammenarbeit typisch ab?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Wir starten immer mit einem unverbindlichen Kennenlern-Call von 15-30 Minuten. Dort besprechen wir
+            deine Ziele und schauen, ob die Chemie stimmt. Danach entwickeln wir gemeinsam einen Plan –
+            transparent, mit klaren Meilensteinen und regelmäßigen Updates. Kurze Entwicklungszyklen sorgen
+            dafür, dass du schnell sichtbare Fortschritte siehst.
+          </p>
+        </Accordion.Body>
+      </Accordion>
+
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">Was kostet ein Projekt bei euch?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Unsere Preise orientieren sich an Umfang, Zeitrahmen und der Frage, ob du einmalig Unterstützung
+            benötigst oder eine laufende Zusammenarbeit wünschst. Wir sind transparent: Lass uns dein Ziel
+            kurz besprechen — wir machen einen konkreten Vorschlag, der zu deinem Budget und Zeitplan passt.
+          </p>
+        </Accordion.Body>
+      </Accordion>
+
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">Arbeitet ihr remote oder vor Ort?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Wir sind zwischen Nürnberg und Heinsberg verteilt. Remote-Arbeit hat sich bei uns bewährt und ist
+            unser Standard für die tägliche Zusammenarbeit. Für größere Projekte kommen wir gezielt vor Ort,
+            etwa für Strategie-Workshops, Kickoffs oder Planungsmeetings; nicht für routinemäßige tägliche
+            Arbeit. Die weitere Umsetzung läuft überwiegend remote und wird durch regelmäßige Video-Calls
+            sowie klar strukturierte Abläufe unterstützt. Du entscheidest, wie viel Präsenz dein Projekt
+            benötigt.
+          </p>
+        </Accordion.Body>
+      </Accordion>
+
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">Welche Technologien nutzt ihr?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Wir sind keine Tool-Fanatiker und wählen die Technologie, die zu deinem Anliegen passt.
+            Legacy-Code ist auch kein Problem für uns. Als grobe Orientierung findest du hier einige unserer
+            persönlichen Favoriten:
+          </p>
+          <p className="mt-4 font-bold">Frontend (TypeScript):</p>
+          <ul className="text-muted-front list-disc pl-6 font-serif">
+            <li>React / Next</li>
+            <li>Vue / Nuxt</li>
+            <li>Astro.js</li>
+          </ul>
+          <p className="mt-4 font-bold">Backend:</p>
+          <ul className="text-muted-front list-disc pl-6 font-serif">
+            <li>Next / PayloadCMS</li>
+            <li>Node</li>
+            <li>Python</li>
+          </ul>
+          <p className="mt-4 font-bold">Infra:</p>
+          <ul className="text-muted-front list-disc pl-6 font-serif">
+            <li>AWS</li>
+            <li>Github</li>
+            <li>Nx (Monorepos)</li>
+            <li>Kubernetes</li>
+          </ul>
+          <p className="text-muted-front mt-4 font-serif"></p>
+        </Accordion.Body>
+      </Accordion>
+
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">Wie schnell könnt ihr starten?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Vielleicht schon morgen — in der Regel reicht ein kurzes Kennenlern-Call (15 Minuten). Im Call
+            klären wir Ziele, Prioritäten und den kleinsten sinnvollen nächsten Schritt. Oft können wir danach
+            sofort starten; andernfalls erstellen wir einen kurzen, konkreten Plan und legen direkt los.
+          </p>
+        </Accordion.Body>
+      </Accordion>
+
+      <Accordion className="animate-blur-fade-in">
+        <Accordion.Trigger>
+          <h3 className="text-front pr-4 font-bold">In welchem Arbeitsumfeld arbeitet ihr?</h3>
+        </Accordion.Trigger>
+        <Accordion.Body>
+          <p className="text-muted-front font-serif">
+            Am effektivsten sind wir, wenn wir selbständig und unabhängig arbeiten können, egal ob wir ein
+            Projekt von Grund auf aufsetzen oder uns in dein bestehendes Team oder Projekt integrieren. Für
+            dich heißt das: Weniger Koordinationsaufwand, mehr Ergebnisse. Dein Ziel steht immer im
+            Mittelpunkt.
+          </p>
+        </Accordion.Body>
+      </Accordion>
+    </Accordion.Group>
   );
 }

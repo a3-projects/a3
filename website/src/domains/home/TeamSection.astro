@@ -18,19 +18,17 @@ import ferhat from "@/assets/images/team/ferhat.png";
     });
   }
 </script>
-<section id="team" class="overflow-x-clip relative flex items-start bg-black pb-40">
+<section id="team" class="overflow-x-clip relative flex items-start bg-back pb-40">
   <div class="container mx-auto px-6 z-10 flex flex-col">
     <div
       class="grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 w-full items-stretch mt-40 justify-items-center"
     >
-      <div class="flex flex-col-reverse max-w-[400px]">
-        <Card
-          className="backdrop-blur-sm  flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
-        >
+      <div class="flex flex-col-reverse max-w-[400px] backdrop-blur-sm animate-blur-fade-in">
+        <Card className="flex-grow-1 bg-primary-back/10 max-w-[1000px] border-t  border-primary-back">
           <Card.Header className="flex flex-col items-start">
             <h3 class="text-4xl font-bold">
               <span
-                class="bg-gradient-to-br from-white via-white to-primary-500 text-transparent bg-clip-text"
+                class="bg-gradient-to-br from-front via-front to-primary-500 text-transparent bg-clip-text"
               >
                 ÖMER
               </span>
@@ -38,7 +36,7 @@ import ferhat from "@/assets/images/team/ferhat.png";
 
             <p class="text-primary-500 text-sm">FRONTENDLER &#x2022; DESIGNER &#x2022; ERLEBNISMACHER</p>
           </Card.Header>
-          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-6 font-serif pt-0">
+          <Card.Body className="text-muted-front flex flex-col items-start gap-8 pb-6 font-serif pt-0">
             <p class="text-base">
               „Für mich muss es nicht nur schön aussehen, sondern sich auch selbstverständlich anfühlen. Wenn
               ich zufrieden bin, merken es die Nutzer sofort.“
@@ -47,21 +45,19 @@ import ferhat from "@/assets/images/team/ferhat.png";
         </Card>
 
         <div
-          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-back/10 bg-grid-primary-back/10 border-solid"
         >
           <div class="absolute bottom-0 left-0 px-4 flex items-start justify-start w-full">
             <Image class="" src={oemer} width="500" alt="Bild von Ömer." loading="lazy" />
           </div>
         </div>
       </div>
-      <div class="flex flex-col-reverse max-w-[400px]">
-        <Card
-          className="backdrop-blur-sm  flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
-        >
+      <div class="flex flex-col-reverse max-w-[400px] backdrop-blur-sm animate-blur-fade-in">
+        <Card className="flex-grow-1 bg-primary-back/10 max-w-[1000px] border-t  border-primary-back">
           <Card.Header className="flex flex-col ">
             <h3 class="text-4xl">
               <span
-                class="bg-gradient-to-br font-bold from-white via-white to-primary-500 text-transparent bg-clip-text"
+                class="bg-gradient-to-br font-bold from-front via-front to-primary-500 text-transparent bg-clip-text"
               >
                 YUSUF
               </span>
@@ -69,7 +65,7 @@ import ferhat from "@/assets/images/team/ferhat.png";
 
             <p class="text-primary-500 text-sm">FULL-STACKLER &#x2022; ARCHITEKT &#x2022; BRÜCKENBAUER</p>
           </Card.Header>
-          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-6 font-serif pt-0">
+          <Card.Body className="text-muted-front flex flex-col items-start gap-8 pb-6 font-serif pt-0">
             <p class="text-base">
               „Ich übersetze Technik so, dass sie jeder versteht. Mir macht’s Spaß, wenn aus Chaos Klarheit
               wird – und keiner das Gefühl hat, draußen zu stehen.“
@@ -77,21 +73,19 @@ import ferhat from "@/assets/images/team/ferhat.png";
           </Card.Body>
         </Card>
         <div
-          class="flex-shrink-0 scale-x-[-1] relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 scale-x-[-1] relative min-h-[300px] w-full bg-primary-back/10 bg-grid-primary-back/10 border-solid"
         >
           <div class="absolute bottom-0 right-0 px-4">
             <Image class="w-[350px]" width="500" src={yusuf} alt="Bild von Yusuf." loading="lazy" />
           </div>
         </div>
       </div>
-      <div class="flex flex-col-reverse max-w-[400px]">
-        <Card
-          className="backdrop-blur-sm flex-grow-1 bg-primary-950/30 max-w-[1000px] border-t  border-primary-800"
-        >
+      <div class="flex flex-col-reverse max-w-[400px] backdrop-blur-sm animate-blur-fade-in">
+        <Card className="flex-grow-1 bg-primary-back/10 max-w-[1000px] border-t  border-primary-back">
           <Card.Header className="flex flex-col items-start">
             <h3 class="text-4xl font-bold">
               <span
-                class="bg-gradient-to-br from-white via-white to-primary-500 text-transparent bg-clip-text"
+                class="bg-gradient-to-br from-front via-front to-primary-500 text-transparent bg-clip-text"
               >
                 FERHAT
               </span>
@@ -99,7 +93,7 @@ import ferhat from "@/assets/images/team/ferhat.png";
 
             <p class="text-primary-500 text-sm">SKALIERER &#x2022; PIPELINER &#x2022; VISIONÄR</p>
           </Card.Header>
-          <Card.Body className="text-neutral-400 flex flex-col items-start gap-8 pb-6 font-serif pt-0">
+          <Card.Body className="text-muted-front flex flex-col items-start gap-8 pb-6 font-serif pt-0">
             <p class="text-base">
               „Für mich ist gute Infra unsichtbar – stabil, leise und verlässlich. Wenn keiner über
               Deployments spricht, weiß ich: es funktioniert.“
@@ -108,7 +102,7 @@ import ferhat from "@/assets/images/team/ferhat.png";
         </Card>
 
         <div
-          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-950/30 heropattern-graphpaper-neutral-800 border border-neutral-800 border-solid"
+          class="flex-shrink-0 relative min-h-[300px] w-full bg-primary-back/10 bg-grid-primary-back/10 border-solid"
         >
           <div class="absolute bottom-0 left-0 px-4 flex items-start justify-start w-full">
             <Image class="" src={ferhat} width="600" alt="Bild von Ömer." loading="lazy" />
@@ -119,7 +113,7 @@ import ferhat from "@/assets/images/team/ferhat.png";
   </div>
   <div id="team-background" class="absolute w-full h-full top-0 left-0 overflow-x-clip">
     <LogoOutline
-      className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-neutral-900/50"
+      className="absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 h-[200%]  text-border/50"
     />
   </div>
 </section>
