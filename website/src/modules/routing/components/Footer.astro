@@ -1,23 +1,8 @@
 ---
-import { Button } from "@/ui/Button";
+import { ContactForm } from "@/modules/routing/components/ContactForm";
 import { LogoDots } from "@/ui/LogoDots";
 ---
 
-<script>
-  import { animate, scroll } from "motion";
-  const fadeInUp = (selector: string) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      scroll(animate(element, { y: [200, 0], opacity: [0, 1] }), {
-        target: element,
-        offset: [`-300px 0.5`, "0 0.5"],
-      });
-    }
-  };
-  fadeInUp("#contact-title");
-  fadeInUp("#contact-description");
-  fadeInUp("#contact-form");
-</script>
 <footer id="kontakt" class="bg-back text-front border-t border-solid border-border flex flex-col relative">
   <div class="relative pb-10 pt-20">
     <!-- Logo dots background -->
@@ -32,49 +17,36 @@ import { LogoDots } from "@/ui/LogoDots";
     />
     <div class="absolute inset-0 bg-back/10 backdrop-blur-[1px]"></div>
 
-    <div class="flex flex-col gap-4 px-6 relative">
+    <div class="flex flex-col gap-4 px-6 relative max-w-[720px] w-full mx-auto">
       <div>
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          action="/anfrage-erfolgreich-uebermittelt"
-          class="flex flex-col gap-4 max-w-prose mx-auto"
-        >
+        <div class="">
           <h2
             id="contact-title"
-            class="text-5xl inline-block text-left bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+            class="text-4xl inline-block text-left bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
           >
             Kurzer Kennenlern‑Call?
           </h2>
-          <p id="contact-description" class="mt-5 text-2xl">
-            15 Minuten reichen oft, um zu sehen, ob es passt. Wir kommen vorbereitet, du gehst mit Klarheit.
+          <p id="contact-description" class="mt-5 text-lg">
+            15-30 Minuten reichen oft, um zu sehen, ob es passt. Wir kommen vorbereitet, du gehst mit
+            Klarheit.
           </p>
-          <div id="contact-form">
-            <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />
-            <label class="text-muted-front mt-10 flex flex-col gap-3"
-              >Email
-              <input
-                class="border-4 rounded-xl text-front border-border p-4 placeholder:opacity-70 bg-input-back backdrop-blur-sm focus:border-primary-500 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-                placeholder="Deine E-Mail für Rückmeldung"
-                required
-                name="email"
-                type="email"
-              /></label
-            >
-            <label class="text-muted-front mt-4 flex flex-col gap-3"
-              >Anfrage
-              <textarea
-                class="h-[200px] border-4 rounded-xl text-front border-border p-4 placeholder:opacity-70 bg-input-back backdrop-blur-sm focus:border-primary-500 outline-none outline-offset-0 focus:outline-4 focus:outline-primary-500/50"
-                required
-                name="message"
-                placeholder="Erzähle uns etwas über dein Projekt."></textarea>
-            </label>
-            <Button aria-label="Anfrage absenden." className="self-start mt-4" type="submit">
-              Anfrage absenden
-            </Button>
+        </div>
+
+        <div class="mx-auto mt-10 bg-white">
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url={`https://calendly.com/hello-a3-team/30min?primary_color=3b82f6`}
+            style="min-width:300px;height:600px;"
+          >
           </div>
-        </form>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" defer
+          ></script>
+          <!-- Calendly inline widget end -->
+        </div>
+        <div class="mt-6">
+          <ContactForm client:idle />
+        </div>
       </div>
 
       <p class="text-center mx-auto font-light mt-20 text-muted-front">

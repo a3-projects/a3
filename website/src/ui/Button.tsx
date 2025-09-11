@@ -14,7 +14,7 @@ export const button = tv({
       ghost: " text-front/50 hover:bg-front/10 hover:text-front",
       secondary: "bg-secondary-back text-secondary-front hover:bg-front hover:text-back",
       neutral: "bg-neutral-back text-neutral-front hover:bg-front hover:text-back hover:shadow-md",
-      link: "text-primary-front underline-offset-4 hover:underline",
+      link: "text-primary-front underline-offset-4 underline hover:underline",
     },
     increaseHitbox: {
       true: "before:absolute before:h-[calc(100%+1rem)] relative before:w-[calc(100%+1rem)]",

@@ -67,6 +67,7 @@ export function FAQAccordion() {
             <li>Next / PayloadCMS</li>
             <li>Node</li>
             <li>Python</li>
+            <li>Java</li>
           </ul>
           <p className="mt-4 font-bold">Infra:</p>
           <ul className="text-muted-front list-disc pl-6 font-serif">
