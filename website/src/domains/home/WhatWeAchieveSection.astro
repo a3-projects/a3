@@ -5,7 +5,7 @@ import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
 import { Container } from "@/domains/home/Container";
-import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
+import { DotsBackground } from "@/domains/home/DotsBackground";
 ---
 
 <section id="was-wir-bewirken" class="overflow-hidden z-10 relative border-t border-border flex flex-col">
@@ -42,15 +42,15 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
       <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-4 auto-template-columns-[300px]">
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm overflow-hidden border border-border rounded-xl"
         >
-          <DotsCornerBackground color="border" />
+          <DotsBackground color="border" />
 
           <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Mehr zahlende Kunden</h4>
             </div>
-            <p class="text-muted-front font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif">
               <TextHighlight>Intuitive, ansprechende Anwendungen</TextHighlight>, die Nutzer begeistern – und
               sie gerne wiederkommen lassen.
             </p>
@@ -61,13 +61,13 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
           client:idle
           className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-border rounded-xl"
         >
-          <DotsCornerBackground color="border" />
+          <DotsBackground color="border" />
 
           <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Mehr Fokus im Alltag</h4>
             </div>
-            <p class="text-muted-front font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif">
               <TextHighlight>Intelligente Automatisierung</TextHighlight> nimmt Routineaufgaben ab und schafft
               Raum für Strategie und Kreativität.
             </p>
@@ -76,15 +76,15 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm overflow-hidden border border-border rounded-xl"
         >
-          <DotsCornerBackground color="border" />
+          <DotsBackground color="border" />
 
           <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Zufriedene Mitarbeiter</h4>
             </div>
-            <p class="text-muted-front font-serif text-base leading-relaxed flex-grow">
+            <p class="text-muted-front font-serif flex-grow">
               <TextHighlight>Durchdachte Tools</TextHighlight> vereinfachen komplexe Abläufe – Frust sinkt, Motivation
               steigt.
             </p>
@@ -93,15 +93,15 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm overflow-hidden border border-border rounded-xl"
         >
-          <DotsCornerBackground color="border" />
+          <DotsBackground color="border" />
 
           <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Nachhaltiges Wachstum</h4>
             </div>
-            <p class="text-muted-front font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif">
               Fundament für morgen – <TextHighlight>Architektur</TextHighlight>, die mit deinem Business
               skaliert.
             </p>
@@ -133,9 +133,9 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
         <!-- Card 6: Energie für Innovation -->
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm overflow-hidden border border-border rounded-xl"
         >
-          <DotsCornerBackground color="border" />
+          <DotsBackground color="border" />
 
           <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
@@ -144,7 +144,7 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
             </div> -->
               <h4 class="text-xl text-front">Energie für Innovation</h4>
             </div>
-            <p class="text-muted-front font-serif text-base leading-relaxed">
+            <p class="text-muted-front font-serif">
               <TextHighlight>Reibungslose Abläufe</TextHighlight> lassen Ideen entstehen – statt ständig Feuer
               löschen.
             </p>

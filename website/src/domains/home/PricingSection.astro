@@ -1,7 +1,7 @@
 ---
 import { User, UsersIcon, CheckIcon } from "lucide-react";
 import { button } from "@/ui/Button";
-import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
+import { DotsBackground } from "@/domains/home/DotsBackground";
 ---
 
 <section id="preise" class="py-20">
@@ -18,16 +18,18 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
       <article
         class="relative bg-gradient-to-tr from-primary-back via-border to-border p-[1px] rounded-xl hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
-        <div class="py-10 px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between">
+        <div
+          class="py-10 overflow-hidden relative px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between"
+        >
           <!-- Dots background with circular mask -->
-          <DotsCornerBackground color="primary" />
+          <DotsBackground cornerOnly color="primary" />
           <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
             <div
               class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-primary-back/80 blur-3xl opacity-40"
             >
             </div>
           </div>
-          <div>
+          <div class="relative">
             <div class="mb-4 flex flex-col items-start gap-4">
               <div class="flex items-center gap-2">
                 <UsersIcon size={36} className="shrink-0 " />
@@ -77,17 +79,16 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
           </div>
         </div>
       </article>
-      <!-- Single Expert -->
+      <!-- Single -->
       <article
         class="relative bg-back rounded-xl border border-border hover:shadow-lg transition-shadow duration-200 animate-blur-fade-in"
       >
         <div
           class="px-6 py-10 bg-back rounded-xl w-full h-full flex flex-col justify-between relative overflow-hidden"
         >
-          <!-- Dots background with circular mask -->
-          <DotsCornerBackground color="border" />
+          <DotsBackground cornerOnly color="border" />
 
-          <div>
+          <div class="relative">
             <div class="mb-4 flex flex-col items-start gap-4">
               <User size={36} className="shrink-0" />
               <div>
@@ -125,7 +126,7 @@ import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
       </article>
     </div>
 
-    <div class="mt-10 py-6 text-muted-front font-serif animate-blur-fade-in">
+    <div class="py-6 text-muted-front font-serif animate-blur-fade-in">
       <strong class="block text-front mb-2">Kurz zur Preisgestaltung</strong>
       <p>
         Unsere Preise richten sich nach Umfang, Zeitrahmen und ob du einmalige Unterstützung oder eine

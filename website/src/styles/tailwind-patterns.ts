@@ -12,8 +12,8 @@ export default plugin(function ({ matchUtilities, theme, ...rest }) {
     {
       "bg-dots": (value) => {
         return {
-          "background-image": `radial-gradient(circle at 1px 1px, ${value} 1px, transparent 0)`,
-          "background-size": "4px 4px",
+          "background-image": `radial-gradient(circle at 1.5px 1.5px, ${value} 1.5px, transparent 0)`,
+          "background-size": "6px 6px",
         };
       },
     },
