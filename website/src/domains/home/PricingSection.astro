@@ -1,6 +1,7 @@
 ---
 import { User, UsersIcon, CheckIcon } from "lucide-react";
 import { button } from "@/ui/Button";
+import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
 ---
 
 <section id="preise" class="py-20">
@@ -19,11 +20,7 @@ import { button } from "@/ui/Button";
       >
         <div class="py-10 px-6 bg-back rounded-xl w-full h-full flex flex-col justify-between">
           <!-- Dots background with circular mask -->
-          <div
-            class="absolute inset-0 z-0 bg-dots-primary-back/10"
-            style="mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%); -webkit-mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%);"
-          >
-          </div>
+          <DotsCornerBackground color="primary" />
           <div class="absolute w-full h-full overflow-hidden top-0 left-0 rounded-xl pointer-events-none">
             <div
               class="pointer-events-none z-0 absolute -left-20 -bottom-20 w-56 h-56 rounded-full bg-primary-back/80 blur-3xl opacity-40"
@@ -88,11 +85,8 @@ import { button } from "@/ui/Button";
           class="px-6 py-10 bg-back rounded-xl w-full h-full flex flex-col justify-between relative overflow-hidden"
         >
           <!-- Dots background with circular mask -->
-          <div
-            class="absolute inset-0 z-0 bg-dots-border/30"
-            style="mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%); -webkit-mask: radial-gradient(circle at bottom left, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 85%);"
-          >
-          </div>
+          <DotsCornerBackground color="border" />
+
           <div>
             <div class="mb-4 flex flex-col items-start gap-4">
               <User size={36} className="shrink-0" />

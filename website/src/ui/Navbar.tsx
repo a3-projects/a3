@@ -62,7 +62,7 @@ const NavbarList = (props: NavbarListProps & ComponentPropsWithoutRef<"ul">) => 
 };
 
 export const navbarListItem = tv({
-  base: "relative group flex items-center justify-center  before:pointer-events-none first:-ml-[10px] uppercase hover:before:bg-border  h-full px-4 cursor-pointer before:absolute  before:-skew-y-12 2 before:-skew-x-12 before:w-full before:z-0  before:h-[200%]",
+  base: "relative group flex items-center justify-center  before:pointer-events-none first:-ml-[10px]  hover:before:bg-border  h-full px-4 cursor-pointer before:absolute  before:-skew-y-12 2 before:-skew-x-12 before:w-full before:z-0  before:h-[200%]",
 });
 
 export interface NavbarListItemProps extends VariantProps<typeof navbarListItem> {}

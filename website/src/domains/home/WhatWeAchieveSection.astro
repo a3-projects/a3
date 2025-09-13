@@ -5,6 +5,7 @@ import { GradientHoverCard } from "@/domains/home/GradientHoverCard";
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
 import { Container } from "@/domains/home/Container";
+import { DotsCornerBackground } from "@/domains/home/DotsCornerBackground";
 ---
 
 <section id="was-wir-bewirken" class="overflow-hidden z-10 relative border-t border-border flex flex-col">
@@ -41,9 +42,11 @@ import { Container } from "@/domains/home/Container";
       <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-4 auto-template-columns-[300px]">
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
         >
-          <div class="flex flex-col h-full">
+          <DotsCornerBackground color="border" />
+
+          <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Mehr zahlende Kunden</h4>
             </div>
@@ -56,9 +59,11 @@ import { Container } from "@/domains/home/Container";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-border p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10  backdrop-blur-sm border border-border rounded-xl"
         >
-          <div class="flex flex-col h-full">
+          <DotsCornerBackground color="border" />
+
+          <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Mehr Fokus im Alltag</h4>
             </div>
@@ -71,9 +76,11 @@ import { Container } from "@/domains/home/Container";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
         >
-          <div class="flex flex-col h-full">
+          <DotsCornerBackground color="border" />
+
+          <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Zufriedene Mitarbeiter</h4>
             </div>
@@ -86,9 +93,11 @@ import { Container } from "@/domains/home/Container";
 
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
         >
-          <div class="flex flex-col h-full">
+          <DotsCornerBackground color="border" />
+
+          <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <h4 class="text-xl text-front">Nachhaltiges Wachstum</h4>
             </div>
@@ -124,9 +133,11 @@ import { Container } from "@/domains/home/Container";
         <!-- Card 6: Energie für Innovation -->
         <GradientHoverCard
           client:idle
-          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border p-6 rounded-xl"
+          className="animate-blur-fade-in relative z-10 backdrop-blur-sm border border-border rounded-xl"
         >
-          <div class="flex flex-col h-full">
+          <DotsCornerBackground color="border" />
+
+          <div class="flex flex-col h-full p-6 relative">
             <div class="flex items-center gap-4 mb-4">
               <!-- <div class="icon-wrapper">
               <LightbulbIcon className="w-8 h-8 text-primary-400" strokeWidth={1.5} />
