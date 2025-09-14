@@ -46,23 +46,24 @@ const { title, description, image = "/logo-banner.webp", robots } = Astro.props;
 
   <!-- Theme script - must run before page loads to prevent FOUC -->
   <script is:inline>
+    // Force default theme to dark unless user explicitly chose light
     const theme = (() => {
-      const localStorageTheme = localStorage?.getItem("theme") ?? "";
-      if (["dark", "light"].includes(localStorageTheme)) {
-        return localStorageTheme;
-      }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
-      return "light";
+      try {
+        const stored = localStorage.getItem("theme");
+        if (stored === "dark" || stored === "light") return stored; // honor prior choice
+      } catch (e) {}
+      // Always default to dark when no stored preference
+      return "dark";
     })();
 
-    if (theme === "light") {
-      document.documentElement.classList.remove("dark");
-    } else {
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
 
-    window.localStorage.setItem("theme", theme);
+    try {
+      window.localStorage.setItem("theme", theme);
+    } catch (e) {}
   </script>
 </head>

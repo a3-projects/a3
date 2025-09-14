@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 export type Theme = "light" | "dark";
 
 export function useTheme() {
-  const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");
+  // Default is dark, as it matches a3 aesthetics more
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setResolvedTheme(
+    setTheme(
       (window.localStorage.getItem("theme") as Theme) ??
         (document.documentElement.classList.contains("dark") ? "dark" : "light")
     );
@@ -15,23 +16,20 @@ export function useTheme() {
   }, []);
 
   const toggleTheme = () => {
-    console.log("resolvedTheme", resolvedTheme);
     // Trigger the click event on the theme toggle element
-    if (resolvedTheme === "dark") {
-      console.log("Switching to dark theme");
-
+    if (theme === "dark") {
       document.documentElement.classList.remove("dark");
       window.localStorage.setItem("theme", "light");
-      setResolvedTheme("light");
+      setTheme("light");
     } else {
       document.documentElement.classList.add("dark");
       window.localStorage.setItem("theme", "dark");
-      setResolvedTheme("dark");
+      setTheme("dark");
     }
   };
 
   return {
-    resolvedTheme,
+    theme,
     toggleTheme,
     isLoaded,
   };

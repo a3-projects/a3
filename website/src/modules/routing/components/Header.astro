@@ -19,16 +19,12 @@ import { button } from "@/ui/Button";
         </Navbar.Link>
       </Navbar.ListItem>
 
-      <!-- <Navbar.ListItem>
-        <Navbar.Link href="/#kontakt">Kontakt</Navbar.Link>
-      </Navbar.ListItem> -->
-
-      <div
+      <li
         class="p-1 ml-auto flex gap-2 group-data-[navbar-visible=true]/navbar:opacity-100 opacity-0 transition-opacity duration-500"
       >
         <ThemeToggle client:idle />
         <a class={button({ size: "sm" })} href="#kontakt">Kennenlern-Call</a>
-      </div>
+      </li>
     </Navbar.List>
   </Navbar>
 </header>

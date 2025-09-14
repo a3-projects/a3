@@ -21,13 +21,6 @@ import { Rust } from "@/domains/home/tool-logos/Rust";
 
 interface OrbitingToolsProps {}
 
-interface TechIcon {
-  component: any;
-  alt: string;
-  title: string;
-  href: string;
-}
-
 export const OrbitingTools = ({ ...props }: OrbitingToolsProps & ComponentProps<typeof OrbitingCircles>) => {
   const innerCircleIcons: TechIcon[] = [
     {
@@ -160,7 +153,14 @@ export const OrbitingTools = ({ ...props }: OrbitingToolsProps & ComponentProps<
         {outerCircleIcons.map((icon, index) => {
           const IconComponent = icon.component;
           return (
-            <a key={index} href={icon.href} target="_blank" rel="noopener noreferrer" title={icon.title}>
+            <a
+              key={index}
+              href={icon.href}
+              aria-label={icon.alt}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={icon.title}
+            >
               <IconComponent alt={icon.alt} />
             </a>
           );
@@ -170,7 +170,14 @@ export const OrbitingTools = ({ ...props }: OrbitingToolsProps & ComponentProps<
         {innerCircleIcons.map((icon, index) => {
           const IconComponent = icon.component;
           return (
-            <a key={index} href={icon.href} target="_blank" rel="noopener noreferrer" title={icon.title}>
+            <a
+              key={index}
+              href={icon.href}
+              aria-label={icon.alt}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={icon.title}
+            >
               <IconComponent alt={icon.alt} />
             </a>
           );

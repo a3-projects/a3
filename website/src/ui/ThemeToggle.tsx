@@ -9,12 +9,12 @@ import { useRef } from "react";
 import { flushSync } from "react-dom";
 
 export const ThemeToggle = (props: ComponentProps<typeof Button>) => {
-  const { resolvedTheme, isLoaded, toggleTheme } = useTheme();
+  const { theme, isLoaded, toggleTheme } = useTheme();
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   const Icon = () => {
     if (!isLoaded) return null;
-    return resolvedTheme === "dark" ? <MoonIcon /> : <SunDimIcon />;
+    return theme === "dark" ? <MoonIcon /> : <SunDimIcon />;
   };
 
   const handleToggleTheme = async () => {
@@ -53,7 +53,7 @@ export const ThemeToggle = (props: ComponentProps<typeof Button>) => {
     <Button
       ref={buttonRef}
       id="themeToggle"
-      aria-label={`Zu ${resolvedTheme === "dark" ? "hellem" : "dunklem"} Design wechseln`}
+      aria-label={`Zu ${theme === "dark" ? "hellem" : "dunklem"} Design wechseln`}
       type="button"
       disabled={!isLoaded}
       variant="ghost"
