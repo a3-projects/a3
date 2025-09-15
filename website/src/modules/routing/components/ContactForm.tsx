@@ -16,8 +16,8 @@ export const ContactForm = () => {
   return (
     <div>
       {!formVisible && (
-        <div className="mx-auto">
-          <Button className="p-0" onClick={showForm} variant="link">
+        <div className="mx-auto flex items-center justify-center">
+          <Button className="underline underline-offset-4" onClick={showForm} variant="ghost">
             Oder schreib uns eine Nachricht
           </Button>
         </div>
@@ -27,7 +27,7 @@ export const ContactForm = () => {
         method="POST"
         data-netlify="true"
         action="/anfrage-erfolgreich-uebermittelt"
-        className={cn({ hidden: !formVisible, flex: formVisible }, "mx-auto flex-col gap-4")}
+        className={cn({ hidden: !formVisible, flex: formVisible }, "mx-auto mt-12 flex-col gap-4")}
       >
         <h3 className="text-xl">Deine Anfrage</h3>
 
@@ -38,7 +38,7 @@ export const ContactForm = () => {
             <input
               ref={emailRef}
               className="text-front border-border bg-input-back focus:border-primary-500 focus:outline-primary-500/50 rounded-xl border-4 p-4 outline-offset-0 backdrop-blur-sm outline-none placeholder:opacity-70 focus:outline-4"
-              placeholder="Deine E-Mail für Rückmeldung"
+              placeholder="Deine E-Mail"
               required
               name="email"
               type="email"

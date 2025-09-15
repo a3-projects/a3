@@ -1,5 +1,6 @@
 ---
 import { ContactForm } from "@/modules/routing/components/ContactForm";
+import { button } from "@/ui/Button";
 import { LogoDots } from "@/ui/LogoDots";
 ---
 
@@ -7,7 +8,7 @@ import { LogoDots } from "@/ui/LogoDots";
   <div class="relative pb-10 pt-20">
     <!-- Logo dots background -->
     <LogoDots
-      className="z-0 "
+      className="z-0"
       client:idle
       dotSize={1.5}
       dotSpacing={6}
@@ -15,48 +16,47 @@ import { LogoDots } from "@/ui/LogoDots";
       logoDotColor="var(--color-primary-back)"
       logoPercentage={200}
     />
-    <div class="absolute inset-0 bg-back/10 backdrop-blur-[1px]"></div>
+    <div class="absolute inset-0 bg-back/10 backdrop-blur-[1px] z-0"></div>
 
-    <div class="flex flex-col gap-4 px-6 relative max-w-[720px] w-full mx-auto">
+    <div class="flex flex-col gap-4 px-6 relative max-w-prose w-full mx-auto">
       <div>
-        <div class="">
+        <div class="flex items-center justify-center flex-col">
           <h2
             id="contact-title"
-            class="text-4xl inline-block text-left bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+            class="text-4xl inline-block bg-gradient-to-br from-front text-center mx-auto via-front to-muted-front text-transparent bg-clip-text"
           >
             Kurzer Kennenlern‑Call?
           </h2>
-          <p id="contact-description" class="mt-5 text-lg">
+          <p id="contact-description" class="mt-5 text-lg text-center">
             15-30 Minuten reichen oft, um zu sehen, ob es passt. Wir kommen vorbereitet, du gehst mit
             Klarheit.
           </p>
         </div>
 
-        <div class="mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden">
-          <!-- Calendly inline widget begin -->
-          <div
-            class="calendly-inline-widget"
-            data-url={`https://calendly.com/hello-a3-team/30min?primary_color=3b82f6`}
-            style="min-width:300px;height:600px;"
+        <div class="mx-auto mt-10 overflow-hidden flex items-center justify-center flex-col gap-4">
+          <a
+            href="https://calendly.com/hello-a3-team/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class={button({
+              size: "lg",
+            })}
           >
+            Jetzt Termin vereinbaren
+          </a>
+          <div class="w-full">
+            <ContactForm client:idle />
           </div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" defer
-          ></script>
-          <!-- Calendly inline widget end -->
         </div>
-        <div class="mt-6">
-          <ContactForm client:idle />
-        </div>
-      </div>
 
-      <p class="text-center mx-auto font-light mt-20 text-muted-front">
-        A3-Team – Software als Familienbetrieb 🤝
-      </p>
+        <p class="text-center mx-auto font-light mt-20 text-muted-front">
+          A3 Team – Gemeinsam im Takt zu deinem Ziel 🤝
+        </p>
+      </div>
     </div>
   </div>
-
   <div
-    class="self-start flex gap-4 bg-back w-full h-12 px-5 items-center border-t border-solid border-border"
+    class="self-start relative flex gap-4 bg-back w-full h-12 px-5 items-center border-t border-solid border-border"
   >
     <a class="text-sm hover:underline underline-offset-4" href="/impressum">Impressum</a>
     <div class="h-1/3 w-[1px] bg-border"></div>

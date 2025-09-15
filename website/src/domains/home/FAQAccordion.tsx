@@ -38,10 +38,9 @@ export function FAQAccordion() {
           <p className="text-muted-front font-serif">
             Wir sind zwischen Nürnberg und Heinsberg verteilt. Remote-Arbeit hat sich bei uns bewährt und ist
             unser Standard für die tägliche Zusammenarbeit. Für größere Projekte kommen wir gezielt vor Ort,
-            etwa für Strategie-Workshops, Kickoffs oder Planungsmeetings; nicht für routinemäßige tägliche
-            Arbeit. Die weitere Umsetzung läuft überwiegend remote und wird durch regelmäßige Video-Calls
-            sowie klar strukturierte Abläufe unterstützt. Du entscheidest, wie viel Präsenz dein Projekt
-            benötigt.
+            etwa für Strategie-Workshops, Kickoffs oder Planungsmeetings. Die weitere Umsetzung läuft
+            überwiegend remote und wird durch regelmäßige Video-Calls, sowie klar strukturierte Abläufe
+            unterstützt.
           </p>
         </Accordion.Body>
       </Accordion>
@@ -86,7 +85,7 @@ export function FAQAccordion() {
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
-            Vielleicht schon morgen — in der Regel reicht ein kurzes Kennenlern-Call (15 Minuten). Im Call
+            Vielleicht schon morgen — in der Regel reicht ein kurzes Kennenlern-Call (15-30 Minuten). Im Call
             klären wir Ziele, Prioritäten und den kleinsten sinnvollen nächsten Schritt. Oft können wir danach
             sofort starten; andernfalls erstellen wir einen kurzen, konkreten Plan und legen direkt los.
           </p>
@@ -100,7 +99,7 @@ export function FAQAccordion() {
         <Accordion.Body>
           <p className="text-muted-front font-serif">
             Wir arbeiten am effektivsten, wenn wir eigenverantwortlich handeln können, egal ob bei einem neuen
-            Projekt oder als Teil deines bestehenden Teams (z.B. SCRUM). Das bedeutet für dich weniger
+            Projekt oder als Teil eines bestehenden Teams (z.B. SCRUM). Das bedeutet für dich weniger
             Mikromanagement und bessere Ergebnisse. Dabei behalten wir deine Ziele stets im Fokus und sorgen
             für transparente Kommunikation ohne unnötigen Overhead.
           </p>
