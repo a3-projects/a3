@@ -4,6 +4,7 @@ import { EarIcon, LightbulbIcon, CodeXmlIcon, PackageIcon } from "lucide-react";
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
 import { BalanceScale } from "@/domains/home/BalanceScale";
+import { TextHighlight } from "@/ui/TextHighlight";
 ---
 
 <section id="wie-wir-arbeiten" class="overflow-hidden pt-20 relative flex flex-col bg-back">
@@ -54,8 +55,9 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div>
         <h3 class="text-xl text-front flex gap-1 items-center">Verstehen</h3>
         <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir hören zu, stellen die richtigen Fragen und priorisieren Anforderungen. Daraus entsteht ein
-          klarer, kurzer Plan für die nächste Iteration.
+          Wir hören zu, stellen die <TextHighlight>richtigen Fragen</TextHighlight> und <TextHighlight
+            >priorisieren Anforderungen</TextHighlight
+          >. Daraus entsteht ein klarer, kurzer Plan für die nächste Iteration.
         </p>
       </div>
     </div>
@@ -73,8 +75,9 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div>
         <h3 class="text-xl text-front flex gap-1 items-center">Entwickeln</h3>
         <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir setzen priorisierte Aufgaben um, in kleinen inkrementellen Schritten. Durch kontinuierliches
-          Testen verringern wir technische Risiken früh.
+          Wir setzen priorisierte Aufgaben um, in kleinen <TextHighlight
+            >inkrementellen Schritten</TextHighlight
+          >. Durch kontinuierliches Testen verringern wir technische Risiken früh.
         </p>
       </div>
     </div>
@@ -92,8 +95,8 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div>
         <h3 class="text-xl text-front flex gap-1 items-center">Liefern</h3>
         <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Jede Iteration endet mit nutzbaren Ergebnissen. So hast du immer greifbare Fortschritte und konkrete
-          Ansatzpunkte für die nächste Planung.
+          Jede Iteration endet mit <TextHighlight>nutzbaren Ergebnissen</TextHighlight>. So hast du immer
+          greifbare Fortschritte und konkrete Ansatzpunkte für die nächste Planung.
         </p>
       </div>
     </div>
@@ -112,8 +115,8 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       <div>
         <h3 class="text-xl text-front flex gap-1 items-center">Reflektieren</h3>
         <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir werten Nutzung und Feedback aus, identifizieren Verbesserungen und leiten konkrete Anpassungen
-          für die nächste Planung ab.
+          Wir werten <TextHighlight>Nutzung</TextHighlight> und <TextHighlight>Feedback</TextHighlight> aus, identifizieren
+          Verbesserungen und leiten konkrete Anpassungen für die nächste Planung ab.
         </p>
       </div>
     </div>
@@ -158,8 +161,9 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
   </div>
   <div class="animate-blur-fade-in flex flex-col items-center justify-center px-4">
     <p class="text-lg mt-4 text-muted-front font-serif max-w-prose text-center">
-      Nicht entweder–oder. Sondern genau richtig. Tempo hält Projekte lebendig, Qualität macht sie
-      verlässlich. Wir setzen auf beides – in der passenden Dosis.
+      Nicht entweder–oder. Sondern genau richtig. <TextHighlight
+        >Tempo hält Projekte lebendig, Qualität macht sie verlässlich</TextHighlight
+      >. Wir setzen auf beides – in der passenden Dosis.
     </p>
   </div>
   <div class="animate-blur-fade-in text-center flex items-center justify-center px-4 my-10">
@@ -167,7 +171,6 @@ import { BalanceScale } from "@/domains/home/BalanceScale";
       href="#kontakt"
       class={button({
         size: "lg",
-        class: "text-lg",
       })}>Kennenlern-Call vereinbaren</a
     >
   </div>

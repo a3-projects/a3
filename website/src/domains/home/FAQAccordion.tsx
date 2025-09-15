@@ -5,7 +5,7 @@ export function FAQAccordion() {
     <Accordion.Group>
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">Wie läuft eine Zusammenarbeit typisch ab?</h3>
+          <h3 className="text-front pr-4">Wie läuft eine Zusammenarbeit typisch ab?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
@@ -19,7 +19,7 @@ export function FAQAccordion() {
 
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">Was kostet ein Projekt bei euch?</h3>
+          <h3 className="text-front pr-4">Was kostet ein Projekt bei euch?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
@@ -32,7 +32,7 @@ export function FAQAccordion() {
 
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">Arbeitet ihr remote oder vor Ort?</h3>
+          <h3 className="text-front pr-4">Arbeitet ihr remote oder vor Ort?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
@@ -47,7 +47,7 @@ export function FAQAccordion() {
 
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">Welche Technologien nutzt ihr?</h3>
+          <h3 className="text-front pr-4">Welche Technologien nutzt ihr?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
@@ -55,20 +55,20 @@ export function FAQAccordion() {
             Legacy-Code ist auch kein Problem für uns. Als grobe Orientierung findest du hier einige unserer
             persönlichen Favoriten:
           </p>
-          <p className="mt-4 font-bold">Frontend (TypeScript):</p>
+          <p className="mt-4">Frontend (TypeScript):</p>
           <ul className="text-muted-front list-disc pl-6 font-serif">
             <li>React / Next</li>
             <li>Vue / Nuxt</li>
             <li>Astro.js</li>
           </ul>
-          <p className="mt-4 font-bold">Backend:</p>
+          <p className="mt-4">Backend:</p>
           <ul className="text-muted-front list-disc pl-6 font-serif">
             <li>Next / PayloadCMS</li>
             <li>Node</li>
             <li>Python</li>
             <li>Java</li>
           </ul>
-          <p className="mt-4 font-bold">Infra:</p>
+          <p className="mt-4">Infra:</p>
           <ul className="text-muted-front list-disc pl-6 font-serif">
             <li>AWS</li>
             <li>Github</li>
@@ -81,7 +81,7 @@ export function FAQAccordion() {
 
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">Wie schnell könnt ihr starten?</h3>
+          <h3 className="text-front pr-4">Wie schnell könnt ihr starten?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
@@ -94,7 +94,7 @@ export function FAQAccordion() {
 
       <Accordion className="animate-blur-fade-in">
         <Accordion.Trigger>
-          <h3 className="text-front pr-4 font-bold">In welchem Arbeitsumfeld arbeitet ihr?</h3>
+          <h3 className="text-front pr-4">In welchem Arbeitsumfeld arbeitet ihr?</h3>
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">

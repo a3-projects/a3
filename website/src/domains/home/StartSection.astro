@@ -32,7 +32,7 @@ import { Container } from "@/domains/home/Container";
 
 <section
   id="start"
-  class="relative flex w-full h-full items-center pb-40 px-md-20 pt-10 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
+  class="relative flex w-full h-full items-center py-10 px-md-20 min-h-[calc(100vh-theme('spacing.header'))] overflow-x-clip"
 >
   <div aria-hidden="true" class="-z-0 flex gap-12 absolute left-0 h-[300%] transform rotate-30 -mt-20">
     <div class="w-[1px] h-full bg-border"></div>
@@ -54,7 +54,7 @@ import { Container } from "@/domains/home/Container";
         >
       </h1>
 
-      <p id="hero-description" class="text-xl max-w-[800px] pt-4">
+      <p id="hero-description" class="text-lg max-w-[800px] pt-4 font-serif text-muted-front">
         Verwandt im echten Leben, eingespielt im Projekt – drei Entwickler, die Klartext sprechen und echten
         Mehrwert schaffen.
       </p>
@@ -63,7 +63,6 @@ import { Container } from "@/domains/home/Container";
           href="#kontakt"
           class={button({
             size: "lg",
-            class: "text-lg",
             increaseHitbox: true,
           })}>Kurzer Kennenlern-Call</a
         >

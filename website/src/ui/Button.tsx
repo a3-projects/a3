@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 export const button = tv({
-  base: "relative cursor-pointer rounded-xl inline-flex items-center justify-center  transition-all text-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  base: "relative cursor-pointer inline-flex items-center justify-center  transition-all text-sm  font-medium ring-offset-background  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   variants: {
     variant: {
       default:
@@ -20,11 +20,11 @@ export const button = tv({
     },
     color: {},
     size: {
-      default: "h-10 px-4 py-2",
-      sm: "h-8  px-2",
-      lg: "h-12 px-6 py-2",
-      xl: "h-16 px-10", // added xl size
-      icon: "h-8 w-8",
+      default: "h-10 px-4 py-2 rounded-lg",
+      sm: "h-8  px-2 rounded-lg",
+      lg: "h-12 px-6 py-2 rounded-xl",
+      xl: "h-16 px-10 rounded-xl",
+      icon: "h-8 w-8 rounded-xl",
     },
   },
   defaultVariants: {

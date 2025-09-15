@@ -57,7 +57,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
       <motion.span
         style={{ opacity, filter }}
         className={cn("text-muted-front inline-block font-thin", {
-          "text-front font-bold": children === "A3" || children === "Team",
+          "text-front": children === "A3" || children === "Team",
         })}
       >
         {children}
