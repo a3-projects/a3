@@ -18,7 +18,7 @@ export const ContactForm = () => {
       {!formVisible && (
         <div className="mx-auto flex items-center justify-center">
           <Button className="underline underline-offset-4" onClick={showForm} variant="ghost">
-            Oder schreib uns eine Nachricht
+            Oder schreibe uns eine Nachricht
           </Button>
         </div>
       )}
