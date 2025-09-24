@@ -85,7 +85,7 @@ export function FAQAccordion() {
         </Accordion.Trigger>
         <Accordion.Body>
           <p className="text-muted-front font-serif">
-            Vielleicht schon morgen — in der Regel reicht ein kurzes Kennenlern-Call (15-30 Minuten). Im Call
+            Vielleicht schon morgen — in der Regel reicht ein kurzer Kennenlern-Call (15-30 Minuten). Im Call
             klären wir Ziele, Prioritäten und den kleinsten sinnvollen nächsten Schritt. Oft können wir danach
             sofort starten; andernfalls erstellen wir einen kurzen, konkreten Plan und legen direkt los.
           </p>
