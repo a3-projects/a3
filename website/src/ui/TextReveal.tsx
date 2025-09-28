@@ -14,6 +14,8 @@ export const TextReveal: FC<TextRevealProps> = ({ text, children, className }) =
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+
+    offset: ["start 0.5", "end end"],
   });
 
   const words = text.split(" ");
@@ -26,7 +28,8 @@ export const TextReveal: FC<TextRevealProps> = ({ text, children, className }) =
           "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
         }
       >
-        <span ref={targetRef} className={"flex flex-wrap"}>
+        {/* The animating content; ref stays only on the outer container to avoid recalculations */}
+        <span className={"flex flex-wrap"}>
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
