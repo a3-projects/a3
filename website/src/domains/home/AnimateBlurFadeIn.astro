@@ -1,10 +1,8 @@
 <script>
-  import { animate, inView } from "motion";
+  import { inView } from "motion";
 
-  // Small helper that finds the meaningful pieces inside the section
   const animateEls = document.querySelectorAll(".animate-blur-fade-in");
 
-  // If there are no elements, warn and exit early.
   if (animateEls.length > 0) {
     const elements = [...animateEls].filter(Boolean);
 
@@ -13,16 +11,7 @@
       inView(
         el,
         () => {
-          animate(
-            el,
-            {
-              opacity: [0, 1],
-              filter: ["blur(20px)", "blur(0px)"],
-            },
-            {
-              duration: 0.55,
-            }
-          );
+          el.classList.add("!transition-all", "!duration-500", "!blur-none", "!opacity-100");
         },
         { amount: 0.2 }
       );
@@ -33,5 +22,6 @@
 <style is:global>
   .animate-blur-fade-in {
     opacity: 0;
+    filter: blur(20px);
   }
 </style>
