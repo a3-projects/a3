@@ -18,7 +18,10 @@ export const TextReveal: FC<TextRevealProps> = ({ text, children, className }) =
     offset: ["start 0.5", "end end"],
   });
 
-  const words = text.split(" ");
+  // Split by | for line breaks, then by spaces for words
+  const lines = text.split("|").map((line) => line.trim().split(" "));
+  const totalWords = lines.flat().length;
+  let wordIndex = 0;
 
   return (
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
@@ -29,14 +32,24 @@ export const TextReveal: FC<TextRevealProps> = ({ text, children, className }) =
         }
       >
         {/* The animating content; ref stays only on the outer container to avoid recalculations */}
-        <span className={"flex flex-wrap"}>
-          {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / words.length;
+        <span className={"flex flex-wrap justify-center"}>
+          {lines.map((lineWords, lineIndex) => {
+            const lineStartIndex = wordIndex;
             return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                {word}
-              </Word>
+              <span key={`line-${lineIndex}`} className="contents text-center">
+                {lineWords.map((word) => {
+                  const start = wordIndex / totalWords;
+                  const end = start + 1 / totalWords;
+                  const currentIndex = wordIndex;
+                  wordIndex++;
+                  return (
+                    <Word key={currentIndex} progress={scrollYProgress} range={[start, end]}>
+                      {word}
+                    </Word>
+                  );
+                })}
+                {lineIndex < lines.length - 1 && <span className="basis-full" />}
+              </span>
             );
           })}
         </span>
@@ -60,7 +73,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
       <motion.span
         style={{ opacity, filter }}
         className={cn("text-muted-front inline-block font-thin", {
-          "text-front": children === "A3" || children === "Team",
+          "text-front": children === "A3" || children === "Team.",
         })}
       >
         {children}

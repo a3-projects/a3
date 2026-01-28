@@ -29,7 +29,7 @@ export const ContactForm = () => {
         action="/anfrage-erfolgreich-uebermittelt"
         className={cn({ hidden: !formVisible, flex: formVisible }, "mx-auto mt-12 flex-col gap-4")}
       >
-        <h3 className="text-xl">Deine Anfrage</h3>
+        <h3 className="ty-headline-sm">Deine Anfrage</h3>
 
         <div id="contact-form">
           <input type="hidden" name="subject" value="New lead from %{formName} (%{submissionId})" />

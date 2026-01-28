@@ -1,23 +1,23 @@
 ---
-import { EarIcon, LightbulbIcon, CodeXmlIcon, PackageIcon } from "lucide-react";
+import { EarIcon, FlaskConicalIcon, CodeXmlIcon, PackageIcon } from "lucide-react";
 
 import { DotBackground } from "@/domains/home/DotBackground";
 import { button } from "@/ui/Button";
 import { BalanceScale } from "@/domains/home/BalanceScale";
 import { TextHighlight } from "@/ui/TextHighlight";
+import { CountUp } from "@/ui/CountUp";
 ---
 
 <section id="wie-wir-arbeiten" class="overflow-hidden pt-20 relative flex flex-col bg-back">
   <div class="animate-blur-fade-in flex flex-col items-start max-w-7xl w-full mx-auto px-4">
     <h2
-      class="text-4xl inline-block bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+      class="ty-headline-lg inline-block bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
     >
-      So läuft unsere agile Zusammenarbeit
+      So läuft dein MVP-Sprint
     </h2>
-    <p class="text-lg mt-4 text-muted-front font-serif max-w-prose">
-      Erfolgreiche Software entsteht in Zyklen, nicht in starren Phasen. Wir arbeiten agil – mit kurzen
-      Iterationen, ständigem Feedback und kontinuierlicher Verbesserung. Jeder Zyklus bringt nutzbaren
-      Fortschritt.
+    <p class="ty-subtitle-lg text-muted-front mt-4 max-w-prose">
+      <TextHighlight>14 Tage, volle Transparenz.</TextHighlight> So arbeiten wir gemeinsam an deinem MVP – mit <TextHighlight>täglichen Updates und
+      ständigem Austausch.</TextHighlight>
     </p>
   </div>
 
@@ -33,7 +33,7 @@ import { TextHighlight } from "@/ui/TextHighlight";
         <div class="h-px w-full bg-neutral-700"></div>
         <div class="h-px w-full bg-neutral-700"></div>
         <div
-          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 text-muted-front tracking-widest"
+          class="absolute whitespace-nowrap top-0 -right-4 translate-x-full -translate-y-1/2 ty-label-sm text-muted-front"
         >
           NÄCHSTE ITERATION
         </div>
@@ -45,78 +45,101 @@ import { TextHighlight } from "@/ui/TextHighlight";
 
     <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
-        <span class="text-4xl flex gap-4 items-center w-full">
-          <div class="p-4 rounded-xl bg-back relative">
-            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <EarIcon size="48" className="text-primary-back relative" strokeWidth="1" />
+        <span class="flex gap-4 items-center w-full">
+          <div id="icon-box-1" class="p-4 rounded-xl bg-back relative timeline-icon-box">
+            <div
+              class="icon-bg absolute w-full h-full bg-border/20 rounded-[inherit] top-0 z-0 left-0 transition-colors duration-500"
+            >
+            </div>
+            <EarIcon
+              size="48"
+              className="icon-svg text-muted-front relative transition-colors duration-500"
+              strokeWidth="1"
+            />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-front flex gap-1 items-center">Verstehen</h3>
-        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir hören zu, stellen die <TextHighlight>richtigen Fragen</TextHighlight> und <TextHighlight
-            >priorisieren Anforderungen</TextHighlight
-          >. Daraus entsteht ein klarer, kurzer Plan für die nächste Iteration.
+        <h3 class="ty-headline-sm text-front flex gap-1 items-center">Tag 1-2: Verstehen & Planen</h3>
+        <p class="ty-body-md text-muted-front max-w-prose mt-2">
+          Kick-off Call, <TextHighlight>Anforderungen verstehen</TextHighlight>, MVP-Scope definieren. Wir
+          klären: Was ist das Wichtigste? Was muss der Prototyp können?
         </p>
       </div>
     </div>
 
     <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
-        <span class="text-7xl font-thin flex gap-4 items-center justify-between w-full">
-          <!-- 02. -->
-          <div class="p-4 rounded-xl bg-back relative">
-            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <CodeXmlIcon size="48" className="text-primary-back relative" strokeWidth="1" />
+        <span class="flex gap-4 items-center justify-between w-full">
+          <div id="icon-box-2" class="p-4 rounded-xl bg-back relative timeline-icon-box">
+            <div
+              class="icon-bg absolute w-full h-full bg-border/20 rounded-[inherit] top-0 z-0 left-0 transition-colors duration-500"
+            >
+            </div>
+            <CodeXmlIcon
+              size="48"
+              className="icon-svg text-muted-front relative transition-colors duration-500"
+              strokeWidth="1"
+            />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-front flex gap-1 items-center">Entwickeln</h3>
-        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir setzen priorisierte Aufgaben um, in kleinen <TextHighlight
-            >inkrementellen Schritten</TextHighlight
-          >. Durch kontinuierliches Testen verringern wir technische Risiken früh.
+        <h3 class="ty-headline-sm text-front flex gap-1 items-center">Tag 3-10: Intensiv Entwickeln</h3>
+        <p class="ty-body-md text-muted-front max-w-prose mt-2">
+          <TextHighlight>Tägliche Updates</TextHighlight>, kontinuierliche Entwicklung. Du siehst jeden Tag
+          Fortschritt. Fragen? Änderungen? Wir passen an.
         </p>
       </div>
     </div>
 
     <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
-        <span class="text-7xl font-thin block">
-          <!-- 03. -->
-          <div class="p-4 rounded-xl bg-back relative">
-            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <PackageIcon size="48" className="text-primary-back relative" strokeWidth="1" />
+        <span class="block">
+          <div id="icon-box-3" class="p-4 rounded-xl bg-back relative timeline-icon-box">
+            <div
+              class="icon-bg absolute w-full h-full bg-border/20 rounded-[inherit] top-0 z-0 left-0 transition-colors duration-500"
+            >
+            </div>
+            <FlaskConicalIcon
+              size="48"
+              className="icon-svg text-muted-front relative transition-colors duration-500"
+              strokeWidth="1"
+            />
           </div>
         </span>
       </div>
       <div>
-        <h3 class="text-xl text-front flex gap-1 items-center">Liefern</h3>
-        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Jede Iteration endet mit <TextHighlight>nutzbaren Ergebnissen</TextHighlight>. So hast du immer
-          greifbare Fortschritte und konkrete Ansatzpunkte für die nächste Planung.
+        <h3 class="ty-headline-sm text-front flex gap-1 items-center">Tag 11-13: Testen & Verfeinern</h3>
+        <p class="ty-body-md text-muted-front max-w-prose mt-2">
+          Prototyp testen, <TextHighlight>Feedback einarbeiten</TextHighlight>, letzte Anpassungen. Du
+          testest, wir optimieren.
         </p>
       </div>
     </div>
 
     <div class="animate-blur-fade-in relative z-10 flex gap-4 flex-1 px-4 py-10">
       <div class="flex flex-col items-start">
-        <span class="text-7xl font-thin block">
-          <!-- 04. -->
-          <div class="p-4 rounded-xl bg-back relative">
-            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <LightbulbIcon size="48" className="text-primary-back relative" strokeWidth="1" />
+        <span class="block">
+          <div id="icon-box-4" class="p-4 rounded-xl bg-back relative timeline-icon-box">
+            <div
+              class="icon-bg absolute w-full h-full bg-border/20 rounded-[inherit] top-0 z-0 left-0 transition-colors duration-500"
+            >
+            </div>
+            <PackageIcon
+              size="48"
+              className="icon-svg text-muted-front relative transition-colors duration-500"
+              strokeWidth="1"
+            />
           </div>
         </span>
       </div>
 
       <div>
-        <h3 class="text-xl text-front flex gap-1 items-center">Reflektieren</h3>
-        <p class="text-muted-front font-serif max-w-prose text-base mt-2">
-          Wir werten <TextHighlight>Nutzung</TextHighlight> und <TextHighlight>Feedback</TextHighlight> aus, identifizieren
-          Verbesserungen und leiten konkrete Anpassungen für die nächste Planung ab.
+        <h3 class="ty-headline-sm text-front flex gap-1 items-center">Tag 14: Liefern & Entscheiden</h3>
+        <p class="ty-body-md text-muted-front max-w-prose mt-2">
+          Fertiger MVP, Übergabe, gemeinsame Bewertung. <TextHighlight>Du entscheidest</TextHighlight>:
+          Weitermachen oder nicht. Kein Druck, kein Lock-in.
         </p>
       </div>
     </div>
@@ -125,10 +148,10 @@ import { TextHighlight } from "@/ui/TextHighlight";
       <div class="absolute bottom-0 left-0 z-10 bg-gradient-to-t from-back from-40% to-back/0 h-full w-full">
       </div>
       <div class="flex flex-col items-start">
-        <span class="text-4xl flex gap-4 items-center w-full">
+        <span class="flex gap-4 items-center w-full">
           <div class="p-4 rounded-xl bg-back relative">
-            <div class="absolute w-full h-full bg-primary-back/20 rounded-[inherit] top-0 z-0 left-0"></div>
-            <EarIcon size="48" className="text-primary-back relative" strokeWidth="1" />
+            <div class="absolute w-full h-full bg-border/20 rounded-[inherit] top-0 z-0 left-0"></div>
+            <EarIcon size="48" className="text-muted-front relative" strokeWidth="1" />
           </div>
         </span>
       </div>
@@ -137,42 +160,54 @@ import { TextHighlight } from "@/ui/TextHighlight";
   </div>
 </section>
 
-<section class="animate-blur-fade-in">
-  <div class="relative container px-4 mx-auto mt-20 z-10">
-    <div class="flex flex-col relative items-center py-20 px-4">
-      <div
-        class="absolute z-0 flex h-full w-full py-20 flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
-      >
-        <DotBackground
-          width={20}
-          height={20}
-          className="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
-          client:load
-        />
+<section class="animate-blur-fade-in py-16 mt-16">
+  <div class="container max-w-6xl mx-auto px-4">
+    <div class="flex flex-col items-center">
+      <!-- Stat -->
+      <div class="text-center max-w-prose">
+        <CountUp target={40} suffix="%" className="ty-hero text-front" client:idle />
+        <p class="ty-headline-lg text-front mt-4">aller neuen Softwareprojekte scheitern in den ersten 3 Jahren.</p>
       </div>
-      <BalanceScale className="animate-blur-fade-in" client:idle />
-      <div class="flex justify-center relative">
-        <div
-          class="w-0 h-0 border-l-[30px] border-r-[30px] border-b-[40px] border-l-transparent border-r-transparent border-b-front"
+
+      <!-- Text -->
+      <p class="ty-subtitle-lg text-muted-front mt-8 text-center max-w-2xl">
+        Meist nicht an der Idee – sondern an der <TextHighlight>Balance</TextHighlight>. Zu schnell, zu
+        schlampig. Oder zu langsam, zu teuer. Wir setzen auf beides: <TextHighlight
+          >Tempo hält Projekte lebendig, Qualität macht sie verlässlich.</TextHighlight
         >
+      </p>
+
+      <!-- Balance Scale -->
+      <div class="relative flex flex-col items-center py-8 mt-8 w-full max-w-lg">
+        <div
+          class="absolute z-0 flex h-full w-full flex-col items-center justify-center rounded-xl left-1/2 top-1/2 -translate-1/2 opacity-50 pointer-events-none"
+        >
+          <DotBackground
+            width={20}
+            height={20}
+            className="[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+            client:load
+          />
+        </div>
+        <BalanceScale className="animate-blur-fade-in w-full" client:idle />
+        <div class="flex justify-center relative">
+          <div
+            class="w-0 h-0 border-l-[20px] border-r-[20px] border-b-[28px] border-l-transparent border-r-transparent border-b-front"
+          >
+          </div>
         </div>
       </div>
+
+      <!-- CTA -->
+      <div class="mt-10">
+        <a
+          href="#kontakt"
+          class={button({
+            size: "lg",
+          })}>Kennenlern-Call vereinbaren</a
+        >
+      </div>
     </div>
-  </div>
-  <div class="animate-blur-fade-in flex flex-col items-center justify-center px-4">
-    <p class="text-lg mt-4 text-muted-front font-serif max-w-prose text-center">
-      Nicht entweder–oder. Sondern genau richtig. <TextHighlight
-        >Tempo hält Projekte lebendig, Qualität macht sie verlässlich</TextHighlight
-      >. Wir setzen auf beides – in der passenden Dosis.
-    </p>
-  </div>
-  <div class="animate-blur-fade-in text-center flex items-center justify-center px-4 my-10">
-    <a
-      href="#kontakt"
-      class={button({
-        size: "lg",
-      })}>Kennenlern-Call vereinbaren</a
-    >
   </div>
 </section>
 
@@ -194,10 +229,44 @@ import { TextHighlight } from "@/ui/TextHighlight";
   if (timelineLine) {
     scroll(animate(timelineLine, { scaleY: [0, 1], originX: 0, originY: 0 }), {
       target: timelineLine,
-
       offset: ["0 0.5", "1 0.5"],
     });
   }
+
+  // Animate icon boxes when timeline reaches them
+  const iconBoxes = [
+    document.getElementById("icon-box-1"),
+    document.getElementById("icon-box-2"),
+    document.getElementById("icon-box-3"),
+    document.getElementById("icon-box-4"),
+  ];
+
+  iconBoxes.forEach((box) => {
+    if (box) {
+      const iconBg = box.querySelector(".icon-bg");
+      const iconSvg = box.querySelector(".icon-svg");
+
+      scroll(
+        (progress: number) => {
+          if (progress > 0.5) {
+            iconBg?.classList.remove("bg-border/20");
+            iconBg?.classList.add("bg-primary-back/20");
+            iconSvg?.classList.remove("text-muted-front");
+            iconSvg?.classList.add("text-primary-back");
+          } else {
+            iconBg?.classList.add("bg-border/20");
+            iconBg?.classList.remove("bg-primary-back/20");
+            iconSvg?.classList.add("text-muted-front");
+            iconSvg?.classList.remove("text-primary-back");
+          }
+        },
+        {
+          target: box,
+          offset: ["0 0.6", "1 0.4"],
+        }
+      );
+    }
+  });
 
   const scaleLine = document.getElementById("scale-line");
 

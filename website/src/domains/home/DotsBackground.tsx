@@ -1,4 +1,5 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
+import { tv } from "@/lib/utils";
 
 const dotsBackground = tv({
   base: "absolute inset-0 z-0",

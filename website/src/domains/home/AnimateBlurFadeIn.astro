@@ -1,21 +1,30 @@
 <script>
   import { inView } from "motion";
 
-  const animateEls = document.querySelectorAll(".animate-blur-fade-in");
+  const setupAnimations = () => {
+    const animateEls = document.querySelectorAll(".animate-blur-fade-in");
 
-  if (animateEls.length > 0) {
-    const elements = [...animateEls].filter(Boolean);
+    if (animateEls.length > 0) {
+      const elements = [...animateEls].filter(Boolean);
 
-    elements.forEach((el) => {
-      if (!el) return;
-      inView(
-        el,
-        () => {
-          el.classList.add("!transition-all", "!duration-500", "!blur-none", "!opacity-100");
-        },
-        { amount: 0.2 }
-      );
-    });
+      elements.forEach((el) => {
+        if (!el) return;
+        inView(
+          el,
+          () => {
+            el.setAttribute("data-in-view", "true");
+          },
+          { amount: 0.2 }
+        );
+      });
+    }
+  };
+
+  // Use requestIdleCallback to wait until browser is idle (after hydration)
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(setupAnimations);
+  } else {
+    setTimeout(setupAnimations, 200);
   }
 </script>
 
@@ -23,5 +32,13 @@
   .animate-blur-fade-in {
     opacity: 0;
     filter: blur(20px);
+    transition:
+      opacity 0.5s ease-out,
+      filter 0.5s ease-out;
+  }
+
+  .animate-blur-fade-in[data-in-view="true"] {
+    opacity: 1;
+    filter: blur(0);
   }
 </style>

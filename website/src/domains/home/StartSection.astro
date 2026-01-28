@@ -2,6 +2,7 @@
 import { button } from "@/ui/Button";
 import LogoBackground from "@/domains/home/LogoBackground";
 import { Container } from "@/domains/home/Container";
+import { CalendarIcon, ChevronRightIcon, EuroIcon, MessageCircleIcon, ShieldCheckIcon } from "lucide-react";
 ---
 
 <script>
@@ -26,66 +27,188 @@ import { Container } from "@/domains/home/Container";
     });
   }
 </script>
+
 <div class="absolute h-[100dvh] -mt-header w-full overflow-hidden">
   <LogoBackground id="hero-background" className="w-full h-full object-cover overflow-hidden" />
 </div>
 
 <section
   id="start"
-  class="relative flex w-full h-full items-center py-10 px-md-20 min-h-[calc(100dvh-theme('spacing.header'))] overflow-x-clip"
+  class="relative flex w-full h-full items-center py-10 min-h-[calc(100dvh-theme('spacing.header'))] overflow-x-clip"
 >
   <div aria-hidden="true" class="-z-0 flex gap-12 absolute left-0 h-[300%] transform rotate-30 -mt-20">
     <div class="w-[1px] h-full bg-border"></div>
     <div class="w-[1px] h-full bg-border"></div>
   </div>
-  <Container className="z-10 h-full gap-24 flex-grow items-center">
-    <div id="hero-body" class="flex flex-col lg:items-center justify-center lg:text-center">
-      <h1 id="hero-title" class="font-sans text-6xl lg:text-7xl text-primary-950 dark:text-primary-50 mt-4">
-        Drei Köpfe.
-        <span class="block md:inline">
-          Ein <span
-            class="bg-gradient-to-r from-primary-950 to-primary-back via-primary-950 dark:from-primary-50 dark:via-primary-50 text-transparent bg-clip-text animate-pulse"
-          >
-            Puls
-          </span>.</span
-        >
+  <Container className="z-10 h-full gap-24 flex-grow items-start">
+    <div id="hero-body" class="flex flex-col items-start justify-center max-w-4xl">
+      <!-- Pre-headline badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-back/10 border border-primary-back/30 backdrop-blur-sm mb-8 hero-blur-fade-in"
+        style="animation-delay: 3s;"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-back opacity-75"
+          ></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-back"></span>
+        </span>
+        <span class="ty-label-sm text-front">MVP-Sprint – Jetzt Platz sichern</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 id="hero-title" class="ty-hero text-front">
+        <span class="block overflow-hidden pb-2">
+          <span class="block animate-slide-up-reveal">14 Tage.</span>
+        </span>
+        <span class="block overflow-hidden pb-2">
+          <span class="block animate-slide-up-reveal" style="animation-delay: 1s;">Dein MVP.</span>
+        </span>
+        <span class="block overflow-hidden pb-2 -mx-4 px-4">
+          <span class="block animate-slide-up-reveal" style="animation-delay: 2s;">
+            <span class="price-old">25.000 €.</span>
+          </span>
+        </span>
+        <span class="block overflow-hidden pb-2">
+          <span class="block animate-slide-up-reveal" style="animation-delay: 3.1s;">
+            Nur <span class="text-primary-back">5.000 €</span>.
+          </span>
+        </span>
       </h1>
 
-      <p id="hero-description" class="text-lg max-w-[800px] pt-4 font-serif text-muted-front">
-        Verwandt im echten Leben, eingespielt im Projekt – drei Entwickler, die Klartext sprechen und echten
-        Mehrwert schaffen.
+      <!-- Subheadline -->
+      <p
+        id="hero-description"
+        class="ty-subtitle-xl text-muted-front max-w-[600px] pt-8 hero-blur-fade-in"
+        style="animation-delay: 3s;"
+      >
+        Drei Experten. Ein Ziel: Dir in <span class="text-front">14 Tagen</span> einen funktionierenden Prototypen
+        liefern. <span class="text-front">Festpreis. Volle Kommunikation. Kein Risiko.</span>
       </p>
-      <div id="hero-button" class="mt-8">
+
+      <!-- CTA Buttons -->
+      <div
+        id="hero-button"
+        class="flex flex-col sm:flex-row gap-4 mt-10 hero-blur-fade-in"
+        style="animation-delay: 3s;"
+      >
         <a
           href="#kontakt"
           class={button({
             size: "lg",
             increaseHitbox: true,
-          })}>Kurzer Kennenlern-Call</a
+          })}
         >
+          Projekt anfragen
+        </a>
+        <a
+          href="#wie-wir-arbeiten"
+          class={`${button({
+            size: "lg",
+            variant: "ghost",
+          })} group`}
+        >
+          So funktioniert's
+          <ChevronRightIcon size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
+        </a>
       </div>
-      <div class="flex flex-wrap lg:items-center lg:justify-center gap-2 mt-8">
+
+      <!-- Feature pills with icons -->
+      <div class="flex flex-wrap items-start gap-3 mt-12 hero-blur-fade-in" style="animation-delay: 3s;">
         <div
-          class="border border-solid border-border bg-back/80 backdrop-blur-lg rounded-full px-3 py-2 text-front"
+          class="flex items-center gap-2 border border-border bg-back/60 backdrop-blur-lg rounded-full px-4 py-1 text-front transition-all hover:border-primary-back/50 hover:bg-primary-back/5"
         >
-          Pragmatisch
+          <CalendarIcon size={16} className="text-primary-back" />
+          <span class="ty-label-sm text-front">14 Tage bis zum MVP</span>
         </div>
         <div
-          class="border border-solid border-border bg-back/80 backdrop-blur-lg rounded-full px-3 py-2 text-front"
+          class="flex items-center gap-2 border border-border bg-back/60 backdrop-blur-lg rounded-full px-4 py-1 text-front transition-all hover:border-primary-back/50 hover:bg-primary-back/5"
         >
-          Qualitätsbewusst
+          <EuroIcon size={16} className="text-primary-back" />
+          <span class="ty-label-sm text-front">Nur 5.000 € Festpreis</span>
         </div>
         <div
-          class="border border-solid border-border bg-back/80 backdrop-blur-lg rounded-full px-3 py-2 text-front"
+          class="flex items-center gap-2 border border-border bg-back/60 backdrop-blur-lg rounded-full px-4 py-1 text-front transition-all hover:border-primary-back/50 hover:bg-primary-back/5"
         >
-          Kommunikativ
+          <MessageCircleIcon size={16} className="text-primary-back" />
+          <span class="ty-label-sm text-front">Tägliches Update</span>
         </div>
         <div
-          class="border border-solid border-border bg-back/80 backdrop-blur-lg rounded-full px-3 py-2 text-front"
+          class="flex items-center gap-2 border border-border bg-back/60 backdrop-blur-lg rounded-full px-4 py-1 text-front transition-all hover:border-primary-back/50 hover:bg-primary-back/5"
         >
-          Verlässlich
+          <ShieldCheckIcon size={16} className="text-primary-back" />
+          <span class="ty-label-sm text-front">Kein Lock-in</span>
         </div>
       </div>
     </div>
   </Container>
 </section>
+
+<style>
+  @keyframes slide-up-reveal {
+    from {
+      transform: translateY(120%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-blur-fade {
+    from {
+      opacity: 0;
+      filter: blur(20px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  .animate-slide-up-reveal {
+    animation: slide-up-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .hero-blur-fade-in {
+    opacity: 0;
+    filter: blur(20px);
+    animation: hero-blur-fade 1s ease-out forwards;
+  }
+
+  /* Price strikethrough animation */
+  .price-old {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    animation: price-fade 0.5s ease-out 2.8s forwards;
+  }
+
+  .price-old::after {
+    content: "";
+    position: absolute;
+    left: -0.2em;
+    top: 50%;
+    width: calc(100% + 0.4em);
+    height: 0.05em;
+    background: var(--color-neutral-500);
+    box-shadow:
+      0 -0.04em 0 var(--color-back),
+      0 0.04em 0 var(--color-back);
+
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+    animation: strikethrough 0.4s ease-out 2.8s forwards;
+  }
+
+  @keyframes strikethrough {
+    to {
+      transform: translateY(-50%) scaleX(1);
+    }
+  }
+
+  @keyframes price-fade {
+    to {
+      color: var(--color-neutral-500);
+    }
+  }
+</style>

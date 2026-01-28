@@ -1,0 +1,153 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Main } from "@/ui/Main";
+---
+
+<BaseLayout>
+  <BaseHead title="Typography System" description="Typography showcase" robots="noindex" />
+
+  <body>
+    <Main hasHeader={false}>
+      <section class="bg-back min-h-screen py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="ty-hero text-front mb-4">Typography System</h1>
+          <p class="ty-subtitle-xl text-muted-front mb-20">
+            All typography styles used across the website.
+          </p>
+
+          <!-- Hero -->
+          <div class="border-b border-border pb-12 mb-12">
+            <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-hero</p>
+            <p class="ty-hero text-front">Hero Headline</p>
+            <p class="ty-body-sm text-muted-front mt-4">
+              48px → 128px / line-height: 1.1 / font-weight: bold / font-family: sans
+            </p>
+          </div>
+
+          <!-- Headlines -->
+          <div class="border-b border-border pb-12 mb-12">
+            <div class="space-y-10">
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-headline-xl</p>
+                <p class="ty-headline-xl text-front">Headline Extra Large</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-5xl (48px → 60px)</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-headline-lg</p>
+                <p class="ty-headline-lg text-front">Headline Large</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-4xl (36px → 45px)</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-headline-md</p>
+                <p class="ty-headline-md text-front">Headline Medium</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-2xl (24px → 30px)</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-headline-sm</p>
+                <p class="ty-headline-sm text-front">Headline Small</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-xl (20px → 25px)</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-headline-xs</p>
+                <p class="ty-headline-xs text-front">Headline Extra Small</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-lg (18px → 23px)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtitles & Body -->
+          <div class="border-b border-border pb-12 mb-12">
+            <div class="space-y-10">
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-subtitle-xl</p>
+                <p class="ty-subtitle-xl text-front">
+                  Subtitle Extra Large. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="ty-body-sm text-muted-front mt-2">text-xl (20px → 25px) / serif / relaxed line-height</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-subtitle-lg</p>
+                <p class="ty-subtitle-lg text-front">
+                  Subtitle Large. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="ty-body-sm text-muted-front mt-2">text-lg (18px → 23px) / serif / relaxed line-height</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-body-md</p>
+                <p class="ty-body-md text-front">
+                  Body Medium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="ty-body-sm text-muted-front mt-2">text-base (16px → 20px) / serif</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-body-sm</p>
+                <p class="ty-body-sm text-front">
+                  Body Small. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="ty-body-sm text-muted-front mt-2">text-sm (14px → 18px) / serif</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Labels -->
+          <div class="pb-12 mb-12">
+            <div class="space-y-10">
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-label-md</p>
+                <p class="ty-label-md text-front">Label Medium - Used for buttons, UI elements, navigation</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-sm (14px → 18px) / sans</p>
+              </div>
+
+              <div>
+                <p class="ty-label-sm text-muted-front uppercase tracking-wide mb-4">ty-label-sm</p>
+                <p class="ty-label-sm text-front">LABEL SMALL - USED FOR BADGES, TAGS, SMALL UI TEXT</p>
+                <p class="ty-body-sm text-muted-front mt-2">text-xs (12px → 15px) / sans / wide letter-spacing</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Examples -->
+          <div class="pb-12">
+            <div class="space-y-6">
+              <div class="p-6 bg-back border border-border rounded-xl">
+                <p class="ty-headline-sm text-front">text-front on bg-back</p>
+                <p class="ty-body-md text-muted-front mt-2">text-muted-front for secondary text</p>
+              </div>
+
+              <div class="p-6 bg-primary-back/10 border border-primary-back/30 rounded-xl">
+                <p class="ty-headline-sm text-front">Primary accent background</p>
+                <p class="ty-body-md text-muted-front mt-2">Used for highlighted sections</p>
+              </div>
+
+              <div>
+                <p class="ty-headline-lg inline-block bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text">
+                  Gradient Text Headline
+                </p>
+                <p class="ty-body-sm text-muted-front mt-2">Used for section titles with gradient effect</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </Main>
+  </body>
+</BaseLayout>
+
+<style>
+  body {
+    @apply flex min-h-screen flex-col;
+  }
+</style>

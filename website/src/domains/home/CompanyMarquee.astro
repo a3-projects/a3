@@ -10,7 +10,7 @@ import PaesslerLogo from "../../assets/images/company-logos/company-logo-paessle
 import SellwerkLogo from "../../assets/images/company-logos/company-logo-sellwerk-white.svg";
 import SiemensLogo from "../../assets/images/company-logos/company-logo-siemens-white.svg";
 
-// Create array of company logos with alt text and height
+// Create array of company logos with alt text and width
 const companyLogos = [
   { src: AdidasLogo, alt: "Adidas", width: 75 },
   { src: KickerLogo, alt: "Kicker", width: 150 },
@@ -29,7 +29,7 @@ const companyLogos = [
 <section class="relative overflow-hidden border-t border-b border-solid border-border py-10 bg-back">
   <div class="flex items-center justify-center">
     <h1
-      class="text-xl inline-block text-center bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
+      class="ty-headline-sm inline-block text-center bg-gradient-to-br from-front via-front to-muted-front text-transparent bg-clip-text"
     >
       GAME-CHANGER BEI
     </h1>
@@ -43,17 +43,19 @@ const companyLogos = [
   >
   </div>
   <div class="relative overflow-hidden brightness-[0.8] dark:brightness-100">
-    <div class="flex animate-marquee w-max py-6 marquee-container hover:pause-animation">
+    <div class="flex animate-marquee w-max py-12 px-4 marquee-container hover:pause-animation">
       <!-- First set of logos -->
-      <div class="flex items-center gap-16 pl-20 justify-center">
+      <div class="flex items-center gap-16 pl-20 justify-center h-[50px]">
         {
           companyLogos.map((logo) => (
-            <div class="flex-shrink-0 group cursor-pointer">
+            <div class="flex-shrink-0 group cursor-pointer h-full flex items-center">
               <img
                 src={logo.src.src}
                 alt={logo.alt}
-                style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out animate-blur "
+                width={logo.width}
+                height="50"
+                style={`width: ${logo.width}px;`}
+                class="transition-all duration-300 ease-in-out animate-blur h-auto object-contain"
                 loading="lazy"
               />
             </div>
@@ -62,15 +64,17 @@ const companyLogos = [
       </div>
 
       <!-- Duplicate set for seamless loop -->
-      <div class="flex items-center gap-16 pl-20 justify-center">
+      <div class="flex items-center gap-16 pl-20 justify-center h-[50px]">
         {
           companyLogos.map((logo) => (
-            <div class="flex-shrink-0 group cursor-pointer">
+            <div class="flex-shrink-0 group cursor-pointer h-full flex items-center">
               <img
                 src={logo.src.src}
                 alt={logo.alt}
-                style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out animate-blur"
+                width={logo.width}
+                height="50"
+                style={`width: ${logo.width}px;`}
+                class="transition-all duration-300 ease-in-out animate-blur h-auto object-contain"
                 loading="lazy"
               />
             </div>
@@ -79,15 +83,17 @@ const companyLogos = [
       </div>
 
       <!-- Duplicate set for seamless loop -->
-      <div class="flex items-center gap-16 pl-20 justify-center">
+      <div class="flex items-center gap-16 pl-20 justify-center h-[50px]">
         {
           companyLogos.map((logo) => (
-            <div class="flex-shrink-0 group cursor-pointer">
+            <div class="flex-shrink-0 group cursor-pointer h-full flex items-center">
               <img
                 src={logo.src.src}
                 alt={logo.alt}
-                style={`min-width: ${logo.width}px; `}
-                class="transition-all duration-300 ease-in-out animate-blur"
+                width={logo.width}
+                height="50"
+                style={`width: ${logo.width}px;`}
+                class="transition-all duration-300 ease-in-out animate-blur h-auto object-contain"
                 loading="lazy"
               />
             </div>
@@ -129,7 +135,7 @@ const companyLogos = [
   }
 
   .animate-blur:hover {
-    transform: scale(1.3);
+    transform: scale(1.15);
     animation: pulse-blur 1s ease;
   }
 

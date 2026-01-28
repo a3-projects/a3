@@ -1,4 +1,7 @@
 ---
+import poppins400 from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url';
+import poppins700 from '@fontsource/poppins/files/poppins-latin-700-normal.woff2?url';
+
 interface Props {
   title: string;
   description: string;
@@ -12,6 +15,8 @@ const { title, description, image = "/logo-banner.webp", robots } = Astro.props;
 ---
 
 <head>
+  <link rel="preload" href={poppins400} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={poppins700} as="font" type="font/woff2" crossorigin />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
@@ -43,6 +48,30 @@ const { title, description, image = "/logo-banner.webp", robots } = Astro.props;
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "A3 Team",
+    "url": "https://a3-team.de",
+    "logo": "https://a3-team.de/favicon.svg"
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "MVP Software Development",
+    "name": "MVP-Sprint",
+    "provider": {
+      "@type": "Organization",
+      "name": "A3 Team"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "5000",
+      "priceCurrency": "EUR"
+    }
+  })} />
 
   <!-- Theme script - must run before page loads to prevent FOUC -->
   <script is:inline>

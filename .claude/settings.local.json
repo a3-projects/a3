@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm add:*)",
+      "WebFetch(domain:recharts.org)",
+      "WebFetch(domain:recharts.github.io)",
+      "WebFetch(domain:m3.material.io)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}

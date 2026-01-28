@@ -1,10 +1,10 @@
 "use client";
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useId } from "react";
 import type { ComponentProps, ComponentPropsWithoutRef, ReactNode } from "react";
 import { ChevronDownIcon } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
+import { tv } from "@/lib/utils";
 
 // Context for managing accordion state
 interface AccordionContextType {
@@ -53,7 +53,8 @@ const _Accordion = ({
   ...rest
 }: AccordionProps & ComponentPropsWithoutRef<"div">) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const id = `accordion-${Math.random().toString(36).substr(2, 9)}`;
+  const reactId = useId();
+  const id = `accordion${reactId}`;
 
   const toggle = () => setIsOpen(!isOpen);
 

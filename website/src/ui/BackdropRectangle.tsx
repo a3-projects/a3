@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
-import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
+import { tv } from "@/lib/utils";
 
 export const backdropRectangle = tv({
   slots: {

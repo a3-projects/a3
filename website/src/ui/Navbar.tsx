@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import type { ComponentPropsWithoutRef, ComponentProps } from "react";
-import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
+import { tv } from "@/lib/utils";
 
 export const navbar = tv({
   base: "h-header flex fixed group/navbar top-0 left-0 w-full duration-1000 z-50 border-b border-solid",
   variants: {
     isBackgroundVisible: {
       true: "bg-back/70 backdrop-blur-sm border-border",
-      false: " bg-transparent border-transparent",
+      false: "bg-transparent border-transparent",
     },
   },
 });
@@ -19,20 +19,15 @@ const _Navbar = (props: NavbarProps & ComponentPropsWithoutRef<"nav">) => {
   const { children, className, ...rest } = props;
   const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 60 && !isBackgroundVisible) {
-      setIsBackgroundVisible(true);
-    } else if (isBackgroundVisible && window.scrollY < 60) {
-      setIsBackgroundVisible(false);
-    }
-  };
-
   useEffect(() => {
-    handleScroll();
+    const handleScroll = () => {
+      setIsBackgroundVisible(window.scrollY >= 60);
+    };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
-    () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav

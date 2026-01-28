@@ -11,7 +11,7 @@ import { button } from "@/ui/Button";
 import { OrbitingTools } from "@/domains/home/OrbitingTools";
 ---
 
-<section class="container w-full px-4 py-20 mx-auto bg-back min-h-[600px] flex relative">
+<section class="container w-full px-4 py-40 mx-auto bg-back min-h-[600px] flex relative">
   <div
     class="absolute w-[60%] h-[60%] rounded-full left-1/2 top-1/2 -translate-1/2 bg-primary-600/20 blur-[100px] z-0"
   >
@@ -27,11 +27,11 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
           >
             <div class="px-4 pt-4">
               <h2
-                class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+                class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Web-Apps
               </h2>
-              <p class="text-base font-serif text-muted-front">Desktop & Mobile-friendly</p>
+              <p class="ty-body-md text-muted-front">Desktop & Mobile-friendly</p>
             </div>
 
             <div
@@ -78,7 +78,7 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
             client:idle
             className="animate-blur-fade-in group backdrop-blur-xl rounded-xl bg-primary-500/10 overflow-hidden"
           >
-            <div class="text-xl bg-gradient-to-br w-full h-full">
+            <div class="w-full h-full">
               <Image
                 src={development}
                 class="object-cover w-full h-full group-hover:scale-110 transition-spring"
@@ -95,7 +95,7 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
             >
               <div class="w-full h-full flex items-center justify-center">
                 <h2
-                  class="text-4xl font-bold absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-0 blur-xl group-hover:blur-none group-hover:scale-150 group-hover:opacity-100 transition-spring"
+                  class="ty-headline-xl absolute flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-0 blur-xl group-hover:blur-none group-hover:scale-150 group-hover:opacity-100 transition-spring"
                 >
                   A3
                 </h2>
@@ -117,11 +117,11 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
         >
           <div class="px-4 pt-4">
             <h2
-              class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+              class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               Infrastruktur-Automatisierung
             </h2>
-            <p class="text-base font-serif text-muted-front">Skalierbarkeit & Pipelines</p>
+            <p class="ty-body-md text-muted-front">Skalierbarkeit & Pipelines</p>
           </div>
           <div
             class="flex items-center mt-4 pb-10 -translate-x-12 group-hover:translate-x-0 transition-spring"
@@ -167,11 +167,11 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
         >
           <div class="px-4 pt-4 pb-20 relative z-10">
             <h2
-              class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+              class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               UI / UX Design
             </h2>
-            <p class="text-muted-front text-base font-serif">Intuitiv & Ansprechend</p>
+            <p class="ty-body-md text-muted-front">Intuitiv & Ansprechend</p>
           </div>
           <div
             class="group-hover:scale-100 lg:scale-0 absolute w-[200%] aspect-square inset-0 bg-primary-500/20 transition-spring rounded-full"
@@ -194,15 +194,15 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
         >
           <div class="px-4 pt-4 pb-20 relative z-10">
             <h2
-              class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+              class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
             >
               Code-Analyse
             </h2>
-            <p class="text-muted-front text-base font-serif">Qualität & Struktur</p>
+            <p class="ty-body-md text-muted-front">Qualität & Struktur</p>
           </div>
 
           <div
-            class="font-mono opacity-50 lg:opacity-100 text-base absolute bottom-0 right-0 translate-x-12 pl-4 group-hover:scale-120 transition-spring"
+            class="font-mono opacity-50 lg:opacity-100 ty-body-md absolute bottom-0 right-0 translate-x-12 pl-4 group-hover:scale-120 transition-spring"
           >
             <div class="flex gap-2">
               <div
@@ -314,11 +314,11 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
           >
             <div class="px-4 pt-4 pb-20">
               <h2
-                class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+                class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Prozessoptimierung
               </h2>
-              <p class="text-base text-muted-front font-serif">Effizienz & Kontrolle</p>
+              <p class="ty-body-md text-muted-front">Effizienz & Kontrolle</p>
             </div>
             <SettingsIcon
               className="absolute w-60 h-60 text-primary-500/50 fill-primary-500/10 top-1/2 right-0 translate-x-1/2 -translate-y-1/4 group-hover:rotate-[180deg] transition-spring"
@@ -333,7 +333,7 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
             <a
               href="#kontakt"
               class={button({
-                class: "text-3xl w-full h-full p-4 text-center relative z-0 rounded-xl",
+                class: "ty-headline-md w-full h-full p-4 text-center relative z-0 rounded-xl",
               })}
             >
               <span class="relative z-10"> Projekt anfragen </span>
@@ -378,7 +378,7 @@ import { OrbitingTools } from "@/domains/home/OrbitingTools";
           <div class="animate-blur-fade-in flex flex-grow-1">
             <div class="backdrop-blur-sm flex items-end justify-end rounded-xl flex-grow-1 bg-back/20 p-4">
               <h2
-                class="text-xl bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
+                class="ty-headline-sm bg-gradient-to-br from-front via-front to-neutral-back text-transparent bg-clip-text"
               >
                 Und mehr...
               </h2>
